@@ -1,5 +1,9 @@
+// 💕 EXAM PREP QUIZ DATA - 450 MCQS 💕
+// Professional English Version - Chapters 12, 13, 14
+
+// CHAPTER 12
 const chapter12Questions = [
-    {
+{
         question: "At ICPC 2025, how many problems did OpenAI's system solve out of 12?",
         options: ['A) 10/12', 'B) 11/12', 'C) 12/12', 'D) 9/12'],
         correct: 2,
@@ -298,12 +302,8 @@ const chapter12Questions = [
         options: ['A) Poor code quality', 'B) Lack of human developers', 'C) Successful integration of AI in development workflows', 'D) Temporary experimentation'],
         correct: 2,
         explanation: "The high percentage (up to 95%) of AI-generated code in some Y Combinator companies demonstrates successful, production-level integration of AI into development workflows."
-    }
-];
-
-module.exports = chapter12Questions;
-const chapter12Questions51to100 = [
-    {
+    },
+{
         question: "What is the primary advantage of the Agent Maturity Model progression?",
         options: ['A) Faster development', 'B) Lower costs', 'C) Gradual specialization from general to custom capabilities', 'D) Easier deployment'],
         correct: 2,
@@ -602,12 +602,8 @@ const chapter12Questions51to100 = [
         options: ['A) Prevents evolution', 'B) Provides infrastructure for both general and specialized capabilities', 'C) Only supports general agents', 'D) Requires complete replacement'],
         correct: 1,
         explanation: "The Modern AI Stack provides flexible infrastructure that supports both general agent capabilities and the development of specialized custom agents as needs evolve."
-    }
-];
-
-module.exports = chapter12Questions51to100;
-const chapter12Questions101to150 = [
-    {
+    },
+{
         question: "What is the primary challenge addressed by the AAIF standards?",
         options: ['A) High costs', 'B) Fragmentation and lack of interoperability in AI agent ecosystem', 'C) Slow processing', 'D) Limited models'],
         correct: 1,
@@ -906,12 +902,12 @@ const chapter12Questions101to150 = [
         options: ['A) Random order acceptable', 'B) Interdependencies require thoughtful sequencing', 'C) All at once only', 'D) Order irrelevant'],
         correct: 1,
         explanation: "The framework suggests interdependencies between pillars require thoughtful sequencing to build on foundations and manage dependencies."
-    }
+    },
 ];
 
-module.exports = chapter12Questions101to150;
-const ch13_q1_50 = [
-  {
+// CHAPTER 13
+const chapter13Questions = [
+{
     id: 1,
     question: "Who created Markdown?",
     options: ["Linus Torvalds", "John Gruber", "Tim Berners-Lee", "Guido van Rossum"],
@@ -1210,12 +1206,8 @@ const ch13_q1_50 = [
     question: "Which Markdown variant is most commonly used on GitHub?",
     options: ["CommonMark", "GitHub Flavored Markdown", "Standard Markdown", "MultiMarkdown"],
     correct: 1
-  }
-];
-
-module.exports = ch13_q1_50;
-const ch13_questions_51_100 = [
-  {
+  },
+{
     id: 51,
     question: "Why does structure matter when writing instructions for AI?",
     options: [
@@ -1814,15 +1806,8 @@ const ch13_questions_51_100 = [
     ],
     correct: 1,
     explanation: "Effective AI instructions combine clear structure (headers, lists), semantic section names (Problem, Features), and concrete examples to provide context and clarity."
-  }
-];
-
-// Export for use in other files
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = ch13_questions_51_100;
-}
-const ch13Questions = [
-  {
+  },
+{
     id: 101,
     question: "In the Task Tracker app specification example, what is the primary benefit of using progressive specification?",
     options: [
@@ -2421,12 +2406,12 @@ const ch13Questions = [
     ],
     correctAnswer: 1,
     explanation: "Markdown's plain text format integrates seamlessly with version control systems, making changes easy to track, diff, and merge."
-  }
+  },
 ];
 
-module.exports = ch13Questions;
-const ch14_q1_50 = [
-  {
+// CHAPTER 14
+const chapter14Questions = [
+{
     id: 1,
     question: "Who conducted the September 2024 experiment that demonstrated Claude Code's potential?",
     options: [
@@ -3025,12 +3010,8 @@ const ch14_q1_50 = [
     ],
     correct: 2,
     chapter: 14
-  }
-];
-
-module.exports = ch14_q1_50;
-const ch14_q51_100 = [
-  {
+  },
+{
     id: 51,
     question: "How many sections does the CLAUDE.md structure contain?",
     options: [
@@ -3629,12 +3610,8 @@ const ch14_q51_100 = [
     ],
     correct: 1,
     chapter: 14
-  }
-];
-
-module.exports = ch14_q51_100;
-const ch14Questions = [
-  {
+  },
+{
     id: 101,
     question: "What is the default permission mode in Claude Code?",
     options: [
@@ -4233,7 +4210,6 @@ const ch14Questions = [
     ],
     correctAnswer: 1,
     explanation: "When the 50-task limit is reached, new task creation is rejected."
-  }
+  },
 ];
 
-module.exports = ch14Questions;
