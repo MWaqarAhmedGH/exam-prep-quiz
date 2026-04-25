@@ -1,2714 +1,4239 @@
-// 💕 EXAM PREP QUIZ DATA - 450 MCQS 💕
-// Romantic + Funny Style - Chapters 12, 13, 14
-
-// CHAPTER 12: AI AGENT FACTORY PARADIGM (150 Questions)
 const chapter12Questions = [
     {
-        question: "ICPC 2025 World Finals mein OpenAI ensemble ne kitne problems solve kiye?",
-        options: ['A) 8/12', 'B) 10/12', 'C) 12/12  ', 'D) 11/12'],
+        question: "At ICPC 2025, how many problems did OpenAI's system solve out of 12?",
+        options: ['A) 10/12', 'B) 11/12', 'C) 12/12', 'D) 9/12'],
         correct: 2,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "OpenAI achieved a perfect score of 12/12 at ICPC 2025, demonstrating the advanced problem-solving capabilities of AI systems in competitive programming."
     },
     {
-        question: "GDPval Benchmark mein Claude Opus 4.1 ka win rate kya tha?",
-        options: ['A) 35%', 'B) 49%  ', 'C) 60%', 'D) 25%'],
+        question: "Which team's performance at ICPC 2025 was notable because a problem was solved only by AI?",
+        options: ['A) MIT', 'B) Stanford', 'C) St. Petersburg', 'D) Cambridge'],
+        correct: 2,
+        explanation: "St. Petersburg scored 11/12 at ICPC 2025, and notably, Problem C was solved exclusively by AI, marking a significant milestone in AI capabilities."
+    },
+    {
+        question: "What was Claude Opus 4.1's performance on GDPval?",
+        options: ['A) 40.6%', 'B) 49%', 'C) 55%', 'D) 35%'],
         correct: 1,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "Claude Opus 4.1 achieved 49% on GDPval, outperforming GPT-5's 40.6% and showing significant improvement from the <15% performance 18 months prior."
     },
     {
-        question: "Stack Overflow 2025 survey: kitne % developers AI use karte hain?",
-        options: ['A) 50%', 'B) 65%', 'C) 84%  ', 'D) 92%'],
+        question: "According to Stack Overflow 2025 data, what percentage of developers use AI tools?",
+        options: ['A) 75%', 'B) 80%', 'C) 84%', 'D) 90%'],
         correct: 2,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "Stack Overflow 2025 reported that 84% of developers use AI tools, with 51% using them daily, indicating widespread adoption in the developer community."
     },
     {
-        question: "DORA Report: developers kitne hours daily AI use karte hain?",
-        options: ['A) 30 min', 'B) 1 hour', 'C) 2 hours ', 'D) 4 hours'],
-        correct: 2,
-        explanation: "Yaad rakho yaar! 💕"
-    },
-    {
-        question: "Y Combinator Winter 2025: kitne % startups AI code use karte hain?",
-        options: ['A) 10%', 'B) 25% ', 'C) 40%', 'D) 50%'],
+        question: "What is the median daily usage time for AI tools according to DORA 2025?",
+        options: ['A) 1 hour/day', 'B) 2 hours/day', 'C) 3 hours/day', 'D) 4 hours/day'],
         correct: 1,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "DORA 2025 reported a median usage of 2 hours per day for AI tools, with 90% adoption rate among developers, showing AI has become integral to daily workflows."
     },
     {
-        question: "Workday ne Sana ko kitne acquire kiya?",
-        options: ['A) $500M', 'B) $1.1B ', 'C) $2B', 'D) $750M'],
+        question: "What percentage of Y Combinator companies are AI-primary?",
+        options: ['A) 15%', 'B) 20%', 'C) 25%', 'D) 30%'],
+        correct: 2,
+        explanation: "25% of Y Combinator companies are AI-primary, with some having 95% AI-generated codebases, demonstrating the shift toward AI-driven development in startups."
+    },
+    {
+        question: "How much did Workday pay to acquire Sana?",
+        options: ['A) $800M', 'B) $1.1B', 'C) $1.5B', 'D) $2B'],
         correct: 1,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "Workday acquired Sana for $1.1 billion, reflecting the high valuation and strategic importance of AI-powered enterprise solutions."
     },
     {
-        question: "Global developer economy ki value?",
-        options: ['A) $1T', 'B) $2T', 'C) $3T ', 'D) $5T'],
+        question: "What is the estimated size of the global developer economy?",
+        options: ['A) $1 trillion', 'B) $2 trillion', 'C) $3 trillion', 'D) $5 trillion'],
         correct: 2,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "The developer economy is valued at $3 trillion, calculated from approximately 30 million developers earning an average of $100K annually."
     },
     {
-        question: "Software industry ko kya unique banata hai?",
-        options: ['A) High salaries', 'B) Software disrupts itself ', 'C) Remote work', 'D) Fast growth'],
+        question: "What is the estimated opportunity window for the AI agent paradigm shift?",
+        options: ['A) 1-2 years', 'B) 3-5 years', 'C) 5-7 years', 'D) 7-10 years'],
         correct: 1,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "The opportunity window is estimated at 3-5 years, representing a critical period for organizations to adopt and leverage AI agent technologies."
     },
     {
-        question: "AI-native development transition window?",
-        options: ['A) 1-2 years', 'B) 3-5 years ', 'C) 7-10 years', 'D) 10+ years'],
+        question: "In the Agent Maturity Model, what comes after General Agents?",
+        options: ['A) Specialized Agents', 'B) Custom Agents', 'C) Expert Agents', 'D) Advanced Agents'],
         correct: 1,
-        explanation: "Yaad rakho yaar! 💕"
+        explanation: "The Agent Maturity Model progresses from General Agents (incubator stage) to Custom Agents (specialist stage), representing increasing specialization and capability."
     },
     {
-        question: "Traditional CS education mein kya missing hai?",
-        options: ['A) Programming', 'B) Specification writing ', 'C) Data structures', 'D) Algorithms'],
-        correct: 1,
-        explanation: "Yaad rakho yaar! 💕"
-    },
-    {
-        question: "Chapter 12 Q11: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q12: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q13: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q14: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q15: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q16: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q17: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q18: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q19: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q20: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q21: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q22: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q23: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q24: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q25: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q26: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q27: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q28: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q29: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q30: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q31: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q32: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q33: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q34: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q35: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q36: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q37: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q38: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q39: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q40: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q41: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q42: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q43: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q44: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q45: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q46: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q47: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q48: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q49: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q50: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q51: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q52: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q53: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q54: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q55: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q56: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q57: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q58: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q59: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q60: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q61: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q62: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q63: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q64: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q65: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q66: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q67: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q68: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q69: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q70: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q71: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q72: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q73: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q74: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q75: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q76: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q77: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q78: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q79: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q80: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q81: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q82: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q83: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q84: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q85: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q86: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q87: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q88: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q89: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q90: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q91: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q92: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q93: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q94: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q95: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q96: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q97: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q98: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q99: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q100: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q101: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q102: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q103: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q104: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q105: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q106: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q107: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q108: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q109: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q110: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q111: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q112: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q113: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q114: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q115: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q116: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q117: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q118: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q119: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q120: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q121: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q122: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q123: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q124: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q125: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q126: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q127: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q128: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q129: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q130: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q131: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q132: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q133: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q134: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q135: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q136: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q137: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q138: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q139: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q140: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q141: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q142: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q143: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q144: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q145: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q146: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q147: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q148: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q149: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-    {
-        question: "Chapter 12 Q150: AI Agent Factory concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Samajh gaye? 💪"
-    },
-];
-
-// CHAPTER 13: MARKDOWN (150 Questions)
-const chapter13Questions = [
-    {
-        question: "Markdown mein H1 heading kaise banate hain?",
-        options: ['A) *text*', 'B) # text ', 'C) ##text', 'D) @text'],
-        correct: 1,
-        explanation: "Easy hai na? 😊"
-    },
-    {
-        question: "H3 heading ke liye kitne # chahiye?",
-        options: ['A) 1', 'B) 2', 'C) 3 ', 'D) 4'],
-        correct: 2,
-        explanation: "Easy hai na? 😊"
-    },
-    {
-        question: "Bullet list kaise banate hain?",
-        options: ['A) - ya * ', 'B) + ya =', 'C) # ya @', 'D) / ya \\'],
+        question: "What does OODA stand for in the OODA Loop framework?",
+        options: ['A) Observe, Orient, Decide, Act', 'B) Organize, Operate, Deploy, Analyze', 'C) Optimize, Order, Deliver, Assess', 'D) Outline, Orchestrate, Develop, Automate'],
         correct: 0,
-        explanation: "Easy hai na? 😊"
+        explanation: "OODA stands for Observe, Orient, Decide, Act - a decision-making framework that applies to AI agent operations and iterative development cycles."
     },
     {
-        question: "Code block kaise banate hain?",
-        options: ['A) Single backtick', 'B) Triple backticks ', 'C) Double quotes', 'D) Parentheses'],
+        question: "How many generations of AI tools are described in the Five Generations framework?",
+        options: ['A) Three', 'B) Four', 'C) Five', 'D) Six'],
+        correct: 2,
+        explanation: "The framework describes Five Generations of AI Tools, showing the evolution from basic automation to sophisticated AI agent systems."
+    },
+    {
+        question: "Which of the following is NOT one of the Five Powers of AI agents?",
+        options: ['A) See', 'B) Hear', 'C) Reason', 'D) Learn'],
+        correct: 3,
+        explanation: "The Five Powers are: See, Hear, Reason, Act, and Remember. While learning is important, 'Learn' is not explicitly listed as one of the Five Powers."
+    },
+    {
+        question: "What are the three layers of the Modern AI Stack?",
+        options: ['A) Models, Tools, Applications', 'B) Frontier Models, AI-First IDEs, Agent Skills', 'C) Infrastructure, Platform, Services', 'D) Data, Compute, Algorithms'],
         correct: 1,
-        explanation: "Easy hai na? 😊"
+        explanation: "The Modern AI Stack consists of Frontier Models (foundation), AI-First IDEs (development environment), and Agent Skills (capabilities)."
     },
     {
-        question: "Link create karne ka syntax?",
-        options: ['A) (text)[url]', 'B) [text](url) ', 'C) {text}(url)', 'D) <text>(url)'],
+        question: "Which of the following is NOT an AAIF standard?",
+        options: ['A) MCP', 'B) AGENTS.md', 'C) goose', 'D) DOCKER.yml'],
+        correct: 3,
+        explanation: "AAIF standards include MCP, AGENTS.md, goose, Agent Skills, and MCP Apps. DOCKER.yml is not part of the AAIF standards framework."
+    },
+    {
+        question: "What does MCP stand for in the AAIF standards?",
+        options: ['A) Model Communication Protocol', 'B) Multi-Cloud Platform', 'C) Machine Coordination Process', 'D) Managed Code Pipeline'],
+        correct: 0,
+        explanation: "MCP stands for Model Communication Protocol, a standard for enabling communication between AI models and external systems in the AAIF framework."
+    },
+    {
+        question: "What percentage of Stack Overflow developers use AI tools daily?",
+        options: ['A) 40%', 'B) 45%', 'C) 51%', 'D) 60%'],
+        correct: 2,
+        explanation: "51% of developers use AI tools daily according to Stack Overflow 2025, showing that AI has become a daily necessity for over half of developers."
+    },
+    {
+        question: "What was GPT-5's performance on GDPval?",
+        options: ['A) 35.6%', 'B) 40.6%', 'C) 45.6%', 'D) 49%'],
         correct: 1,
-        explanation: "Easy hai na? 😊"
+        explanation: "GPT-5 achieved 40.6% on GDPval, which while lower than Claude Opus 4.1's 49%, still represents significant improvement from 18 months prior."
     },
     {
-        question: "Chapter 13 Q6: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q7: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q8: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q9: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q10: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q11: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q12: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q13: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q14: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q15: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q16: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q17: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q18: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q19: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q20: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q21: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q22: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q23: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q24: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q25: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q26: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q27: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q28: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q29: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q30: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q31: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q32: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q33: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q34: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q35: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q36: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q37: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q38: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q39: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q40: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q41: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q42: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q43: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q44: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q45: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q46: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q47: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q48: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q49: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q50: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q51: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q52: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q53: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q54: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q55: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q56: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q57: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q58: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q59: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q60: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q61: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q62: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q63: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q64: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q65: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q66: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q67: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q68: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q69: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q70: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q71: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q72: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q73: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q74: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q75: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q76: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q77: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q78: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q79: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q80: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q81: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q82: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q83: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q84: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q85: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q86: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q87: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q88: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q89: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q90: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q91: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q92: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q93: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q94: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q95: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q96: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q97: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q98: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q99: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q100: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q101: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q102: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q103: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q104: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q105: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q106: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q107: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q108: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q109: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q110: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q111: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q112: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q113: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q114: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q115: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q116: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q117: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q118: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
-    {
-        question: "Chapter 13 Q119: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What was the AI performance on GDPval 18 months before the current measurements?",
+        options: ['A) <10%', 'B) <15%', 'C) <20%', 'D) <25%'],
+        correct: 1,
+        explanation: "18 months ago, AI performance on GDPval was less than 15%, showing dramatic improvement to current levels of 40-49%."
     },
     {
-        question: "Chapter 13 Q120: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "How many problems did Gemini solve at ICPC 2025?",
+        options: ['A) 8/12', 'B) 9/12', 'C) 10/12', 'D) 11/12'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "Gemini solved 10 out of 12 problems at ICPC 2025, demonstrating strong competitive programming capabilities, though slightly behind OpenAI's perfect score."
     },
     {
-        question: "Chapter 13 Q121: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the concept of Digital FTE in the AI Agent Factory paradigm?",
+        options: ['A) Full-Time Employee replacement', 'B) Digital Full-Time Equivalent for measuring AI agent productivity', 'C) Fractional Technology Engagement', 'D) Future Technology Enablement'],
+        correct: 1,
+        explanation: "Digital FTE (Full-Time Equivalent) is a metric for measuring AI agent productivity and economic value, comparing AI output to human full-time employee work."
     },
     {
-        question: "Chapter 13 Q122: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "How many pillars are in the AIDD (AI-Driven Development) framework?",
+        options: ['A) Five', 'B) Seven', 'C) Nine', 'D) Twelve'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "AIDD consists of Nine Pillars that provide a comprehensive framework for implementing AI-driven development practices in organizations."
     },
     {
-        question: "Chapter 13 Q123: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What does SDD stand for in the context of AI development?",
+        options: ['A) Software Design Document', 'B) Spec-Driven Development', 'C) System Development Diagram', 'D) Structured Data Design'],
+        correct: 1,
+        explanation: "SDD stands for Spec-Driven Development, an approach where detailed specifications guide AI agents in generating code and solutions."
     },
     {
-        question: "Chapter 13 Q124: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "What is the adoption rate reported by DORA 2025?",
+        options: ['A) 80%', 'B) 84%', 'C) 90%', 'D) 95%'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "DORA 2025 reported a 90% adoption rate for AI tools among developers, indicating near-universal acceptance in the development community."
     },
     {
-        question: "Chapter 13 Q125: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "What percentage of some Y Combinator companies' codebases are AI-generated?",
+        options: ['A) 75%', 'B) 85%', 'C) 95%', 'D) 100%'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "Some Y Combinator companies have 95% AI-generated codebases, representing the extreme end of AI adoption in software development."
     },
     {
-        question: "Chapter 13 Q126: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "Which problem at ICPC 2025 was solved exclusively by AI?",
+        options: ['A) Problem A', 'B) Problem B', 'C) Problem C', 'D) Problem D'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "Problem C at ICPC 2025 was solved only by AI systems, not by human teams, marking a significant milestone in AI problem-solving capabilities."
     },
     {
-        question: "Chapter 13 Q127: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the average developer salary used in calculating the $3 trillion developer economy?",
+        options: ['A) $75K', 'B) $100K', 'C) $125K', 'D) $150K'],
+        correct: 1,
+        explanation: "The $3 trillion developer economy calculation uses an average salary of $100K per developer across approximately 30 million developers globally."
     },
     {
-        question: "Chapter 13 Q128: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "How many developers are estimated to exist globally according to the developer economy calculation?",
+        options: ['A) 20 million', 'B) 25 million', 'C) 30 million', 'D) 35 million'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "The global developer population is estimated at 30 million, which when multiplied by average salary of $100K yields the $3 trillion economy."
     },
     {
-        question: "Chapter 13 Q129: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "In the Agent Maturity Model, what role do General Agents play?",
+        options: ['A) Specialist', 'B) Incubator', 'C) Expert', 'D) Coordinator'],
+        correct: 1,
+        explanation: "General Agents serve as the incubator stage in the Agent Maturity Model, providing broad capabilities before specialization into Custom Agents."
     },
     {
-        question: "Chapter 13 Q130: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "Which of the Five Powers enables AI agents to process visual information?",
+        options: ['A) Hear', 'B) See', 'C) Reason', 'D) Remember'],
+        correct: 1,
+        explanation: "The 'See' power enables AI agents to process visual information, including images, diagrams, and visual interfaces."
     },
     {
-        question: "Chapter 13 Q131: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "Which of the Five Powers enables AI agents to maintain context across interactions?",
+        options: ['A) Act', 'B) Reason', 'C) Remember', 'D) Hear'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "The 'Remember' power enables AI agents to maintain context, store information, and recall previous interactions for continuity."
     },
     {
-        question: "Chapter 13 Q132: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the primary purpose of AI-First IDEs in the Modern AI Stack?",
+        options: ['A) Replace traditional IDEs completely', 'B) Provide development environments optimized for AI agent interaction', 'C) Train AI models', 'D) Deploy applications'],
+        correct: 1,
+        explanation: "AI-First IDEs provide development environments specifically designed and optimized for AI agent interaction and collaboration with human developers."
     },
     {
-        question: "Chapter 13 Q133: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What does AGENTS.md represent in the AAIF standards?",
+        options: ['A) A configuration file for agent behavior', 'B) Documentation standard for agent capabilities', 'C) Agent deployment manifest', 'D) Agent testing specification'],
+        correct: 1,
+        explanation: "AGENTS.md is a documentation standard in AAIF that describes agent capabilities, interfaces, and usage patterns in a standardized format."
     },
     {
-        question: "Chapter 13 Q134: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the significance of the 3-5 year opportunity window?",
+        options: ['A) Time until AI replaces all developers', 'B) Critical period for competitive advantage in AI adoption', 'C) Duration of current AI model lifecycle', 'D) Patent protection period'],
+        correct: 1,
+        explanation: "The 3-5 year window represents a critical period where early adopters can gain significant competitive advantage before AI agent practices become commoditized."
     },
     {
-        question: "Chapter 13 Q135: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "Which layer of the Modern AI Stack includes Frontier Models?",
+        options: ['A) Top layer', 'B) Middle layer', 'C) Bottom/Foundation layer', 'D) Integration layer'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "Frontier Models form the foundation layer of the Modern AI Stack, providing the core AI capabilities that other layers build upon."
     },
     {
-        question: "Chapter 13 Q136: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the primary focus of Spec-Driven Development (SDD)?",
+        options: ['A) Writing code faster', 'B) Using detailed specifications to guide AI code generation', 'C) Reducing testing requirements', 'D) Eliminating documentation'],
+        correct: 1,
+        explanation: "SDD focuses on creating detailed specifications that guide AI agents in generating accurate, requirement-aligned code and solutions."
     },
     {
-        question: "Chapter 13 Q137: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "In the OODA Loop, what comes after 'Observe'?",
+        options: ['A) Act', 'B) Decide', 'C) Orient', 'D) Analyze'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "The OODA Loop sequence is Observe, Orient, Decide, Act. After observing, the agent orients itself to understand the context and situation."
     },
     {
-        question: "Chapter 13 Q138: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the role of Agent Skills in the Modern AI Stack?",
+        options: ['A) Train models', 'B) Provide specific capabilities and tools for agents', 'C) Store data', 'D) Manage infrastructure'],
+        correct: 1,
+        explanation: "Agent Skills provide specific capabilities, tools, and functions that AI agents can use to perform tasks in the Modern AI Stack architecture."
     },
     {
-        question: "Chapter 13 Q139: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What does the Digital FTE concept help organizations measure?",
+        options: ['A) Employee satisfaction', 'B) AI agent productivity and economic value', 'C) Code quality', 'D) System performance'],
+        correct: 1,
+        explanation: "Digital FTE helps organizations quantify and measure the productivity and economic value of AI agents in terms comparable to human full-time employees."
     },
     {
-        question: "Chapter 13 Q140: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "Which of the Five Powers enables AI agents to process audio and speech?",
+        options: ['A) See', 'B) Hear', 'C) Act', 'D) Reason'],
+        correct: 1,
+        explanation: "The 'Hear' power enables AI agents to process audio information, including speech recognition and audio analysis."
     },
     {
-        question: "Chapter 13 Q141: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the primary purpose of MCP Apps in the AAIF standards?",
+        options: ['A) Model training', 'B) Application integration using Model Communication Protocol', 'C) Data storage', 'D) User authentication'],
+        correct: 1,
+        explanation: "MCP Apps enable application integration using the Model Communication Protocol, allowing AI agents to interact with external systems and services."
     },
     {
-        question: "Chapter 13 Q142: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "What stage comes after 'incubator' in the Agent Maturity Model?",
+        options: ['A) Advanced', 'B) Expert', 'C) Specialist', 'D) Master'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "The Agent Maturity Model progresses from General Agents (incubator) to Custom Agents (specialist), representing increased specialization and focus."
     },
     {
-        question: "Chapter 13 Q143: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "Which of the Five Powers enables AI agents to execute tasks and interact with systems?",
+        options: ['A) See', 'B) Reason', 'C) Act', 'D) Remember'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "The 'Act' power enables AI agents to execute tasks, make changes, and interact with systems to accomplish objectives."
     },
     {
-        question: "Chapter 13 Q144: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the significance of the Nine Pillars of AIDD?",
+        options: ['A) They define programming languages', 'B) They provide a comprehensive framework for AI-driven development', 'C) They list required tools', 'D) They specify team sizes'],
+        correct: 1,
+        explanation: "The Nine Pillars of AIDD provide a comprehensive framework covering all essential aspects of implementing AI-driven development in organizations."
     },
     {
-        question: "Chapter 13 Q145: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What does 'goose' represent in the AAIF standards?",
+        options: ['A) A testing framework', 'B) An AAIF standard component', 'C) A deployment tool', 'D) A monitoring system'],
+        correct: 1,
+        explanation: "Goose is one of the AAIF standards, contributing to the standardized framework for AI agent development and deployment."
     },
     {
-        question: "Chapter 13 Q146: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "Which of the Five Powers enables AI agents to analyze and make decisions?",
+        options: ['A) See', 'B) Hear', 'C) Reason', 'D) Act'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        explanation: "The 'Reason' power enables AI agents to analyze information, make logical deductions, and arrive at decisions based on available data."
     },
     {
-        question: "Chapter 13 Q147: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the primary business model implication of Digital FTE economics?",
+        options: ['A) Eliminating all human workers', 'B) Measuring and pricing AI agent value comparable to human employees', 'C) Reducing software costs to zero', 'D) Outsourcing all development'],
+        correct: 1,
+        explanation: "Digital FTE economics enables organizations to measure and price AI agent contributions in terms comparable to human employees, facilitating business planning and ROI calculations."
     },
     {
-        question: "Chapter 13 Q148: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "In the OODA Loop, what is the final step?",
+        options: ['A) Observe', 'B) Orient', 'C) Decide', 'D) Act'],
+        correct: 3,
+        explanation: "The OODA Loop concludes with 'Act', where decisions are executed, before the cycle repeats with new observations."
     },
     {
-        question: "Chapter 13 Q149: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
+        question: "What is the relationship between Frontier Models and Agent Skills in the Modern AI Stack?",
+        options: ['A) They are independent', 'B) Agent Skills build on top of Frontier Models', 'C) Frontier Models require Agent Skills', 'D) They are the same thing'],
+        correct: 1,
+        explanation: "Agent Skills build on top of Frontier Models, using the foundation capabilities to provide specific, actionable functions for AI agents."
     },
     {
-        question: "Chapter 13 Q150: Markdown aur SDD concept?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
+        question: "What does the high percentage of AI-generated code in Y Combinator companies indicate?",
+        options: ['A) Poor code quality', 'B) Lack of human developers', 'C) Successful integration of AI in development workflows', 'D) Temporary experimentation'],
         correct: 2,
-        explanation: "Markdown pyaar hai! ❤️"
-    },
+        explanation: "The high percentage (up to 95%) of AI-generated code in some Y Combinator companies demonstrates successful, production-level integration of AI into development workflows."
+    }
 ];
 
-// CHAPTER 14: CLAUDE CODE (150 Questions)
-const chapter14Questions = [
+module.exports = chapter12Questions;
+const chapter12Questions51to100 = [
     {
-        question: "CLAUDE.md file ka purpose?",
-        options: ['A) Code docs', 'B) Project memory ', 'C) Test results', 'D) Bug tracking'],
+        question: "What is the primary advantage of the Agent Maturity Model progression?",
+        options: ['A) Faster development', 'B) Lower costs', 'C) Gradual specialization from general to custom capabilities', 'D) Easier deployment'],
+        correct: 2,
+        explanation: "The Agent Maturity Model's progression from General Agents to Custom Agents allows organizations to gradually specialize capabilities, starting broad and becoming more focused."
+    },
+    {
+        question: "What does the ICPC 2025 results demonstrate about AI capabilities?",
+        options: ['A) AI can only solve simple problems', 'B) AI has reached competitive programming excellence', 'C) AI cannot work with algorithms', 'D) AI needs human supervision'],
         correct: 1,
-        explanation: "Claude tumhara dost! 🤖"
+        explanation: "ICPC 2025 results, with OpenAI achieving 12/12 and AI-only solutions, demonstrate that AI has reached competitive programming excellence at world-class levels."
     },
     {
-        question: "Agent Skill ka format?",
-        options: ['A) SKILL.json', 'B) SKILL.md ', 'C) SKILL.txt', 'D) SKILL.yaml'],
+        question: "What is the significance of the $1.1B Sana acquisition by Workday?",
+        options: ['A) Market consolidation', 'B) High valuation of AI-powered enterprise solutions', 'C) Elimination of competition', 'D) Cost reduction strategy'],
         correct: 1,
-        explanation: "Claude tumhara dost! 🤖"
+        explanation: "The $1.1B acquisition demonstrates the high market valuation and strategic importance of AI-powered enterprise solutions in the current landscape."
     },
     {
-        question: "Progressive Disclosure se kitna token reduction?",
-        options: ['A) 20-30%', 'B) 50-60%', 'C) 80-98% ', 'D) 100%'],
-        correct: 2,
-        explanation: "Claude tumhara dost! 🤖"
-    },
-    {
-        question: "MCP ka full form?",
-        options: ['A) Model Communication', 'B) Model Context Protocol ', 'C) Machine Control', 'D) Multi-Context'],
+        question: "How does Spec-Driven Development (SDD) differ from traditional development?",
+        options: ['A) No testing required', 'B) Specifications guide AI code generation rather than direct coding', 'C) Faster deployment only', 'D) No documentation needed'],
         correct: 1,
-        explanation: "Claude tumhara dost! 🤖"
+        explanation: "SDD shifts focus from direct coding to creating detailed specifications that guide AI agents in generating code, fundamentally changing the development approach."
     },
     {
-        question: "Claude Cowork kya hai?",
-        options: ['A) Terminal tool', 'B) Desktop app ', 'C) Mobile app', 'D) Web extension'],
+        question: "What does the 90% adoption rate in DORA 2025 indicate?",
+        options: ['A) Temporary trend', 'B) Near-universal acceptance of AI tools in development', 'C) Forced adoption', 'D) Marketing hype'],
         correct: 1,
-        explanation: "Claude tumhara dost! 🤖"
+        explanation: "The 90% adoption rate indicates near-universal acceptance and integration of AI tools into mainstream development practices, not a niche or experimental trend."
     },
     {
-        question: "Chapter 14 Q6: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the role of AI-First IDEs in developer workflows?",
+        options: ['A) Replace developers', 'B) Facilitate seamless human-AI collaboration', 'C) Only for AI training', 'D) Reduce code quality'],
+        correct: 1,
+        explanation: "AI-First IDEs are designed to facilitate seamless collaboration between human developers and AI agents, optimizing the development environment for this partnership."
     },
     {
-        question: "Chapter 14 Q7: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the improvement from <15% to 49% on GDPval over 18 months indicate?",
+        options: ['A) Slow progress', 'B) Rapid advancement in AI capabilities', 'C) Measurement error', 'D) Temporary spike'],
+        correct: 1,
+        explanation: "The improvement from <15% to 49% in just 18 months demonstrates rapid, sustained advancement in AI capabilities for complex development tasks."
     },
     {
-        question: "Chapter 14 Q8: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the primary purpose of the AAIF standards?",
+        options: ['A) Restrict AI development', 'B) Standardize AI agent development and interoperability', 'C) Increase costs', 'D) Limit innovation'],
+        correct: 1,
+        explanation: "AAIF standards aim to standardize AI agent development, ensuring interoperability and consistent practices across the AI agent ecosystem."
     },
     {
-        question: "Chapter 14 Q9: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "Why is the 'Remember' power critical for AI agents?",
+        options: ['A) Data storage only', 'B) Enables context continuity and learning from past interactions', 'C) Reduces processing time', 'D) Improves speed'],
+        correct: 1,
+        explanation: "The 'Remember' power is critical because it enables AI agents to maintain context continuity, learn from past interactions, and provide coherent long-term assistance."
     },
     {
-        question: "Chapter 14 Q10: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the Five Generations of AI Tools framework describe?",
+        options: ['A) Five different AI models', 'B) Evolution of AI tool capabilities over time', 'C) Five programming languages', 'D) Five development methodologies'],
+        correct: 1,
+        explanation: "The Five Generations framework describes the evolutionary progression of AI tool capabilities, from basic automation to sophisticated agent systems."
     },
     {
-        question: "Chapter 14 Q11: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the significance of 51% daily AI usage among developers?",
+        options: ['A) Occasional use', 'B) AI has become essential to daily development work', 'C) Experimental phase', 'D) Weekend projects only'],
+        correct: 1,
+        explanation: "51% daily usage indicates that AI tools have become essential to daily development work for the majority of developers, not just occasional or experimental use."
     },
     {
-        question: "Chapter 14 Q12: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How does the Modern AI Stack support agent development?",
+        options: ['A) Single monolithic system', 'B) Layered architecture from models to skills', 'C) Cloud-only deployment', 'D) Hardware acceleration only'],
+        correct: 1,
+        explanation: "The Modern AI Stack provides a layered architecture from Frontier Models through AI-First IDEs to Agent Skills, supporting comprehensive agent development."
     },
     {
-        question: "Chapter 14 Q13: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the OODA Loop's 'Orient' phase involve?",
+        options: ['A) Taking action', 'B) Understanding context and situation after observation', 'C) Making final decisions', 'D) Collecting data'],
+        correct: 1,
+        explanation: "The 'Orient' phase involves understanding and contextualizing observations, positioning the agent to make informed decisions in the next phase."
     },
     {
-        question: "Chapter 14 Q14: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the implication of Problem C being solved only by AI at ICPC 2025?",
+        options: ['A) The problem was too easy', 'B) AI has capabilities beyond some human teams', 'C) Human teams gave up', 'D) The problem was designed for AI'],
+        correct: 1,
+        explanation: "Problem C being solved only by AI demonstrates that AI systems have developed capabilities that can exceed those of human competitive programming teams in specific scenarios."
     },
     {
-        question: "Chapter 14 Q15: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does Digital FTE economics enable for business planning?",
+        options: ['A) Eliminating budgets', 'B) Quantifying AI agent value in familiar business terms', 'C) Reducing all costs to zero', 'D) Avoiding financial planning'],
+        correct: 1,
+        explanation: "Digital FTE economics enables businesses to quantify and plan for AI agent value using familiar full-time equivalent metrics, facilitating ROI and resource planning."
     },
     {
-        question: "Chapter 14 Q16: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the relationship between the Nine Pillars of AIDD and implementation?",
+        options: ['A) Optional guidelines', 'B) Comprehensive framework covering all essential aspects', 'C) Marketing material only', 'D) Theoretical concepts only'],
+        correct: 1,
+        explanation: "The Nine Pillars provide a comprehensive, practical framework covering all essential aspects needed for successful AI-driven development implementation."
     },
     {
-        question: "Chapter 14 Q17: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "Why is the 3-5 year window considered critical?",
+        options: ['A) Technology will stop advancing', 'B) Early adopters can establish competitive advantages before commoditization', 'C) AI will be banned', 'D) All companies will be equal'],
+        correct: 1,
+        explanation: "The 3-5 year window is critical because early adopters can establish significant competitive advantages before AI agent practices become commoditized and widespread."
     },
     {
-        question: "Chapter 14 Q18: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the 'Reason' power enable that other powers don't?",
+        options: ['A) Data collection', 'B) Logical analysis and decision-making', 'C) Task execution', 'D) Information storage'],
+        correct: 1,
+        explanation: "The 'Reason' power uniquely enables logical analysis, inference, and decision-making, distinguishing it from perception (See, Hear) and action (Act, Remember) powers."
     },
     {
-        question: "Chapter 14 Q19: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the significance of Gemini's 10/12 score at ICPC 2025?",
+        options: ['A) Poor performance', 'B) Competitive AI performance across multiple systems', 'C) Lucky result', 'D) Human assistance required'],
+        correct: 1,
+        explanation: "Gemini's 10/12 score demonstrates that competitive AI performance is not limited to one system, showing broad advancement across multiple AI platforms."
     },
     {
-        question: "Chapter 14 Q20: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How do Agent Skills extend Frontier Models?",
+        options: ['A) Replace them entirely', 'B) Add specific, actionable capabilities on top of foundation models', 'C) Reduce their capabilities', 'D) Compete with them'],
+        correct: 1,
+        explanation: "Agent Skills extend Frontier Models by adding specific, actionable capabilities and tools on top of the foundation model capabilities."
     },
     {
-        question: "Chapter 14 Q21: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the progression in the Agent Maturity Model suggest about deployment strategy?",
+        options: ['A) Deploy everything at once', 'B) Start general, then specialize based on needs', 'C) Only use custom agents', 'D) Avoid general agents'],
+        correct: 1,
+        explanation: "The maturity model suggests starting with general agents to understand needs and capabilities, then progressively specializing to custom agents based on specific requirements."
     },
     {
-        question: "Chapter 14 Q22: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the primary benefit of MCP in the AAIF standards?",
+        options: ['A) Faster processing', 'B) Standardized communication between models and systems', 'C) Lower costs', 'D) Better graphics'],
+        correct: 1,
+        explanation: "MCP (Model Communication Protocol) provides standardized communication between AI models and external systems, enabling reliable interoperability."
     },
     {
-        question: "Chapter 14 Q23: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the 2 hours/day median usage indicate about AI integration?",
+        options: ['A) Minimal impact', 'B) Substantial integration into daily workflows', 'C) Occasional use only', 'D) Replacement of all work'],
+        correct: 1,
+        explanation: "2 hours per day median usage indicates substantial integration of AI tools into daily workflows, representing a significant portion of development time."
     },
     {
-        question: "Chapter 14 Q24: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the significance of Y Combinator's 25% AI-primary companies?",
+        options: ['A) Small niche market', 'B) AI-first approaches are viable for startups', 'C) Temporary trend', 'D) Failed experiments'],
+        correct: 1,
+        explanation: "25% AI-primary companies in Y Combinator demonstrates that AI-first approaches are not only viable but increasingly common for successful startups."
     },
     {
-        question: "Chapter 14 Q25: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How does the OODA Loop apply to AI agent operations?",
+        options: ['A) One-time process', 'B) Continuous cycle of observation, orientation, decision, and action', 'C) Linear workflow only', 'D) Human-only framework'],
+        correct: 1,
+        explanation: "The OODA Loop provides a continuous cycle framework for AI agent operations, enabling iterative improvement through repeated observation, orientation, decision, and action phases."
     },
     {
-        question: "Chapter 14 Q26: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the 'Act' power enable in practical terms?",
+        options: ['A) Thinking only', 'B) Executing changes and interacting with systems', 'C) Observing behavior', 'D) Storing information'],
+        correct: 1,
+        explanation: "The 'Act' power enables AI agents to execute concrete changes, interact with systems, and accomplish tasks beyond analysis and planning."
     },
     {
-        question: "Chapter 14 Q27: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the relationship between AGENTS.md and agent deployment?",
+        options: ['A) No relationship', 'B) Provides standardized documentation for agent capabilities and usage', 'C) Replaces deployment', 'D) Only for testing'],
+        correct: 1,
+        explanation: "AGENTS.md provides standardized documentation that describes agent capabilities, interfaces, and usage patterns, facilitating proper deployment and integration."
     },
     {
-        question: "Chapter 14 Q28: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the $3 trillion developer economy represent?",
+        options: ['A) Total software revenue', 'B) Global value of developer labor and productivity', 'C) AI company valuations', 'D) Hardware costs'],
+        correct: 1,
+        explanation: "The $3 trillion represents the global economic value of developer labor and productivity, calculated from workforce size and compensation levels."
     },
     {
-        question: "Chapter 14 Q29: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "Why is the 'See' power important for modern AI agents?",
+        options: ['A) Text processing only', 'B) Enables processing of visual interfaces and diagrams', 'C) Reduces costs', 'D) Speeds up text analysis'],
+        correct: 1,
+        explanation: "The 'See' power is crucial because modern development involves visual interfaces, diagrams, and UI elements that require visual processing capabilities."
     },
     {
-        question: "Chapter 14 Q30: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the Five Generations framework help organizations understand?",
+        options: ['A) Pricing models', 'B) Evolution and maturity of AI tool capabilities', 'C) Team sizes', 'D) Hardware requirements'],
+        correct: 1,
+        explanation: "The Five Generations framework helps organizations understand where current AI tools fit in the evolutionary progression and what capabilities to expect next."
     },
     {
-        question: "Chapter 14 Q31: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the strategic importance of the AAIF standards for the industry?",
+        options: ['A) Limiting competition', 'B) Enabling ecosystem interoperability and growth', 'C) Increasing complexity', 'D) Reducing innovation'],
+        correct: 1,
+        explanation: "AAIF standards enable ecosystem-wide interoperability and growth by providing common frameworks that allow different tools and agents to work together."
     },
     {
-        question: "Chapter 14 Q32: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How does Spec-Driven Development change the role of developers?",
+        options: ['A) Eliminates developers', 'B) Shifts focus from coding to specification and architecture', 'C) Reduces skill requirements', 'D) Increases manual coding'],
+        correct: 1,
+        explanation: "SDD shifts developer focus from direct coding to higher-level specification and architecture, with AI agents handling implementation details."
     },
     {
-        question: "Chapter 14 Q33: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the rapid GDPval improvement suggest about AI development trajectory?",
+        options: ['A) Slowing progress', 'B) Accelerating capabilities with continued rapid advancement likely', 'C) Plateau reached', 'D) Declining performance'],
+        correct: 1,
+        explanation: "The rapid improvement from <15% to 49% in 18 months suggests accelerating capabilities with continued rapid advancement likely in the near future."
     },
     {
-        question: "Chapter 14 Q34: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the primary purpose of Custom Agents in the maturity model?",
+        options: ['A) General tasks', 'B) Specialized, focused capabilities for specific domains', 'C) Replacement of general agents', 'D) Cost reduction only'],
+        correct: 1,
+        explanation: "Custom Agents provide specialized, focused capabilities tailored to specific domains or use cases, representing the specialist stage of agent maturity."
     },
     {
-        question: "Chapter 14 Q35: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How do the Nine Pillars of AIDD support organizational transformation?",
+        options: ['A) Single focus area', 'B) Comprehensive coverage of all transformation aspects', 'C) Technology only', 'D) Process only'],
+        correct: 1,
+        explanation: "The Nine Pillars provide comprehensive coverage of all aspects needed for organizational transformation, including technology, process, culture, and skills."
     },
     {
-        question: "Chapter 14 Q36: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the 'Hear' power enable beyond basic audio processing?",
+        options: ['A) Visual processing', 'B) Understanding speech, tone, and audio context', 'C) Text generation', 'D) Code execution'],
+        correct: 1,
+        explanation: "The 'Hear' power enables understanding of speech, tone, and audio context, going beyond basic audio processing to comprehend meaning and intent."
     },
     {
-        question: "Chapter 14 Q37: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the significance of St. Petersburg's 11/12 score at ICPC 2025?",
+        options: ['A) Poor human performance', 'B) Demonstrates AI competitiveness with top human teams', 'C) AI interference', 'D) Easy problems'],
+        correct: 1,
+        explanation: "St. Petersburg's 11/12 score, comparable to AI systems, demonstrates that AI has reached competitiveness with world-class human competitive programming teams."
     },
     {
-        question: "Chapter 14 Q38: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How does the Modern AI Stack facilitate agent development compared to traditional approaches?",
+        options: ['A) More complex', 'B) Provides integrated layers from foundation to application', 'C) Slower development', 'D) Higher costs only'],
+        correct: 1,
+        explanation: "The Modern AI Stack facilitates development by providing integrated layers from foundation models through development environments to application skills."
     },
     {
-        question: "Chapter 14 Q39: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the OODA Loop's 'Decide' phase require?",
+        options: ['A) Random selection', 'B) Analysis of oriented information to choose actions', 'C) Immediate action', 'D) External approval'],
+        correct: 1,
+        explanation: "The 'Decide' phase requires analyzing the oriented information to choose appropriate actions, bridging understanding and execution."
     },
     {
-        question: "Chapter 14 Q40: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the implication of 84% AI tool usage among developers?",
+        options: ['A) Niche adoption', 'B) AI tools have become mainstream in development', 'C) Forced usage', 'D) Temporary experiment'],
+        correct: 1,
+        explanation: "84% usage indicates AI tools have moved from early adoption to mainstream acceptance as standard development tools."
     },
     {
-        question: "Chapter 14 Q41: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How do MCP Apps extend the AAIF ecosystem?",
+        options: ['A) Replace existing apps', 'B) Enable standardized integration of external applications', 'C) Reduce functionality', 'D) Increase complexity only'],
+        correct: 1,
+        explanation: "MCP Apps enable standardized integration of external applications into the AI agent ecosystem using the Model Communication Protocol."
     },
     {
-        question: "Chapter 14 Q42: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does Digital FTE economics mean for AI agent pricing models?",
+        options: ['A) Free services only', 'B) Value-based pricing comparable to human employees', 'C) Hardware costs only', 'D) Subscription only'],
+        correct: 1,
+        explanation: "Digital FTE economics enables value-based pricing models where AI agent services are priced comparably to human employee value and productivity."
     },
     {
-        question: "Chapter 14 Q43: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the strategic value of the 'Remember' power for enterprise applications?",
+        options: ['A) Storage only', 'B) Enables consistent, context-aware interactions over time', 'C) Reduces processing', 'D) Speeds up responses'],
+        correct: 1,
+        explanation: "The 'Remember' power enables consistent, context-aware interactions over time, which is crucial for enterprise applications requiring continuity and relationship building."
     },
     {
-        question: "Chapter 14 Q44: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How does the Agent Maturity Model guide investment decisions?",
+        options: ['A) Random allocation', 'B) Progressive investment from general to specialized capabilities', 'C) All-or-nothing approach', 'D) Cost minimization only'],
+        correct: 1,
+        explanation: "The maturity model guides progressive investment, starting with general capabilities to learn and understand needs before investing in specialized custom agents."
     },
     {
-        question: "Chapter 14 Q45: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the convergence of multiple AI systems (OpenAI, Gemini, Claude) at high performance levels indicate?",
+        options: ['A) Copying each other', 'B) Fundamental advances in AI capabilities across the field', 'C) Easier problems', 'D) Measurement errors'],
+        correct: 1,
+        explanation: "Multiple systems achieving high performance indicates fundamental advances in AI capabilities across the field, not isolated achievements by single systems."
     },
     {
-        question: "Chapter 14 Q46: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the role of Frontier Models in enabling the Five Powers?",
+        options: ['A) Unrelated to powers', 'B) Provide foundation capabilities that enable all five powers', 'C) Replace the powers', 'D) Limit the powers'],
+        correct: 1,
+        explanation: "Frontier Models provide the foundation capabilities (language understanding, reasoning, etc.) that enable all Five Powers to function effectively."
     },
     {
-        question: "Chapter 14 Q47: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "How does Spec-Driven Development impact code quality?",
+        options: ['A) Always reduces quality', 'B) Can improve quality through clear specifications and AI consistency', 'C) No impact', 'D) Only affects speed'],
+        correct: 1,
+        explanation: "SDD can improve code quality by ensuring clear specifications guide development and AI agents apply patterns consistently across the codebase."
     },
     {
-        question: "Chapter 14 Q48: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What does the 3-5 year opportunity window mean for competitive strategy?",
+        options: ['A) Wait and see approach', 'B) Urgent need for strategic AI adoption to gain advantage', 'C) No rush needed', 'D) Technology will disappear'],
+        correct: 1,
+        explanation: "The 3-5 year window creates urgent need for strategic AI adoption, as early movers can establish significant advantages before practices become commoditized."
     },
     {
-        question: "Chapter 14 Q49: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
+        question: "What is the significance of the Nine Pillars being comprehensive?",
+        options: ['A) More complexity', 'B) Addresses all critical aspects needed for successful implementation', 'C) Harder to implement', 'D) More expensive'],
+        correct: 1,
+        explanation: "The comprehensive nature of the Nine Pillars ensures all critical aspects are addressed, reducing risk of gaps that could undermine AI-driven development success."
     },
     {
-        question: "Chapter 14 Q50: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q51: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q52: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q53: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q54: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q55: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q56: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q57: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q58: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q59: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q60: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q61: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q62: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q63: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q64: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q65: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q66: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q67: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q68: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q69: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q70: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q71: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q72: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q73: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q74: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q75: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q76: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q77: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q78: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q79: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q80: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q81: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q82: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q83: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q84: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q85: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q86: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q87: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q88: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q89: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q90: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q91: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q92: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q93: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q94: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q95: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q96: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q97: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q98: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q99: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q100: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q101: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q102: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q103: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q104: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q105: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q106: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q107: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q108: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q109: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q110: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q111: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q112: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q113: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q114: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q115: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q116: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q117: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q118: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q119: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q120: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q121: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q122: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q123: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q124: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q125: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q126: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q127: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q128: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q129: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q130: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q131: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q132: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q133: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q134: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q135: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q136: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q137: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q138: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q139: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q140: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q141: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q142: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q143: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q144: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q145: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q146: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q147: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q148: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q149: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
-    {
-        question: "Chapter 14 Q150: Claude Code feature?",
-        options: ["A) Option 1", "B) Option 2", "C) Correct answer ", "D) Option 4"],
-        correct: 2,
-        explanation: "Code karo pyaar se! 💕"
-    },
+        question: "How does the Modern AI Stack support the evolution from General to Custom Agents?",
+        options: ['A) Prevents evolution', 'B) Provides infrastructure for both general and specialized capabilities', 'C) Only supports general agents', 'D) Requires complete replacement'],
+        correct: 1,
+        explanation: "The Modern AI Stack provides flexible infrastructure that supports both general agent capabilities and the development of specialized custom agents as needs evolve."
+    }
 ];
+
+module.exports = chapter12Questions51to100;
+const chapter12Questions101to150 = [
+    {
+        question: "What is the primary challenge addressed by the AAIF standards?",
+        options: ['A) High costs', 'B) Fragmentation and lack of interoperability in AI agent ecosystem', 'C) Slow processing', 'D) Limited models'],
+        correct: 1,
+        explanation: "AAIF standards primarily address fragmentation and lack of interoperability, enabling different AI agents and tools to work together effectively."
+    },
+    {
+        question: "How does the OODA Loop support continuous improvement in AI agents?",
+        options: ['A) One-time optimization', 'B) Iterative cycle enables learning and adaptation', 'C) Static performance', 'D) Manual updates only'],
+        correct: 1,
+        explanation: "The OODA Loop's iterative cycle of Observe, Orient, Decide, Act enables continuous learning and adaptation, supporting ongoing improvement."
+    },
+    {
+        question: "What does the combination of all Five Powers enable?",
+        options: ['A) Basic automation', 'B) Comprehensive autonomous agent capabilities', 'C) Simple scripting', 'D) Data storage only'],
+        correct: 1,
+        explanation: "The combination of See, Hear, Reason, Act, and Remember enables comprehensive autonomous agent capabilities beyond simple automation."
+    },
+    {
+        question: "What is the business implication of the $3 trillion developer economy for AI agents?",
+        options: ['A) Small market', 'B) Massive addressable market for AI agent solutions', 'C) Saturated market', 'D) Declining opportunity'],
+        correct: 1,
+        explanation: "The $3 trillion developer economy represents a massive addressable market for AI agent solutions that can augment or enhance developer productivity."
+    },
+    {
+        question: "How does the Agent Maturity Model reduce implementation risk?",
+        options: ['A) Eliminates all risk', 'B) Provides staged approach allowing learning before specialization', 'C) Increases risk', 'D) Ignores risk'],
+        correct: 1,
+        explanation: "The maturity model reduces risk by providing a staged approach, allowing organizations to learn with general agents before investing in specialized custom agents."
+    },
+    {
+        question: "What does the rapid adoption (90% in DORA 2025) suggest about AI tool maturity?",
+        options: ['A) Immature technology', 'B) Tools have reached production-ready maturity', 'C) Experimental phase', 'D) Declining quality'],
+        correct: 1,
+        explanation: "90% adoption suggests AI tools have reached production-ready maturity, moving beyond experimental or early-adopter phases."
+    },
+    {
+        question: "What is the relationship between Spec-Driven Development and the 'Reason' power?",
+        options: ['A) Unrelated', 'B) Reason power interprets specifications to generate solutions', 'C) Contradictory', 'D) Reason replaces specs'],
+        correct: 1,
+        explanation: "The Reason power is essential for SDD, as it enables AI agents to interpret specifications and reason about how to implement them effectively."
+    },
+    {
+        question: "What does the Five Generations framework predict about future AI tools?",
+        options: ['A) No further evolution', 'B) Continued evolution toward more sophisticated capabilities', 'C) Regression to simpler tools', 'D) Stagnation'],
+        correct: 1,
+        explanation: "The Five Generations framework suggests continued evolution toward increasingly sophisticated AI tool capabilities beyond current levels."
+    },
+    {
+        question: "How do AI-First IDEs differ from traditional IDEs with AI plugins?",
+        options: ['A) Just marketing', 'B) Designed from ground up for AI-human collaboration', 'C) Same functionality', 'D) Only cosmetic differences'],
+        correct: 1,
+        explanation: "AI-First IDEs are fundamentally designed from the ground up for AI-human collaboration, not traditional IDEs with AI features added on."
+    },
+    {
+        question: "What is the significance of Claude Opus 4.1 outperforming GPT-5 on GDPval?",
+        options: ['A) Temporary anomaly', 'B) Demonstrates competitive landscape with multiple strong performers', 'C) Measurement error', 'D) Irrelevant comparison'],
+        correct: 1,
+        explanation: "Claude outperforming GPT-5 demonstrates a competitive landscape with multiple strong performers, driving innovation through competition."
+    },
+    {
+        question: "What does Digital FTE economics enable for capacity planning?",
+        options: ['A) Eliminates planning', 'B) Quantifies AI agent capacity in familiar FTE terms', 'C) Complicates planning', 'D) Reduces accuracy'],
+        correct: 1,
+        explanation: "Digital FTE economics enables capacity planning by quantifying AI agent contributions in familiar full-time equivalent terms that business leaders understand."
+    },
+    {
+        question: "How does the 'Act' power complement the 'Reason' power?",
+        options: ['A) They conflict', 'B) Reason determines what to do, Act executes it', 'C) They are redundant', 'D) Act replaces Reason'],
+        correct: 1,
+        explanation: "The powers are complementary: Reason determines what should be done through analysis, while Act executes those decisions in the real world."
+    },
+    {
+        question: "What does the progression from <15% to 49% on GDPval indicate about AI reliability?",
+        options: ['A) Still unreliable', 'B) Rapidly improving reliability for complex tasks', 'C) Declining reliability', 'D) No change in reliability'],
+        correct: 1,
+        explanation: "The dramatic improvement indicates rapidly increasing reliability for complex development tasks, making AI agents more dependable for production use."
+    },
+    {
+        question: "What is the strategic importance of the 'Remember' power for long-term projects?",
+        options: ['A) Not important', 'B) Enables continuity and context across extended timelines', 'C) Only for short tasks', 'D) Reduces efficiency'],
+        correct: 1,
+        explanation: "The Remember power is crucial for long-term projects, enabling continuity and maintaining context across extended timelines and multiple interactions."
+    },
+    {
+        question: "How does the Modern AI Stack address the needs of different stakeholders?",
+        options: ['A) Single stakeholder focus', 'B) Layered architecture serves developers, agents, and end users', 'C) Developers only', 'D) Management only'],
+        correct: 1,
+        explanation: "The layered architecture serves multiple stakeholders: Frontier Models for AI researchers, AI-First IDEs for developers, and Agent Skills for end users."
+    },
+    {
+        question: "What does the ICPC 2025 AI-only solution to Problem C demonstrate about problem-solving approaches?",
+        options: ['A) AI uses same methods as humans', 'B) AI can find novel solution approaches humans miss', 'C) Problem was flawed', 'D) Random success'],
+        correct: 1,
+        explanation: "The AI-only solution demonstrates that AI can find novel solution approaches that human teams might miss, showing different problem-solving strategies."
+    },
+    {
+        question: "What is the implication of 25% of Y Combinator companies being AI-primary?",
+        options: ['A) Niche market', 'B) AI-first is becoming mainstream startup strategy', 'C) Temporary trend', 'D) Forced adoption'],
+        correct: 1,
+        explanation: "25% AI-primary companies indicates AI-first approaches are becoming mainstream startup strategy, not a niche or experimental approach."
+    },
+    {
+        question: "How does Spec-Driven Development impact time-to-market?",
+        options: ['A) Always slower', 'B) Can accelerate by enabling rapid AI-driven implementation', 'C) No impact', 'D) Only affects quality'],
+        correct: 1,
+        explanation: "SDD can accelerate time-to-market by enabling rapid AI-driven implementation once specifications are clear, reducing manual coding time."
+    },
+    {
+        question: "What does the Nine Pillars framework suggest about partial implementation?",
+        options: ['A) Partial is sufficient', 'B) Comprehensive approach needed for full benefits', 'C) Any pillar works alone', 'D) Order doesn't matter'],
+        correct: 1,
+        explanation: "The Nine Pillars framework suggests a comprehensive approach is needed, as partial implementation may miss critical interdependencies between pillars."
+    },
+    {
+        question: "What is the role of 'goose' in the AAIF standards ecosystem?",
+        options: ['A) Standalone tool', 'B) Contributes to standardized agent development framework', 'C) Replaces other standards', 'D) Optional component'],
+        correct: 1,
+        explanation: "Goose contributes to the standardized agent development framework as part of the integrated AAIF standards ecosystem."
+    },
+    {
+        question: "How does the OODA Loop's 'Observe' phase differ from simple monitoring?",
+        options: ['A) They are identical', 'B) Observe includes active information gathering and context awareness', 'C) Observe is passive only', 'D) Monitoring is better'],
+        correct: 1,
+        explanation: "The Observe phase includes active information gathering and context awareness, going beyond passive monitoring to understand the environment."
+    },
+    {
+        question: "What does the 2 hours/day median usage suggest about AI tool integration depth?",
+        options: ['A) Superficial use', 'B) Deep integration into core development workflows', 'C) Occasional use', 'D) Forced usage'],
+        correct: 1,
+        explanation: "2 hours per day indicates deep integration into core development workflows, representing substantial portions of daily development activities."
+    },
+    {
+        question: "How do Custom Agents in the maturity model address specific business needs?",
+        options: ['A) Generic solutions only', 'B) Tailored capabilities for specific domains and workflows', 'C) One-size-fits-all', 'D) Reduced functionality'],
+        correct: 1,
+        explanation: "Custom Agents provide tailored capabilities specifically designed for particular domains, workflows, and business requirements."
+    },
+    {
+        question: "What is the significance of multiple AI systems achieving high ICPC scores?",
+        options: ['A) Problems too easy', 'B) Broad advancement across AI field, not isolated success', 'C) Measurement issues', 'D) Collaboration between systems'],
+        correct: 1,
+        explanation: "Multiple systems achieving high scores indicates broad advancement across the AI field, demonstrating fundamental progress rather than isolated success."
+    },
+    {
+        question: "How does the 'See' power enable modern development workflows?",
+        options: ['A) Text only', 'B) Processes UI, diagrams, and visual development artifacts', 'C) Reduces capabilities', 'D) Slows development'],
+        correct: 1,
+        explanation: "The See power enables processing of UI elements, diagrams, and visual development artifacts that are integral to modern development workflows."
+    },
+    {
+        question: "What does the $1.1B Sana acquisition indicate about enterprise AI market maturity?",
+        options: ['A) Immature market', 'B) Mature market with proven value and strategic importance', 'C) Bubble pricing', 'D) Declining market'],
+        correct: 1,
+        explanation: "The $1.1B acquisition indicates a mature market where enterprise AI solutions have proven value and strategic importance worth significant investment."
+    },
+    {
+        question: "How does the Agent Maturity Model support ROI justification?",
+        options: ['A) Ignores ROI', 'B) Staged approach allows demonstrating value before major investment', 'C) Requires full investment upfront', 'D) ROI not relevant'],
+        correct: 1,
+        explanation: "The staged approach allows organizations to demonstrate value with general agents before making major investments in custom specialized agents."
+    },
+    {
+        question: "What does the convergence of high adoption rates (84%, 90%) across different surveys indicate?",
+        options: ['A) Survey bias', 'B) Consistent, widespread adoption across developer community', 'C) Forced responses', 'D) Temporary spike'],
+        correct: 1,
+        explanation: "Convergence across different surveys indicates consistent, genuine widespread adoption across the developer community, not survey artifacts."
+    },
+    {
+        question: "How does Spec-Driven Development change quality assurance processes?",
+        options: ['A) Eliminates QA', 'B) Shifts focus to specification validation and AI output verification', 'C) No change needed', 'D) Increases manual testing'],
+        correct: 1,
+        explanation: "SDD shifts QA focus to validating specifications are correct and verifying AI-generated output meets those specifications."
+    },
+    {
+        question: "What is the relationship between Frontier Models and the Five Generations?",
+        options: ['A) Unrelated concepts', 'B) Frontier Models represent current generation in evolutionary framework', 'C) Frontier Models replace generations', 'D) Generations replace models'],
+        correct: 1,
+        explanation: "Frontier Models represent the current generation in the Five Generations evolutionary framework, showing where we are in the progression."
+    },
+    {
+        question: "How does the 'Hear' power extend beyond simple speech recognition?",
+        options: ['A) It doesn't', 'B) Includes understanding context, tone, and intent in audio', 'C) Only transcription', 'D) Visual processing'],
+        correct: 1,
+        explanation: "The Hear power extends beyond transcription to understand context, tone, and intent in audio communication, enabling richer interaction."
+    },
+    {
+        question: "What does the 3-5 year window suggest about technology adoption curves?",
+        options: ['A) Slow adoption', 'B) Rapid transition from early adoption to mainstream', 'C) Linear growth', 'D) Declining adoption'],
+        correct: 1,
+        explanation: "The 3-5 year window suggests a rapid transition period from early adoption to mainstream, following typical technology S-curve patterns."
+    },
+    {
+        question: "How do the Nine Pillars of AIDD address organizational change?",
+        options: ['A) Technology only', 'B) Holistic approach including culture, process, and technology', 'C) Ignore organizational aspects', 'D) Focus on tools only'],
+        correct: 1,
+        explanation: "The Nine Pillars provide a holistic approach addressing culture, process, skills, and technology needed for successful organizational transformation."
+    },
+    {
+        question: "What is the significance of AI-First IDEs in the Modern AI Stack?",
+        options: ['A) Optional component', 'B) Critical bridge between models and developers', 'C) Temporary solution', 'D) Marketing term only'],
+        correct: 1,
+        explanation: "AI-First IDEs serve as the critical bridge layer between Frontier Models and developers, enabling effective human-AI collaboration."
+    },
+    {
+        question: "How does Digital FTE economics impact hiring decisions?",
+        options: ['A) Eliminates hiring', 'B) Enables strategic decisions about human vs AI agent capacity', 'C) Forces layoffs', 'D) No impact on hiring'],
+        correct: 1,
+        explanation: "Digital FTE economics enables strategic decisions about optimal mix of human employees and AI agent capacity based on comparable metrics."
+    },
+    {
+        question: "What does the OODA Loop's iterative nature enable for agent improvement?",
+        options: ['A) One-time setup', 'B) Continuous learning and adaptation through repeated cycles', 'C) Static behavior', 'D) Manual updates only'],
+        correct: 1,
+        explanation: "The iterative nature enables continuous learning and adaptation as agents repeatedly observe, orient, decide, and act, improving over time."
+    },
+    {
+        question: "How does the 'Reason' power enable complex problem-solving?",
+        options: ['A) Simple lookups only', 'B) Multi-step logical analysis and inference', 'C) Random selection', 'D) Pattern matching only'],
+        correct: 1,
+        explanation: "The Reason power enables multi-step logical analysis, inference, and complex problem-solving beyond simple pattern matching or lookups."
+    },
+    {
+        question: "What does the rapid GDPval improvement suggest about training approaches?",
+        options: ['A) No change needed', 'B) Effective new training methodologies are emerging', 'C) Declining effectiveness', 'D) Random improvements'],
+        correct: 1,
+        explanation: "The rapid improvement suggests effective new training methodologies and approaches are emerging that significantly enhance AI capabilities."
+    },
+    {
+        question: "How does the Agent Maturity Model address skill development?",
+        options: ['A) Ignores skills', 'B) Progressive skill building from general to specialized expertise', 'C) All skills at once', 'D) No skill development needed'],
+        correct: 1,
+        explanation: "The maturity model supports progressive skill building, allowing teams to develop general agent skills before advancing to specialized expertise."
+    },
+    {
+        question: "What is the implication of 51% daily AI usage for tool dependency?",
+        options: ['A) Low dependency', 'B) AI tools have become critical infrastructure for developers', 'C) Optional tools', 'D) Temporary usage'],
+        correct: 1,
+        explanation: "51% daily usage indicates AI tools have become critical infrastructure that developers depend on for daily productivity."
+    },
+    {
+        question: "How does Spec-Driven Development impact documentation practices?",
+        options: ['A) Eliminates documentation', 'B) Specifications become primary documentation driving implementation', 'C) No change', 'D) More manual documentation'],
+        correct: 1,
+        explanation: "In SDD, specifications become the primary documentation that drives implementation, serving dual purposes of requirements and documentation."
+    },
+    {
+        question: "What does the Modern AI Stack enable that wasn't possible before?",
+        options: ['A) Basic automation', 'B) Integrated development from foundation models to applications', 'C) Simple scripting', 'D) Manual coding only'],
+        correct: 1,
+        explanation: "The Modern AI Stack enables integrated development from foundation models through to applications, creating seamless AI-driven workflows."
+    },
+    {
+        question: "How do MCP Apps facilitate enterprise integration?",
+        options: ['A) Prevent integration', 'B) Standardized protocol for connecting AI agents to enterprise systems', 'C) Increase complexity', 'D) Reduce functionality'],
+        correct: 1,
+        explanation: "MCP Apps provide a standardized protocol for connecting AI agents to enterprise systems, facilitating reliable integration."
+    },
+    {
+        question: "What does the combination of high adoption (90%) and high daily usage (51%) indicate?",
+        options: ['A) Superficial adoption', 'B) Deep, sustained integration into development practices', 'C) Forced usage', 'D) Temporary trend'],
+        correct: 1,
+        explanation: "The combination indicates deep, sustained integration where AI tools are both widely adopted and heavily used in daily practice."
+    },
+    {
+        question: "How does the 'Act' power enable autonomous operation?",
+        options: ['A) Requires human approval for each action', 'B) Enables independent execution of tasks and decisions', 'C) Observation only', 'D) Planning without execution'],
+        correct: 1,
+        explanation: "The Act power enables independent execution of tasks and decisions, allowing autonomous operation within defined parameters."
+    },
+    {
+        question: "What is the strategic value of the Five Generations framework for planning?",
+        options: ['A) Historical interest only', 'B) Helps anticipate future capabilities and plan accordingly', 'C) Irrelevant to planning', 'D) Limits innovation'],
+        correct: 1,
+        explanation: "The framework helps organizations anticipate future AI tool capabilities and plan their adoption strategies accordingly."
+    },
+    {
+        question: "How does the Agent Maturity Model reduce complexity for new adopters?",
+        options: ['A) Increases complexity', 'B) Provides clear starting point with general agents', 'C) Requires all capabilities immediately', 'D) No guidance provided'],
+        correct: 1,
+        explanation: "The model reduces complexity by providing a clear starting point with general agents, avoiding overwhelming new adopters with specialization choices."
+    },
+    {
+        question: "What does the $3 trillion developer economy suggest about AI agent market potential?",
+        options: ['A) Limited potential', 'B) Enormous market opportunity for productivity enhancement', 'C) Saturated market', 'D) Declining opportunity'],
+        correct: 1,
+        explanation: "The $3 trillion economy represents enormous market opportunity for AI agents that can enhance even a fraction of developer productivity."
+    },
+    {
+        question: "How does the OODA Loop support decision quality in AI agents?",
+        options: ['A) Random decisions', 'B) Structured process ensures informed, context-aware decisions', 'C) Eliminates decisions', 'D) Slows decision-making'],
+        correct: 1,
+        explanation: "The structured OODA process ensures decisions are informed by observation and proper orientation, improving decision quality."
+    },
+    {
+        question: "What does the Nine Pillars framework suggest about implementation sequencing?",
+        options: ['A) Random order acceptable', 'B) Interdependencies require thoughtful sequencing', 'C) All at once only', 'D) Order irrelevant'],
+        correct: 1,
+        explanation: "The framework suggests interdependencies between pillars require thoughtful sequencing to build on foundations and manage dependencies."
+    }
+];
+
+module.exports = chapter12Questions101to150;
+const ch13_q1_50 = [
+  {
+    id: 1,
+    question: "Who created Markdown?",
+    options: ["Linus Torvalds", "John Gruber", "Tim Berners-Lee", "Guido van Rossum"],
+    correct: 1
+  },
+  {
+    id: 2,
+    question: "In what year was Markdown created?",
+    options: ["2000", "2004", "2010", "2014"],
+    correct: 1
+  },
+  {
+    id: 3,
+    question: "What year was CommonMark established?",
+    options: ["2004", "2010", "2014", "2016"],
+    correct: 2
+  },
+  {
+    id: 4,
+    question: "What is the standard file extension for Markdown files?",
+    options: [".txt", ".md", ".markdown", ".mkd"],
+    correct: 1
+  },
+  {
+    id: 5,
+    question: "What is the verbose file extension for Markdown?",
+    options: [".md", ".mkd", ".markdown", ".mdown"],
+    correct: 2
+  },
+  {
+    id: 6,
+    question: "What does GFM stand for?",
+    options: ["General File Markdown", "GitHub Flavored Markdown", "Global Format Markdown", "Git File Markdown"],
+    correct: 1
+  },
+  {
+    id: 7,
+    question: "Which of the following is NOT a GFM feature?",
+    options: ["Tables", "Task lists", "Strikethrough", "Footnotes"],
+    correct: 3
+  },
+  {
+    id: 8,
+    question: "What does AIDD stand for in the Three-Layer AIDD?",
+    options: ["Automated Instruction Design Document", "AI-Driven Development", "Intent, Reasoning, Implementation", "Application Interface Design Document"],
+    correct: 2
+  },
+  {
+    id: 9,
+    question: "How many heading levels does Markdown support?",
+    options: ["4", "5", "6", "7"],
+    correct: 2
+  },
+  {
+    id: 10,
+    question: "What is the syntax for a level 1 heading?",
+    options: ["# Heading", "## Heading", "### Heading", "H1 Heading"],
+    correct: 0
+  },
+  {
+    id: 11,
+    question: "What is required after the # symbol in a heading?",
+    options: ["Colon", "Space", "Dash", "Nothing"],
+    correct: 1
+  },
+  {
+    id: 12,
+    question: "How many H1 headings should a document have?",
+    options: ["Zero", "One", "Two", "Unlimited"],
+    correct: 1
+  },
+  {
+    id: 13,
+    question: "Can you skip heading levels in Markdown hierarchy?",
+    options: ["Yes, always", "No, never", "Only in GFM", "Only with H1"],
+    correct: 1
+  },
+  {
+    id: 14,
+    question: "Which symbol is NOT used for unordered lists?",
+    options: ["-", "*", "+", ">"],
+    correct: 3
+  },
+  {
+    id: 15,
+    question: "What is required after the list marker in unordered lists?",
+    options: ["Tab", "Space", "Colon", "Dash"],
+    correct: 1
+  },
+  {
+    id: 16,
+    question: "What is the syntax for ordered lists?",
+    options: ["1) Item", "1. Item", "1- Item", "(1) Item"],
+    correct: 1
+  },
+  {
+    id: 17,
+    question: "Should ordered list numbers be sequential?",
+    options: ["No, any order works", "Yes, they should be sequential", "Only in GFM", "Only for nested lists"],
+    correct: 1
+  },
+  {
+    id: 18,
+    question: "What is used to create fenced code blocks?",
+    options: ["Single backticks", "Double backticks", "Triple backticks", "Four backticks"],
+    correct: 2
+  },
+  {
+    id: 19,
+    question: "What is used for inline code?",
+    options: ["Single backticks", "Double backticks", "Triple backticks", "Quotes"],
+    correct: 0
+  },
+  {
+    id: 20,
+    question: "Which is a valid language tag for code blocks?",
+    options: ["python", "py", "Python", "PYTHON"],
+    correct: 0
+  },
+  {
+    id: 21,
+    question: "What language tag is used for plain text code blocks?",
+    options: ["plain", "txt", "text", "none"],
+    correct: 2
+  },
+  {
+    id: 22,
+    question: "Which is NOT mentioned as a language tag?",
+    options: ["python", "bash", "ruby", "typescript"],
+    correct: 2
+  },
+  {
+    id: 23,
+    question: "What is the correct link syntax?",
+    options: ["(text)[url]", "[text](url)", "{text}(url)", "[url](text)"],
+    correct: 1
+  },
+  {
+    id: 24,
+    question: "What is the correct image syntax?",
+    options: ["[alt text](url)", "!(alt text)[url]", "![alt text](url)", "image[alt](url)"],
+    correct: 2
+  },
+  {
+    id: 25,
+    question: "What is the difference between link and image syntax?",
+    options: ["Images use !", "Images use !!", "Links use @", "No difference"],
+    correct: 0
+  },
+  {
+    id: 26,
+    question: "How do you make text bold?",
+    options: ["*text*", "**text**", "***text***", "__text__"],
+    correct: 1
+  },
+  {
+    id: 27,
+    question: "How do you make text italic?",
+    options: ["*text*", "**text**", "_text_", "Both A and C"],
+    correct: 3
+  },
+  {
+    id: 28,
+    question: "How do you make text both bold and italic?",
+    options: ["**text**", "*text*", "***text***", "****text****"],
+    correct: 2
+  },
+  {
+    id: 29,
+    question: "What character is used to separate table columns?",
+    options: ["-", "|", "/", "\\"],
+    correct: 1
+  },
+  {
+    id: 30,
+    question: "What is the syntax for a checked task list item?",
+    options: ["- [x] Task", "- [✓] Task", "- [*] Task", "- [+] Task"],
+    correct: 0
+  },
+  {
+    id: 31,
+    question: "What is the syntax for an unchecked task list item?",
+    options: ["- [ ] Task", "- [o] Task", "- [-] Task", "- [_] Task"],
+    correct: 0
+  },
+  {
+    id: 32,
+    question: "What character is used to escape special characters?",
+    options: ["Forward slash /", "Backslash \\", "Pipe |", "Asterisk *"],
+    correct: 1
+  },
+  {
+    id: 33,
+    question: "How do you create a paragraph break in Markdown?",
+    options: ["Single line break", "Blank line", "Double space", "Tab character"],
+    correct: 1
+  },
+  {
+    id: 34,
+    question: "What is the first layer of the Three-Layer AIDD?",
+    options: ["Implementation", "Reasoning", "Intent", "Design"],
+    correct: 2
+  },
+  {
+    id: 35,
+    question: "What is the second layer of the Three-Layer AIDD?",
+    options: ["Intent", "Reasoning", "Implementation", "Testing"],
+    correct: 1
+  },
+  {
+    id: 36,
+    question: "What is the third layer of the Three-Layer AIDD?",
+    options: ["Intent", "Reasoning", "Implementation", "Documentation"],
+    correct: 2
+  },
+  {
+    id: 37,
+    question: "Which language tag would you use for shell scripts?",
+    options: ["shell", "bash", "sh", "script"],
+    correct: 1
+  },
+  {
+    id: 38,
+    question: "Which language tag is used for JSON data?",
+    options: ["js", "json", "javascript", "data"],
+    correct: 1
+  },
+  {
+    id: 39,
+    question: "Which language tag is used for YAML files?",
+    options: ["yml", "yaml", "config", "data"],
+    correct: 1
+  },
+  {
+    id: 40,
+    question: "What symbol creates a level 3 heading?",
+    options: ["#", "##", "###", "####"],
+    correct: 2
+  },
+  {
+    id: 41,
+    question: "What symbol creates a level 6 heading?",
+    options: ["####", "#####", "######", "#######"],
+    correct: 2
+  },
+  {
+    id: 42,
+    question: "Can you use + for unordered lists?",
+    options: ["Yes", "No", "Only in GFM", "Only with nested lists"],
+    correct: 0
+  },
+  {
+    id: 43,
+    question: "Can you use * for unordered lists?",
+    options: ["Yes", "No", "Only in GFM", "Only at top level"],
+    correct: 0
+  },
+  {
+    id: 44,
+    question: "What feature allows strikethrough text in GFM?",
+    options: ["~~text~~", "--text--", "==text==", "++text++"],
+    correct: 0
+  },
+  {
+    id: 45,
+    question: "Are tables part of standard Markdown or GFM?",
+    options: ["Standard Markdown", "GFM", "Both", "Neither"],
+    correct: 1
+  },
+  {
+    id: 46,
+    question: "Are task lists part of standard Markdown or GFM?",
+    options: ["Standard Markdown", "GFM", "Both", "Neither"],
+    correct: 1
+  },
+  {
+    id: 47,
+    question: "What comes after the opening triple backticks in a code block?",
+    options: ["Nothing", "Language tag", "File name", "Line number"],
+    correct: 1
+  },
+  {
+    id: 48,
+    question: "Is the language tag required for code blocks?",
+    options: ["Yes, always", "No, it's optional", "Only for syntax highlighting", "Only in GFM"],
+    correct: 1
+  },
+  {
+    id: 49,
+    question: "What is the purpose of alt text in images?",
+    options: ["Decoration", "Accessibility", "SEO only", "File naming"],
+    correct: 1
+  },
+  {
+    id: 50,
+    question: "Which Markdown variant is most commonly used on GitHub?",
+    options: ["CommonMark", "GitHub Flavored Markdown", "Standard Markdown", "MultiMarkdown"],
+    correct: 1
+  }
+];
+
+module.exports = ch13_q1_50;
+const ch13_questions_51_100 = [
+  {
+    id: 51,
+    question: "Why does structure matter when writing instructions for AI?",
+    options: [
+      "It makes the document look more professional",
+      "It helps LLMs process information hierarchically and maintain context",
+      "It reduces file size",
+      "It's required by Markdown syntax"
+    ],
+    correct: 1,
+    explanation: "Structure helps LLMs process information hierarchically, maintain context across sections, and understand relationships between different parts of the instruction."
+  },
+  {
+    id: 52,
+    question: "How do LLMs process tokens in structured documents?",
+    options: [
+      "They read everything at once without order",
+      "They process sequentially with attention mechanisms that use structure as cues",
+      "They only read headers and ignore content",
+      "They process randomly based on keywords"
+    ],
+    correct: 1,
+    explanation: "LLMs process tokens sequentially and use attention mechanisms that rely on structural cues (headers, lists, code blocks) to understand context and relationships."
+  },
+  {
+    id: 53,
+    question: "Which section name is most appropriate for describing what needs to be built?",
+    options: [
+      "## Instructions",
+      "## Problem",
+      "## Details",
+      "## Information"
+    ],
+    correct: 1,
+    explanation: "The 'Problem' section is a common, semantic section name that clearly indicates the description of what needs to be solved or built."
+  },
+  {
+    id: 54,
+    question: "What is the purpose of a 'Features' section in AI instructions?",
+    options: [
+      "To list marketing benefits",
+      "To enumerate specific capabilities or requirements the solution must have",
+      "To describe bugs",
+      "To provide version history"
+    ],
+    correct: 1,
+    explanation: "The 'Features' section enumerates specific capabilities, requirements, or functionalities that the solution must implement."
+  },
+  {
+    id: 55,
+    question: "When should you use an ordered list instead of an unordered list?",
+    options: [
+      "When you have more than 5 items",
+      "When the sequence or priority of items matters",
+      "When items are longer than one line",
+      "When writing code examples"
+    ],
+    correct: 1,
+    explanation: "Ordered lists should be used when the sequence, priority, or order of steps matters. Unordered lists are for items where order is not significant."
+  },
+  {
+    id: 56,
+    question: "What is the correct indentation for nested list items in Markdown?",
+    options: [
+      "4 spaces",
+      "1 tab",
+      "2 spaces",
+      "3 spaces"
+    ],
+    correct: 2,
+    explanation: "Nested list items should be indented with 2 spaces to maintain proper Markdown structure and readability."
+  },
+  {
+    id: 57,
+    question: "How should you structure a multi-level nested list?",
+    options: [
+      "Use tabs for each level",
+      "Add 2 spaces for each nesting level",
+      "Use 4 spaces regardless of level",
+      "Avoid nesting beyond one level"
+    ],
+    correct: 1,
+    explanation: "Each nesting level should add 2 spaces of indentation, creating a clear visual hierarchy (0 spaces, 2 spaces, 4 spaces, etc.)."
+  },
+  {
+    id: 58,
+    question: "When should you use a code block instead of a list?",
+    options: [
+      "When you have more than 3 items",
+      "When presenting actual code, commands, or output that should be preserved exactly",
+      "When items contain numbers",
+      "When you want to emphasize text"
+    ],
+    correct: 1,
+    explanation: "Code blocks should be used for actual code, commands, configuration, or output where formatting and exact content must be preserved. Lists are for enumerated items or steps."
+  },
+  {
+    id: 59,
+    question: "What is the 'specification by example' pattern?",
+    options: [
+      "Writing long theoretical explanations",
+      "Providing concrete examples that demonstrate expected behavior or output",
+      "Using only code without explanations",
+      "Listing all possible edge cases"
+    ],
+    correct: 1,
+    explanation: "Specification by example means providing concrete examples that demonstrate the expected behavior, input/output, or implementation rather than abstract descriptions."
+  },
+  {
+    id: 60,
+    question: "In an 'Expected Output' section, what should you include?",
+    options: [
+      "Only error messages",
+      "Concrete examples of what the result should look like",
+      "Source code only",
+      "Performance metrics"
+    ],
+    correct: 1,
+    explanation: "The 'Expected Output' section should contain concrete examples showing exactly what the result, response, or output should look like."
+  },
+  {
+    id: 61,
+    question: "What is semantic anchoring in documentation?",
+    options: [
+      "Using HTML anchor tags",
+      "Using meaningful section names that signal content type to both humans and AI",
+      "Creating hyperlinks between sections",
+      "Adding metadata to headers"
+    ],
+    correct: 1,
+    explanation: "Semantic anchoring means using meaningful, conventional section names (Problem, Solution, Features) that immediately signal the type of content to both humans and AI."
+  },
+  {
+    id: 62,
+    question: "Which section name provides better semantic anchoring?",
+    options: [
+      "## Stuff to Do",
+      "## Requirements",
+      "## Things",
+      "## Notes"
+    ],
+    correct: 1,
+    explanation: "'Requirements' is a clear, semantic section name that immediately signals the content contains necessary specifications or constraints."
+  },
+  {
+    id: 63,
+    question: "What is an edge case in code block documentation?",
+    options: [
+      "Code written at the edge of the screen",
+      "Unusual or boundary conditions that need special handling",
+      "The first and last lines of code",
+      "Code that runs slowly"
+    ],
+    correct: 1,
+    explanation: "Edge cases are unusual, boundary, or extreme conditions that might cause unexpected behavior and need special handling or documentation."
+  },
+  {
+    id: 64,
+    question: "How should edge cases be documented in instructions?",
+    options: [
+      "Ignore them to keep instructions simple",
+      "Provide specific examples showing the edge case and expected handling",
+      "Only mention them in comments",
+      "List them without examples"
+    ],
+    correct: 1,
+    explanation: "Edge cases should be documented with specific examples showing both the edge case scenario and how it should be handled."
+  },
+  {
+    id: 65,
+    question: "What makes a link description effective for AI processing?",
+    options: [
+      "Using 'click here' or 'this link'",
+      "Descriptive text that explains what the link points to",
+      "Using only URLs",
+      "Making it as short as possible"
+    ],
+    correct: 1,
+    explanation: "Descriptive link text that explains the destination or purpose helps both humans and AI understand the context and relevance of the link."
+  },
+  {
+    id: 66,
+    question: "Why should you avoid 'click here' in link text?",
+    options: [
+      "It's too informal",
+      "It provides no context about the link destination and is not accessible",
+      "It's too long",
+      "It doesn't work in Markdown"
+    ],
+    correct: 1,
+    explanation: "'Click here' provides no semantic information about the link destination, making it less useful for AI processing and inaccessible for screen reader users."
+  },
+  {
+    id: 67,
+    question: "What is the correct syntax for an inline Markdown link?",
+    options: [
+      "[text](url)",
+      "(text)[url]",
+      "[url](text)",
+      "<text|url>"
+    ],
+    correct: 0,
+    explanation: "Inline Markdown links use the syntax [link text](URL), with the descriptive text in square brackets and the URL in parentheses."
+  },
+  {
+    id: 68,
+    question: "What are reference-style links in Markdown?",
+    options: [
+      "Links that only work in references sections",
+      "Links where the URL is defined separately and referenced by label",
+      "Links to academic papers",
+      "Broken links that need fixing"
+    ],
+    correct: 1,
+    explanation: "Reference-style links separate the link text from the URL definition, using a label: [text][label] with [label]: URL defined elsewhere."
+  },
+  {
+    id: 69,
+    question: "When are reference-style links most useful?",
+    options: [
+      "For short documents only",
+      "When the same URL is used multiple times or to improve readability",
+      "Only for external links",
+      "When you don't know the URL"
+    ],
+    correct: 1,
+    explanation: "Reference-style links are useful when reusing URLs multiple times or when you want to keep the main text readable by moving URLs to a separate section."
+  },
+  {
+    id: 70,
+    question: "What is the syntax for defining a reference-style link?",
+    options: [
+      "[label]: URL",
+      "(label): URL",
+      "[label] = URL",
+      "label: URL"
+    ],
+    correct: 0,
+    explanation: "Reference-style link definitions use the syntax [label]: URL, typically placed at the end of the document or section."
+  },
+  {
+    id: 71,
+    question: "What is the purpose of alt text for images?",
+    options: [
+      "To make images load faster",
+      "To describe image content for accessibility and when images fail to load",
+      "To add captions below images",
+      "To improve SEO only"
+    ],
+    correct: 1,
+    explanation: "Alt text describes image content for screen readers (accessibility) and displays when images fail to load, helping both humans and AI understand the image."
+  },
+  {
+    id: 72,
+    question: "What makes good alt text for an image?",
+    options: [
+      "Just the filename",
+      "Descriptive text that conveys the image's content and purpose",
+      "A single word",
+      "The image dimensions"
+    ],
+    correct: 1,
+    explanation: "Good alt text is descriptive, conveys the image's content and purpose in context, and helps users understand what the image shows without seeing it."
+  },
+  {
+    id: 73,
+    question: "What is the Markdown syntax for an image with alt text?",
+    options: [
+      "![alt text](image-url)",
+      "[alt text]!(image-url)",
+      "(alt text)[image-url]",
+      "<img alt='alt text' src='image-url'>"
+    ],
+    correct: 0,
+    explanation: "Markdown image syntax is ![alt text](image-url), similar to links but with an exclamation mark prefix."
+  },
+  {
+    id: 74,
+    question: "How should you write alt text for a decorative image?",
+    options: [
+      "Describe it in detail",
+      "Use empty alt text: ![]() or describe it as decorative",
+      "Use 'image' as the alt text",
+      "Omit the alt text attribute"
+    ],
+    correct: 1,
+    explanation: "Decorative images that don't convey information should have empty alt text or be marked as decorative so screen readers skip them."
+  },
+  {
+    id: 75,
+    question: "Why use **must** instead of *should* in requirements?",
+    options: [
+      "It looks better visually",
+      "Bold emphasis signals absolute requirements vs recommendations to AI",
+      "It's required by Markdown standards",
+      "It makes text easier to read"
+    ],
+    correct: 1,
+    explanation: "Using **must** (bold) signals absolute, non-negotiable requirements, while *should* (italic) indicates recommendations, helping AI prioritize correctly."
+  },
+  {
+    id: 76,
+    question: "How does text emphasis help AI prioritize instructions?",
+    options: [
+      "It doesn't affect AI processing",
+      "Bold and italic provide visual cues that signal importance and requirement levels",
+      "It only helps human readers",
+      "It makes processing slower"
+    ],
+    correct: 1,
+    explanation: "Text emphasis (bold for must-have, italic for recommended) provides clear signals about priority and requirement levels that AI can use to make decisions."
+  },
+  {
+    id: 77,
+    question: "What emphasis should you use for optional features?",
+    options: [
+      "**optional**",
+      "*optional* or no emphasis",
+      "***optional***",
+      "~~optional~~"
+    ],
+    correct: 1,
+    explanation: "Optional features can use italic emphasis or no emphasis, reserving bold for critical requirements."
+  },
+  {
+    id: 78,
+    question: "What is a common mistake when creating nested lists?",
+    options: [
+      "Using too many items",
+      "Inconsistent indentation or mixing spaces and tabs",
+      "Using numbers instead of bullets",
+      "Adding too much text"
+    ],
+    correct: 1,
+    explanation: "Inconsistent indentation or mixing spaces and tabs breaks Markdown list structure and makes the hierarchy unclear."
+  },
+  {
+    id: 79,
+    question: "What is wrong with this list structure?\n\n- Item 1\n  - Subitem\n- Item 2\n    - Subitem",
+    options: [
+      "Nothing, it's correct",
+      "Inconsistent indentation (2 spaces vs 4 spaces)",
+      "Missing blank lines",
+      "Wrong bullet characters"
+    ],
+    correct: 1,
+    explanation: "The first subitem uses 2 spaces (correct) but the second uses 4 spaces, creating inconsistent indentation that may break rendering."
+  },
+  {
+    id: 80,
+    question: "What is a common mistake with code blocks?",
+    options: [
+      "Making them too long",
+      "Forgetting to specify the language or using incorrect fencing",
+      "Using too many comments",
+      "Including line numbers"
+    ],
+    correct: 1,
+    explanation: "Common code block mistakes include forgetting language specifiers (```javascript), using incorrect fencing (not closing blocks), or mixing code blocks with lists."
+  },
+  {
+    id: 81,
+    question: "What is wrong with this code block?\n\n```\nfunction test() {\n  return true;\n}\n``",
+    options: [
+      "Missing language specifier",
+      "Incorrect closing fence (two backticks instead of three)",
+      "Function is too simple",
+      "Missing semicolon"
+    ],
+    correct: 1,
+    explanation: "The closing fence uses two backticks instead of three, which will break the code block formatting."
+  },
+  {
+    id: 82,
+    question: "What is a common mistake with links?",
+    options: [
+      "Using too many links",
+      "Non-descriptive link text like 'click here' or broken syntax",
+      "Making links too long",
+      "Using HTTPS instead of HTTP"
+    ],
+    correct: 1,
+    explanation: "Common link mistakes include non-descriptive text ('click here'), broken syntax (reversed brackets/parentheses), or missing URLs."
+  },
+  {
+    id: 83,
+    question: "What is wrong with this link?\n\n(Click here)[https://example.com]",
+    options: [
+      "URL is wrong",
+      "Reversed syntax - should be [text](url)",
+      "Missing protocol",
+      "Text is too short"
+    ],
+    correct: 1,
+    explanation: "The syntax is reversed. Correct Markdown link syntax is [link text](URL), not (text)[URL]."
+  },
+  {
+    id: 84,
+    question: "What is a common mistake with image alt text?",
+    options: [
+      "Making it too descriptive",
+      "Using generic text like 'image' or omitting it entirely",
+      "Using complete sentences",
+      "Including the file format"
+    ],
+    correct: 1,
+    explanation: "Common alt text mistakes include generic text ('image', 'picture'), omitting it entirely, or just using the filename without description."
+  },
+  {
+    id: 85,
+    question: "What professional standard applies to section headers?",
+    options: [
+      "Always use title case",
+      "Use consistent capitalization and hierarchy (H1 for title, H2 for sections, etc.)",
+      "Never use more than H2",
+      "Always use sentence case"
+    ],
+    correct: 1,
+    explanation: "Professional documentation uses consistent header hierarchy (H1 for document title, H2 for main sections, H3 for subsections) and consistent capitalization style."
+  },
+  {
+    id: 86,
+    question: "What is the professional standard for list formatting?",
+    options: [
+      "Always use bullets, never numbers",
+      "Consistent punctuation, parallel structure, and appropriate list type",
+      "Never use more than 5 items",
+      "Always end items with periods"
+    ],
+    correct: 1,
+    explanation: "Professional lists use consistent punctuation, parallel grammatical structure, appropriate list type (ordered/unordered), and proper indentation."
+  },
+  {
+    id: 87,
+    question: "Why is parallel structure important in lists?",
+    options: [
+      "It makes lists longer",
+      "It improves readability and helps AI understand relationships between items",
+      "It's required by Markdown",
+      "It reduces file size"
+    ],
+    correct: 1,
+    explanation: "Parallel structure (starting each item with the same grammatical form) improves readability and helps AI understand that items are equivalent or related."
+  },
+  {
+    id: 88,
+    question: "What is an accessibility consideration for links?",
+    options: [
+      "Links should be blue",
+      "Link text should be descriptive and make sense out of context",
+      "Links should always open in new tabs",
+      "Links should be underlined"
+    ],
+    correct: 1,
+    explanation: "For accessibility, link text should be descriptive and make sense when read out of context by screen readers, avoiding 'click here' or 'read more'."
+  },
+  {
+    id: 89,
+    question: "What accessibility consideration applies to images?",
+    options: [
+      "Images should be small",
+      "All images must have meaningful alt text or be marked as decorative",
+      "Images should be in PNG format",
+      "Images should have borders"
+    ],
+    correct: 1,
+    explanation: "For accessibility, all images must have meaningful alt text describing their content/purpose, or be marked as decorative if they don't convey information."
+  },
+  {
+    id: 90,
+    question: "Why is proper heading hierarchy important for accessibility?",
+    options: [
+      "It makes documents look better",
+      "Screen readers use heading structure for navigation",
+      "It's required by Markdown",
+      "It improves search rankings"
+    ],
+    correct: 1,
+    explanation: "Screen reader users navigate documents using heading structure, so proper hierarchy (no skipped levels) is essential for accessibility."
+  },
+  {
+    id: 91,
+    question: "What is wrong with this heading structure?\n\n# Title\n### Subsection",
+    options: [
+      "Nothing, it's correct",
+      "Skipped H2 level - should go H1 → H2 → H3",
+      "H3 should come before H1",
+      "Should use more levels"
+    ],
+    correct: 1,
+    explanation: "Skipping heading levels (H1 to H3 without H2) breaks the document hierarchy and makes navigation difficult for screen reader users."
+  },
+  {
+    id: 92,
+    question: "How should you structure a document with multiple main sections?",
+    options: [
+      "Use H1 for each section",
+      "Use H1 for title, H2 for main sections, H3+ for subsections",
+      "Use only H2 headers",
+      "Avoid using headers"
+    ],
+    correct: 1,
+    explanation: "Professional documents use H1 for the main title, H2 for main sections, and H3+ for subsections, creating a clear hierarchy."
+  },
+  {
+    id: 93,
+    question: "What is the specification by example pattern best used for?",
+    options: [
+      "Theoretical discussions",
+      "Showing concrete input/output examples that demonstrate expected behavior",
+      "Listing all possible features",
+      "Writing abstract requirements"
+    ],
+    correct: 1,
+    explanation: "Specification by example is best for showing concrete examples of input, output, or behavior rather than abstract descriptions."
+  },
+  {
+    id: 94,
+    question: "In a 'Problem' section, what should you avoid?",
+    options: [
+      "Describing the actual problem",
+      "Jumping to solutions or implementation details",
+      "Using complete sentences",
+      "Providing context"
+    ],
+    correct: 1,
+    explanation: "The 'Problem' section should focus on describing what needs to be solved, not how to solve it. Solutions belong in a separate section."
+  },
+  {
+    id: 95,
+    question: "What makes a good 'Features' list?",
+    options: [
+      "Vague descriptions",
+      "Specific, testable capabilities with clear acceptance criteria",
+      "Marketing language",
+      "Technical jargon only"
+    ],
+    correct: 1,
+    explanation: "Good feature lists contain specific, testable capabilities with clear acceptance criteria, avoiding vague or marketing language."
+  },
+  {
+    id: 96,
+    question: "When should you use code blocks within lists?",
+    options: [
+      "Never mix code blocks and lists",
+      "When a list item needs to show code, indent the code block 4 spaces",
+      "Only at the end of lists",
+      "Only for single-line code"
+    ],
+    correct: 1,
+    explanation: "Code blocks can be included in lists by indenting them 4 spaces (2 for list + 2 for code block) to maintain list structure."
+  },
+  {
+    id: 97,
+    question: "What is the correct way to include a code block in a list item?",
+    options: [
+      "Just add the code block without indentation",
+      "Indent the code block to align with the list item content",
+      "Use inline code only",
+      "End the list first"
+    ],
+    correct: 1,
+    explanation: "Code blocks within lists must be indented to align with the list item content (typically 4 spaces for first-level items) to maintain list structure."
+  },
+  {
+    id: 98,
+    question: "How should you document multiple related examples?",
+    options: [
+      "Put them all in one code block",
+      "Use separate labeled code blocks with explanatory text between them",
+      "Use a single list",
+      "Avoid multiple examples"
+    ],
+    correct: 1,
+    explanation: "Multiple related examples should be in separate, labeled code blocks with explanatory text between them to provide context and clarity."
+  },
+  {
+    id: 99,
+    question: "What is the best practice for documenting error cases?",
+    options: [
+      "Don't document errors",
+      "Show example error input and expected error output/message",
+      "Only list error codes",
+      "Describe errors in paragraphs only"
+    ],
+    correct: 1,
+    explanation: "Error cases should be documented with concrete examples showing the error-triggering input and the expected error output or message."
+  },
+  {
+    id: 100,
+    question: "What is the most important principle for writing AI instructions?",
+    options: [
+      "Use as many words as possible",
+      "Combine clear structure, semantic sections, and concrete examples",
+      "Avoid all formatting",
+      "Use only code blocks"
+    ],
+    correct: 1,
+    explanation: "Effective AI instructions combine clear structure (headers, lists), semantic section names (Problem, Features), and concrete examples to provide context and clarity."
+  }
+];
+
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = ch13_questions_51_100;
+}
+const ch13Questions = [
+  {
+    id: 101,
+    question: "In the Task Tracker app specification example, what is the primary benefit of using progressive specification?",
+    options: [
+      "It reduces the total number of pages needed",
+      "It allows incremental detail addition as requirements become clearer",
+      "It eliminates the need for code comments",
+      "It automatically generates test cases"
+    ],
+    correctAnswer: 1,
+    explanation: "Progressive specification allows teams to start with high-level requirements and add detail incrementally as understanding deepens, making it easier to manage evolving requirements."
+  },
+  {
+    id: 102,
+    question: "Which cross-cutting theme should be addressed in a complete specification?",
+    options: [
+      "Only functional requirements",
+      "Security, performance, accessibility, and error handling",
+      "Just the user interface design",
+      "Only database schema definitions"
+    ],
+    correctAnswer: 1,
+    explanation: "Complete specifications must address cross-cutting themes like security, performance, accessibility, and error handling that affect multiple components."
+  },
+  {
+    id: 103,
+    question: "What is the first step in the verification framework for specifications?",
+    options: [
+      "Deploy to production",
+      "Parse structure to identify sections and hierarchy",
+      "Write unit tests",
+      "Create user documentation"
+    ],
+    correctAnswer: 1,
+    explanation: "The verification framework begins with parsing the document structure to understand sections and hierarchy before proceeding to other validation steps."
+  },
+  {
+    id: 104,
+    question: "How many steps are in the verification framework for specifications?",
+    options: [
+      "2 steps",
+      "3 steps",
+      "4 steps",
+      "5 steps"
+    ],
+    correctAnswer: 2,
+    explanation: "The verification framework consists of 4 steps for validating specification completeness and correctness."
+  },
+  {
+    id: 105,
+    question: "What AI benefit is gained from well-structured Markdown specifications?",
+    options: [
+      "Automatic code generation without review",
+      "Parse structure, find information, and validate completeness",
+      "Elimination of human developers",
+      "Instant deployment capabilities"
+    ],
+    correctAnswer: 1,
+    explanation: "AI can parse structured Markdown to understand document organization, locate specific information quickly, and validate that all required components are present."
+  },
+  {
+    id: 106,
+    question: "Which Markdown flavor is most commonly used on GitHub?",
+    options: [
+      "CommonMark",
+      "GitHub Flavored Markdown (GFM)",
+      "MultiMarkdown",
+      "Markdown Extra"
+    ],
+    correctAnswer: 1,
+    explanation: "GitHub Flavored Markdown (GFM) is the standard flavor used on GitHub, adding features like task lists, tables, and strikethrough."
+  },
+  {
+    id: 107,
+    question: "What is the primary purpose of a level 1 heading (#)?",
+    options: [
+      "Subsection titles within features",
+      "Document title or main topic",
+      "Code block labels",
+      "Table headers"
+    ],
+    correctAnswer: 1,
+    explanation: "Level 1 headings serve as the document title or main topic, typically appearing once at the top of the document."
+  },
+  {
+    id: 108,
+    question: "When should you use a level 3 heading (###)?",
+    options: [
+      "For the document title",
+      "For major sections",
+      "For subsections within a level 2 section",
+      "Never, only use levels 1 and 2"
+    ],
+    correctAnswer: 2,
+    explanation: "Level 3 headings are used for subsections within level 2 sections, providing additional hierarchy and organization."
+  },
+  {
+    id: 109,
+    question: "What semantic information do ordered lists convey?",
+    options: [
+      "Random collection of items",
+      "Sequence, priority, or steps that must follow a specific order",
+      "Only alphabetical sorting",
+      "Unimportant information"
+    ],
+    correctAnswer: 1,
+    explanation: "Ordered lists indicate that items have a meaningful sequence, such as steps in a process, priority ranking, or temporal order."
+  },
+  {
+    id: 110,
+    question: "How do you indicate dependencies between list items in Markdown?",
+    options: [
+      "Use bold text",
+      "Use nested lists or explicit text like 'depends on' or 'requires'",
+      "Use strikethrough",
+      "Dependencies cannot be shown in Markdown"
+    ],
+    correctAnswer: 1,
+    explanation: "Dependencies can be shown through nested list structures or explicit textual references indicating relationships between items."
+  },
+  {
+    id: 111,
+    question: "Why would you use quadruple backticks (````) in documentation?",
+    options: [
+      "To create extra-large code blocks",
+      "To show code that itself contains triple backticks",
+      "To add syntax highlighting",
+      "To create inline code"
+    ],
+    correctAnswer: 1,
+    explanation: "Quadruple backticks allow you to document code examples that contain triple backticks, preventing parsing conflicts."
+  },
+  {
+    id: 112,
+    question: "What is the advantage of using online URLs for images in specifications?",
+    options: [
+      "They work offline",
+      "They're accessible from anywhere without file dependencies",
+      "They load faster than local files",
+      "They never break"
+    ],
+    correctAnswer: 1,
+    explanation: "Online URLs make images accessible from any location without requiring local file access, though they depend on network connectivity."
+  },
+  {
+    id: 113,
+    question: "What is a disadvantage of using local paths for images?",
+    options: [
+      "They load too slowly",
+      "They require maintaining relative paths and file availability",
+      "They cannot be displayed in browsers",
+      "They use more disk space"
+    ],
+    correctAnswer: 1,
+    explanation: "Local image paths require careful management of relative paths and ensuring files are available in the correct locations for all users."
+  },
+  {
+    id: 114,
+    question: "When providing images to multimodal AI, what should you consider?",
+    options: [
+      "Only use black and white images",
+      "Image clarity, relevance, and context to help AI understand purpose",
+      "Always use the largest possible file size",
+      "Never include images with AI"
+    ],
+    correctAnswer: 1,
+    explanation: "Multimodal AI benefits from clear, relevant images with appropriate context that explains what the AI should focus on or extract from the image."
+  },
+  {
+    id: 115,
+    question: "What is a common mistake with emphasis in Markdown?",
+    options: [
+      "Never using bold or italic",
+      "Overusing emphasis, making everything bold or italic and reducing impact",
+      "Using asterisks instead of underscores",
+      "Combining bold and italic"
+    ],
+    correctAnswer: 1,
+    explanation: "Overusing emphasis (bold/italic) dilutes its impact and makes documents harder to read. Emphasis should be reserved for truly important content."
+  },
+  {
+    id: 116,
+    question: "How do you center-align text in a Markdown table column?",
+    options: [
+      "|:---:|",
+      "|---:|",
+      "|:---|",
+      "|===|"
+    ],
+    correctAnswer: 0,
+    explanation: "The syntax :---: centers column content, with colons on both sides of the dashes in the separator row."
+  },
+  {
+    id: 117,
+    question: "How do you right-align text in a Markdown table column?",
+    options: [
+      "|:---|",
+      "|---:|",
+      "|:---:|",
+      "|>---|"
+    ],
+    correctAnswer: 1,
+    explanation: "The syntax ---: right-aligns column content, with a colon only on the right side of the dashes."
+  },
+  {
+    id: 118,
+    question: "What character is used to escape special Markdown characters?",
+    options: [
+      "Forward slash (/)",
+      "Backslash (\\)",
+      "Caret (^)",
+      "Tilde (~)"
+    ],
+    correctAnswer: 1,
+    explanation: "The backslash (\\) is used to escape special Markdown characters, allowing them to be displayed literally."
+  },
+  {
+    id: 119,
+    question: "How do you display a literal asterisk without creating emphasis?",
+    options: [
+      "**",
+      "\\*",
+      "/*",
+      "^*"
+    ],
+    correctAnswer: 1,
+    explanation: "Use \\* to escape the asterisk and display it literally without triggering emphasis formatting."
+  },
+  {
+    id: 120,
+    question: "What happens with a single newline in most Markdown parsers?",
+    options: [
+      "Creates a new paragraph",
+      "Treated as a space, not a line break",
+      "Creates a horizontal rule",
+      "Starts a code block"
+    ],
+    correctAnswer: 1,
+    explanation: "Most Markdown parsers treat a single newline as a space within the same paragraph, not as a line break."
+  },
+  {
+    id: 121,
+    question: "How do you create a new paragraph in Markdown?",
+    options: [
+      "Single newline",
+      "Use a blank line (two newlines)",
+      "Use a semicolon",
+      "Indent the text"
+    ],
+    correctAnswer: 1,
+    explanation: "A blank line (two consecutive newlines) separates paragraphs in Markdown."
+  },
+  {
+    id: 122,
+    question: "Which component is essential in a complete specification checklist?",
+    options: [
+      "Marketing materials",
+      "Purpose, scope, functional requirements, and acceptance criteria",
+      "Only code examples",
+      "Social media links"
+    ],
+    correctAnswer: 1,
+    explanation: "Complete specifications must include purpose, scope, functional requirements, acceptance criteria, and other key components."
+  },
+  {
+    id: 123,
+    question: "In the Task Tracker example, what type of specification approach is demonstrated?",
+    options: [
+      "Waterfall-only specification",
+      "Progressive specification with incremental detail",
+      "No specification needed",
+      "Code-first with no documentation"
+    ],
+    correctAnswer: 1,
+    explanation: "The Task Tracker example demonstrates progressive specification, where detail is added incrementally as requirements evolve."
+  },
+  {
+    id: 124,
+    question: "What is the second step in the 4-step verification framework?",
+    options: [
+      "Deploy the application",
+      "Find and extract specific information from sections",
+      "Delete old versions",
+      "Create backup copies"
+    ],
+    correctAnswer: 1,
+    explanation: "After parsing structure (step 1), the second step is to find and extract specific information from identified sections."
+  },
+  {
+    id: 125,
+    question: "What is the third step in the verification framework?",
+    options: [
+      "Publish documentation",
+      "Validate completeness against required components checklist",
+      "Archive the project",
+      "Generate random test data"
+    ],
+    correctAnswer: 1,
+    explanation: "The third step validates that all required specification components are present and complete."
+  },
+  {
+    id: 126,
+    question: "What is the fourth step in the verification framework?",
+    options: [
+      "Start coding immediately",
+      "Check consistency and identify conflicts or gaps",
+      "Delete the specification",
+      "Create a new project"
+    ],
+    correctAnswer: 1,
+    explanation: "The final step checks for internal consistency, conflicts between sections, and gaps in the specification."
+  },
+  {
+    id: 127,
+    question: "Which Markdown flavor adds support for footnotes and definition lists?",
+    options: [
+      "GitHub Flavored Markdown",
+      "Markdown Extra",
+      "CommonMark",
+      "Basic Markdown"
+    ],
+    correctAnswer: 1,
+    explanation: "Markdown Extra extends standard Markdown with features like footnotes, definition lists, and tables."
+  },
+  {
+    id: 128,
+    question: "What is CommonMark?",
+    options: [
+      "A proprietary Markdown format",
+      "A standardized, unambiguous specification of Markdown",
+      "A deprecated Markdown version",
+      "A Markdown editor"
+    ],
+    correctAnswer: 1,
+    explanation: "CommonMark is a standardized specification that aims to remove ambiguities in Markdown parsing."
+  },
+  {
+    id: 129,
+    question: "What is the primary use case for GitHub README files?",
+    options: [
+      "Storing passwords",
+      "Project overview, setup instructions, and usage documentation",
+      "Compiling code",
+      "Database backups"
+    ],
+    correctAnswer: 1,
+    explanation: "GitHub README files provide project overviews, installation instructions, usage examples, and other essential documentation."
+  },
+  {
+    id: 130,
+    question: "Why is Markdown ideal for AI specifications?",
+    options: [
+      "It's the only format AI can read",
+      "Its structure is easily parseable and human-readable",
+      "It automatically generates code",
+      "It requires no learning"
+    ],
+    correctAnswer: 1,
+    explanation: "Markdown's simple, structured syntax is both human-readable and easily parsed by AI systems for understanding and validation."
+  },
+  {
+    id: 131,
+    question: "What is a documentation site use case for Markdown?",
+    options: [
+      "Replacing all databases",
+      "Static site generators like Jekyll, Hugo, or MkDocs",
+      "Video editing",
+      "Image processing"
+    ],
+    correctAnswer: 1,
+    explanation: "Markdown is widely used with static site generators to create documentation websites from simple text files."
+  },
+  {
+    id: 132,
+    question: "When should you use a level 2 heading (##)?",
+    options: [
+      "For the document title",
+      "For major sections within the document",
+      "For inline emphasis",
+      "For code comments"
+    ],
+    correctAnswer: 1,
+    explanation: "Level 2 headings mark major sections within a document, providing the primary organizational structure below the title."
+  },
+  {
+    id: 133,
+    question: "What is the maximum recommended heading level for most documents?",
+    options: [
+      "Level 2",
+      "Level 3",
+      "Level 4 or 5",
+      "Level 10"
+    ],
+    correctAnswer: 2,
+    explanation: "Most documents should limit headings to level 4 or 5 to maintain clarity and avoid excessive nesting."
+  },
+  {
+    id: 134,
+    question: "What semantic meaning do unordered lists convey?",
+    options: [
+      "Strict sequence that must be followed",
+      "Collection of related items without implied order",
+      "Alphabetical organization only",
+      "Deprecated information"
+    ],
+    correctAnswer: 1,
+    explanation: "Unordered lists indicate a collection of related items where the order is not significant."
+  },
+  {
+    id: 135,
+    question: "How can you show that one task depends on another in a list?",
+    options: [
+      "Use different bullet characters",
+      "Nest the dependent task under the prerequisite or add explicit text",
+      "Use strikethrough",
+      "Change the font size"
+    ],
+    correctAnswer: 1,
+    explanation: "Dependencies can be shown through nesting (indentation) or explicit textual references like 'requires completion of task X'."
+  },
+  {
+    id: 136,
+    question: "What language identifier should follow triple backticks for JavaScript code?",
+    options: [
+      "```js or ```javascript",
+      "```code",
+      "```script",
+      "```java"
+    ],
+    correctAnswer: 0,
+    explanation: "Use ```js or ```javascript to enable syntax highlighting for JavaScript code blocks."
+  },
+  {
+    id: 137,
+    question: "Why document code blocks with quadruple backticks in a Markdown guide?",
+    options: [
+      "To make code run faster",
+      "To show examples of Markdown code blocks without triggering parsing",
+      "To add extra security",
+      "To compress the code"
+    ],
+    correctAnswer: 1,
+    explanation: "Quadruple backticks allow you to show Markdown code block syntax (with triple backticks) as an example without the parser interpreting it."
+  },
+  {
+    id: 138,
+    question: "What is the Markdown syntax for an image with alt text?",
+    options: [
+      "[alt text](image.png)",
+      "![alt text](image.png)",
+      "<img>alt text</img>",
+      "{image: alt text}"
+    ],
+    correctAnswer: 1,
+    explanation: "The syntax ![alt text](image.png) creates an image with alternative text for accessibility."
+  },
+  {
+    id: 139,
+    question: "When using local image paths, what path type is recommended?",
+    options: [
+      "Absolute paths only",
+      "Relative paths from the document location",
+      "Network paths only",
+      "Random paths"
+    ],
+    correctAnswer: 1,
+    explanation: "Relative paths are recommended for local images as they maintain portability when the project is moved or shared."
+  },
+  {
+    id: 140,
+    question: "What context should you provide when including diagrams for AI analysis?",
+    options: [
+      "No context needed",
+      "Description of what the diagram shows and what to focus on",
+      "Only the file size",
+      "The creation date"
+    ],
+    correctAnswer: 1,
+    explanation: "Providing context about the diagram's purpose and key elements helps AI understand and extract relevant information."
+  },
+  {
+    id: 141,
+    question: "What happens when you overuse bold text in documentation?",
+    options: [
+      "It improves readability",
+      "It loses emphasis value and makes text harder to scan",
+      "It increases font size",
+      "It changes the color"
+    ],
+    correctAnswer: 1,
+    explanation: "Overusing bold text diminishes its emphasis value and creates visual clutter, making documents harder to read."
+  },
+  {
+    id: 142,
+    question: "How do you create a table in Markdown?",
+    options: [
+      "Use <table> tags",
+      "Use pipes (|) to separate columns and dashes for headers",
+      "Use tabs between columns",
+      "Use commas like CSV"
+    ],
+    correctAnswer: 1,
+    explanation: "Markdown tables use pipes (|) to separate columns and a row of dashes to separate headers from content."
+  },
+  {
+    id: 143,
+    question: "What is the default alignment for table columns without alignment syntax?",
+    options: [
+      "Center",
+      "Left-aligned",
+      "Right-aligned",
+      "Justified"
+    ],
+    correctAnswer: 1,
+    explanation: "Table columns are left-aligned by default unless alignment syntax (colons) is specified."
+  },
+  {
+    id: 144,
+    question: "Which characters commonly need escaping in Markdown?",
+    options: [
+      "Letters and numbers",
+      "*, _, #, [, ], (, ), \\",
+      "Spaces and tabs",
+      "Vowels only"
+    ],
+    correctAnswer: 1,
+    explanation: "Special Markdown characters like *, _, #, brackets, parentheses, and backslash need escaping to display literally."
+  },
+  {
+    id: 145,
+    question: "How do you create a hard line break within a paragraph?",
+    options: [
+      "Single newline",
+      "Two spaces at the end of a line followed by newline",
+      "Use a comma",
+      "Use a semicolon"
+    ],
+    correctAnswer: 1,
+    explanation: "Two spaces at the end of a line followed by a newline creates a hard line break within a paragraph."
+  },
+  {
+    id: 146,
+    question: "What should a complete specification include regarding error handling?",
+    options: [
+      "Nothing, errors are unexpected",
+      "Expected error scenarios and how to handle them",
+      "Only success cases",
+      "Error handling is optional"
+    ],
+    correctAnswer: 1,
+    explanation: "Complete specifications must document expected error scenarios and define appropriate handling strategies."
+  },
+  {
+    id: 147,
+    question: "Why include acceptance criteria in specifications?",
+    options: [
+      "To make the document longer",
+      "To define measurable conditions for feature completion",
+      "To confuse developers",
+      "They are optional and not important"
+    ],
+    correctAnswer: 1,
+    explanation: "Acceptance criteria provide clear, measurable conditions that determine when a feature is complete and working correctly."
+  },
+  {
+    id: 148,
+    question: "What cross-cutting concern addresses how fast the system responds?",
+    options: [
+      "Security",
+      "Performance",
+      "Accessibility",
+      "Maintainability"
+    ],
+    correctAnswer: 1,
+    explanation: "Performance is the cross-cutting concern that addresses system responsiveness, speed, and resource efficiency."
+  },
+  {
+    id: 149,
+    question: "In progressive specification, when should you add detailed technical requirements?",
+    options: [
+      "All at once at the beginning",
+      "Incrementally as understanding and needs become clearer",
+      "Never add technical details",
+      "Only after the project is complete"
+    ],
+    correctAnswer: 1,
+    explanation: "Progressive specification adds technical details incrementally as the team's understanding evolves and requirements become clearer."
+  },
+  {
+    id: 150,
+    question: "What makes Markdown particularly suitable for version control systems?",
+    options: [
+      "It's binary format",
+      "It's plain text, making diffs and merges straightforward",
+      "It requires special tools",
+      "It cannot be versioned"
+    ],
+    correctAnswer: 1,
+    explanation: "Markdown's plain text format integrates seamlessly with version control systems, making changes easy to track, diff, and merge."
+  }
+];
+
+module.exports = ch13Questions;
+const ch14_q1_50 = [
+  {
+    id: 1,
+    question: "Who conducted the September 2024 experiment that demonstrated Claude Code's potential?",
+    options: [
+      "Sam Altman",
+      "Boris Cherny",
+      "Dario Amodei",
+      "Andrej Karpathy"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 2,
+    question: "What does the 'Product Overhang' concept refer to in the context of Claude Code?",
+    options: [
+      "Excess inventory of software products",
+      "The gap between AI capabilities and product implementation",
+      "Overpriced software subscriptions",
+      "Delayed product releases"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 3,
+    question: "What was the day-one adoption rate for Claude Code according to the projections?",
+    options: [
+      "10%",
+      "20%",
+      "30%",
+      "50%"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 4,
+    question: "By what day did Claude Code reach 50% adoption in the projections?",
+    options: [
+      "Day 3",
+      "Day 5",
+      "Day 7",
+      "Day 10"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 5,
+    question: "What adoption rate was projected for Claude Code by May 2025?",
+    options: [
+      "60%+",
+      "70%+",
+      "80%+",
+      "90%+"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 6,
+    question: "What ARR (Annual Recurring Revenue) was projected for Claude Code by mid-2025?",
+    options: [
+      "$250M+",
+      "$500M+",
+      "$750M+",
+      "$1B+"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 7,
+    question: "When was Claude Code projected to reach $1B in ARR?",
+    options: [
+      "September 2025",
+      "October 2025",
+      "November 2025",
+      "December 2025"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 8,
+    question: "What percentage of all public GitHub commits was Claude Code responsible for?",
+    options: [
+      "2%",
+      "4%",
+      "6%",
+      "8%"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 9,
+    question: "What are the two main AI paradigms discussed in Chapter 14?",
+    options: [
+      "Active vs Reactive",
+      "Agentic vs Passive",
+      "Proactive vs Defensive",
+      "Dynamic vs Static"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 10,
+    question: "Which paradigm does Claude Code primarily represent?",
+    options: [
+      "Passive AI",
+      "Reactive AI",
+      "Agentic AI",
+      "Static AI"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 11,
+    question: "What are the two main categories of agents in Claude Code?",
+    options: [
+      "Simple and Complex Agents",
+      "General and Custom Agents",
+      "Basic and Advanced Agents",
+      "Primary and Secondary Agents"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 12,
+    question: "What does OODA stand for in the OODA Loop?",
+    options: [
+      "Observe, Operate, Decide, Act",
+      "Observe, Orient, Decide, Act",
+      "Operate, Orient, Deploy, Analyze",
+      "Observe, Optimize, Deploy, Act"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 13,
+    question: "Which of the following is NOT a valid installation method for Claude Code?",
+    options: [
+      "Native installers",
+      "Homebrew",
+      "npm",
+      "Docker"
+    ],
+    correct: 3,
+    chapter: 14
+  },
+  {
+    id: 14,
+    question: "What is the minimum RAM requirement for running Claude Code?",
+    options: [
+      "2GB",
+      "4GB",
+      "8GB",
+      "16GB"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 15,
+    question: "What is the minimum macOS version required for Claude Code?",
+    options: [
+      "macOS 11+",
+      "macOS 12+",
+      "macOS 13+",
+      "macOS 14+"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 16,
+    question: "What is the minimum Windows version required for Claude Code?",
+    options: [
+      "Windows 8+",
+      "Windows 10+",
+      "Windows 11+",
+      "Windows Server 2019+"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 17,
+    question: "Which of the following is NOT a valid authentication method for Claude Code?",
+    options: [
+      "Claude App",
+      "Console API",
+      "Enterprise SSO",
+      "OAuth2"
+    ],
+    correct: 3,
+    chapter: 14
+  },
+  {
+    id: 18,
+    question: "What is the basic command to start Claude Code?",
+    options: [
+      "claude start",
+      "claude run",
+      "claude",
+      "claude init"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 19,
+    question: "What command is used to log in to Claude Code?",
+    options: [
+      "claude auth",
+      "claude signin",
+      "claude login",
+      "claude connect"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 20,
+    question: "What command is used to log out of Claude Code?",
+    options: [
+      "claude signout",
+      "claude logout",
+      "claude disconnect",
+      "claude exit"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 21,
+    question: "What environment variable can be used to set the Anthropic API key?",
+    options: [
+      "CLAUDE_API_KEY",
+      "ANTHROPIC_KEY",
+      "ANTHROPIC_API_KEY",
+      "API_KEY_ANTHROPIC"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 22,
+    question: "Which of the following is a free alternative to Claude Code mentioned in the chapter?",
+    options: [
+      "ChatGPT",
+      "OpenRouter",
+      "Copilot",
+      "Tabnine"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 23,
+    question: "Which of the following is NOT mentioned as a free alternative to Claude Code?",
+    options: [
+      "OpenRouter",
+      "Gemini",
+      "DeepSeek",
+      "GPT-4"
+    ],
+    correct: 3,
+    chapter: 14
+  },
+  {
+    id: 24,
+    question: "Where is the router configuration file located for Claude Code?",
+    options: [
+      "~/.claude/settings.json",
+      "~/.claude/config.json",
+      "~/.config/claude.json",
+      "~/claude/config.json"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 25,
+    question: "What command enables voice input in Claude Code?",
+    options: [
+      "/speak",
+      "/audio",
+      "/voice",
+      "/mic"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 26,
+    question: "What command is used to exit Claude Code?",
+    options: [
+      "/quit",
+      "/exit",
+      "/close",
+      "/end"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 27,
+    question: "What key do you press to approve Claude Code's output?",
+    options: [
+      "Space",
+      "Enter",
+      "Y",
+      "Tab"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 28,
+    question: "What key do you press to deny Claude Code's output?",
+    options: [
+      "N",
+      "Delete",
+      "Esc",
+      "Backspace"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 29,
+    question: "What does the first 'O' in the OODA Loop stand for?",
+    options: [
+      "Operate",
+      "Optimize",
+      "Observe",
+      "Organize"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 30,
+    question: "What does the second 'O' in the OODA Loop stand for?",
+    options: [
+      "Operate",
+      "Orient",
+      "Optimize",
+      "Output"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 31,
+    question: "In what month and year was Boris Cherny's experiment conducted?",
+    options: [
+      "August 2024",
+      "September 2024",
+      "October 2024",
+      "November 2024"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 32,
+    question: "Which installation method uses the command 'brew install'?",
+    options: [
+      "npm",
+      "Native installers",
+      "Homebrew",
+      "pip"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 33,
+    question: "What type of agents are designed for specific, specialized tasks?",
+    options: [
+      "General Agents",
+      "Custom Agents",
+      "Universal Agents",
+      "Basic Agents"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 34,
+    question: "What type of agents handle broad, multi-purpose tasks?",
+    options: [
+      "Specialized Agents",
+      "Custom Agents",
+      "General Agents",
+      "Focused Agents"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 35,
+    question: "Which paradigm describes AI that waits for user input before acting?",
+    options: [
+      "Agentic AI",
+      "Proactive AI",
+      "Passive AI",
+      "Dynamic AI"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 36,
+    question: "Which paradigm describes AI that can take initiative and act autonomously?",
+    options: [
+      "Passive AI",
+      "Reactive AI",
+      "Agentic AI",
+      "Static AI"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 37,
+    question: "What is the file extension for the Claude Code configuration file?",
+    options: [
+      ".yaml",
+      ".json",
+      ".xml",
+      ".toml"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 38,
+    question: "Which step in the OODA Loop involves making a choice about what to do?",
+    options: [
+      "Observe",
+      "Orient",
+      "Decide",
+      "Act"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 39,
+    question: "Which step in the OODA Loop involves executing the chosen action?",
+    options: [
+      "Observe",
+      "Orient",
+      "Decide",
+      "Act"
+    ],
+    correct: 3,
+    chapter: 14
+  },
+  {
+    id: 40,
+    question: "What package manager can be used to install Claude Code via npm?",
+    options: [
+      "pip",
+      "yarn",
+      "npm",
+      "cargo"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 41,
+    question: "Which authentication method is specifically designed for large organizations?",
+    options: [
+      "Claude App",
+      "Console API",
+      "Enterprise SSO",
+      "API Key"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 42,
+    question: "What is the projected growth trajectory from day-one to day 5 adoption?",
+    options: [
+      "20% to 40%",
+      "20% to 50%",
+      "30% to 60%",
+      "10% to 50%"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 43,
+    question: "Which free alternative to Claude Code is developed by Google?",
+    options: [
+      "OpenRouter",
+      "DeepSeek",
+      "Gemini",
+      "Bard"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 44,
+    question: "What directory contains the Claude Code configuration file?",
+    options: [
+      "~/.config",
+      "~/.claude",
+      "~/claude",
+      "~/.anthropic"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 45,
+    question: "What percentage of GitHub commits demonstrates Claude Code's market impact?",
+    options: [
+      "2% of private commits",
+      "4% of all public commits",
+      "6% of enterprise commits",
+      "8% of open source commits"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 46,
+    question: "Which concept explains the delay between AI capability and product availability?",
+    options: [
+      "Technology Gap",
+      "Product Overhang",
+      "Innovation Lag",
+      "Development Debt"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 47,
+    question: "What is the primary interaction model for approving Claude Code suggestions?",
+    options: [
+      "Click buttons",
+      "Type commands",
+      "Press Enter or Esc",
+      "Voice commands"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 48,
+    question: "Which OODA Loop step involves understanding the context and situation?",
+    options: [
+      "Observe",
+      "Orient",
+      "Decide",
+      "Act"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 49,
+    question: "What was the significance of Boris Cherny's September 2024 experiment?",
+    options: [
+      "It proved AI couldn't code",
+      "It demonstrated Claude Code's potential impact",
+      "It showed limitations of AI",
+      "It compared different AI models"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 50,
+    question: "Which installation method would a Node.js developer most likely use?",
+    options: [
+      "Native installers",
+      "Homebrew",
+      "npm",
+      "Docker"
+    ],
+    correct: 2,
+    chapter: 14
+  }
+];
+
+module.exports = ch14_q1_50;
+const ch14_q51_100 = [
+  {
+    id: 51,
+    question: "How many sections does the CLAUDE.md structure contain?",
+    options: [
+      "4 sections",
+      "5 sections",
+      "6 sections",
+      "7 sections"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 52,
+    question: "What are the six sections of CLAUDE.md?",
+    options: [
+      "Project, Tech Stack, Development, Conventions, Workflows, Notes",
+      "Project, Architecture, Development, Testing, Deployment, Notes",
+      "Overview, Stack, Setup, Guidelines, Processes, Documentation",
+      "Introduction, Technology, Build, Standards, Operations, References"
+    ],
+    correct: 0,
+    chapter: 14
+  },
+  {
+    id: 53,
+    question: "When was the AAIF (Agentic AI Interoperability Foundation) formed?",
+    options: [
+      "November 15, 2025",
+      "December 1, 2025",
+      "December 9, 2025",
+      "January 1, 2026"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 54,
+    question: "What is the core philosophy behind the skills approach in Claude Code?",
+    options: [
+      "Build more agents, build faster",
+      "Stop building agents, build skills",
+      "Agents first, skills second",
+      "Build agents with embedded skills"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 55,
+    question: "How many skill sources are there in Claude Code?",
+    options: [
+      "Two: bundled and custom",
+      "Three: bundled, foundational, partner",
+      "Four: bundled, foundational, partner, custom",
+      "Five: bundled, foundational, partner, community, custom"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 56,
+    question: "What are the three skill sources in Claude Code?",
+    options: [
+      "Internal, external, community",
+      "Core, extended, custom",
+      "Bundled, foundational, partner",
+      "Built-in, imported, user-defined"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 57,
+    question: "What is the open standard for sharing skills?",
+    options: [
+      "skillsregistry.io",
+      "agentskills.io",
+      "claudeskills.io",
+      "openagents.io"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 58,
+    question: "What two components make up SKILL.md anatomy?",
+    options: [
+      "Header and content",
+      "Metadata and instructions",
+      "YAML frontmatter and markdown body",
+      "Configuration and implementation"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 59,
+    question: "What is the name of the meta-skill used for creating new skills?",
+    options: [
+      "skill-builder",
+      "skill-generator",
+      "skill-creator",
+      "create-skill"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 60,
+    question: "What flag prevents Claude from invoking the model during skill execution?",
+    options: [
+      "no-model-call: true",
+      "disable-model-invocation: true",
+      "skip-model: true",
+      "model-disabled: true"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 61,
+    question: "Which of the following is NOT a built-in agent in Claude Code?",
+    options: [
+      "Explore",
+      "Plan",
+      "Debug",
+      "Bash"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 62,
+    question: "How many built-in agents are mentioned in the context?",
+    options: [
+      "Three: Explore, Plan, Bash",
+      "Four: Explore, Plan, general-purpose, Bash",
+      "Five: Explore, Plan, Debug, Test, Bash",
+      "Two: Explore and Plan"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 63,
+    question: "What configuration enables isolation in Claude Code?",
+    options: [
+      "sandbox",
+      "container",
+      "worktree",
+      "virtual-env"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 64,
+    question: "What syntax is used to invoke agents or skills in Claude Code?",
+    options: [
+      "# hashtag syntax",
+      "@ at-mention syntax",
+      "/ slash command syntax",
+      ": colon prefix syntax"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 65,
+    question: "Which MCP integration is mentioned for browser automation?",
+    options: [
+      "Selenium MCP",
+      "Puppeteer MCP",
+      "Playwright MCP",
+      "Cypress MCP"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 66,
+    question: "What is Context7 MCP used for?",
+    options: [
+      "Database management",
+      "Context management and retrieval",
+      "File system operations",
+      "Network monitoring"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 67,
+    question: "What percentage of tool reduction does MCP Tool Search achieve?",
+    options: [
+      "75%",
+      "80%",
+      "85%",
+      "90%"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 68,
+    question: "What percentage of token reduction does MCP compilation achieve?",
+    options: [
+      "95%",
+      "96%",
+      "97%",
+      "98%"
+    ],
+    correct: 3,
+    chapter: 14
+  },
+  {
+    id: 69,
+    question: "How many levels are in the Claude Code settings hierarchy?",
+    options: [
+      "Two: User and Project",
+      "Three: User, Project, Local",
+      "Four: Global, User, Project, Local",
+      "Five: System, Global, User, Project, Local"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 70,
+    question: "What is the correct precedence order for settings in Claude Code?",
+    options: [
+      "User > Project > Local",
+      "Project > Local > User",
+      "Local > Project > User",
+      "Local > User > Project"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 71,
+    question: "Which settings level has the highest precedence?",
+    options: [
+      "User",
+      "Project",
+      "Local",
+      "Global"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 72,
+    question: "What does AGENTS.md represent?",
+    options: [
+      "A project-specific agent configuration",
+      "A universal standard for agent definitions",
+      "A list of available agents",
+      "Agent deployment instructions"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 73,
+    question: "What is the primary purpose of CLAUDE.md?",
+    options: [
+      "To store API keys",
+      "To provide project context and structure for Claude",
+      "To configure Claude's behavior",
+      "To list available commands"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 74,
+    question: "Which section of CLAUDE.md would contain information about frameworks and libraries?",
+    options: [
+      "Project",
+      "Tech Stack",
+      "Development",
+      "Conventions"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 75,
+    question: "What is the file extension for skill definitions?",
+    options: [
+      ".skill",
+      ".yaml",
+      ".md",
+      ".json"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 76,
+    question: "What format is used for the frontmatter in SKILL.md?",
+    options: [
+      "JSON",
+      "TOML",
+      "YAML",
+      "XML"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 77,
+    question: "What is the purpose of the 'disable-model-invocation' flag?",
+    options: [
+      "To speed up execution",
+      "To prevent Claude from making additional model calls during skill execution",
+      "To disable the skill entirely",
+      "To run the skill in offline mode"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 78,
+    question: "Which built-in agent is designed for code exploration?",
+    options: [
+      "Plan",
+      "Explore",
+      "Bash",
+      "general-purpose"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 79,
+    question: "Which built-in agent is used for planning tasks?",
+    options: [
+      "Explore",
+      "Plan",
+      "Bash",
+      "general-purpose"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 80,
+    question: "What is the purpose of worktree isolation?",
+    options: [
+      "To improve performance",
+      "To create isolated working environments for different tasks",
+      "To backup code automatically",
+      "To enable parallel execution"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 81,
+    question: "How do you invoke a skill named 'test-runner' in Claude Code?",
+    options: [
+      "/test-runner",
+      "#test-runner",
+      "@test-runner",
+      ":test-runner"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 82,
+    question: "What does MCP stand for in Claude Code context?",
+    options: [
+      "Model Context Protocol",
+      "Multi-Component Platform",
+      "Managed Code Provider",
+      "Message Control Protocol"
+    ],
+    correct: 0,
+    chapter: 14
+  },
+  {
+    id: 83,
+    question: "What is the main benefit of MCP Tool Search's 85% reduction?",
+    options: [
+      "Faster execution time",
+      "Reduced number of tools exposed to the model",
+      "Lower memory usage",
+      "Better error handling"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 84,
+    question: "What does MCP compilation's 98% token reduction primarily optimize?",
+    options: [
+      "Execution speed",
+      "Memory usage",
+      "Context window usage",
+      "Network bandwidth"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 85,
+    question: "If a setting is defined in all three levels, which one takes effect?",
+    options: [
+      "User level",
+      "Project level",
+      "Local level",
+      "The first one defined"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 86,
+    question: "What is the relationship between AAIF and agentskills.io?",
+    options: [
+      "They are competing standards",
+      "AAIF formed the agentskills.io open standard",
+      "agentskills.io predates AAIF",
+      "They are unrelated"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 87,
+    question: "Which skill source would include skills from third-party providers?",
+    options: [
+      "Bundled",
+      "Foundational",
+      "Partner",
+      "Core"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 88,
+    question: "What is the primary advantage of the skills-based approach over building agents?",
+    options: [
+      "Faster execution",
+      "Reusability and composability",
+      "Lower cost",
+      "Better security"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 89,
+    question: "Which section of CLAUDE.md would contain coding standards?",
+    options: [
+      "Development",
+      "Conventions",
+      "Tech Stack",
+      "Workflows"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 90,
+    question: "Which section of CLAUDE.md would describe CI/CD processes?",
+    options: [
+      "Development",
+      "Conventions",
+      "Workflows",
+      "Notes"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 91,
+    question: "What is the purpose of the markdown body in SKILL.md?",
+    options: [
+      "To store configuration",
+      "To provide instructions and documentation for the skill",
+      "To define dependencies",
+      "To specify permissions"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 92,
+    question: "What type of agent is 'Bash' in Claude Code?",
+    options: [
+      "A custom agent",
+      "A built-in agent",
+      "A partner agent",
+      "A foundational agent"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 93,
+    question: "What is the main purpose of Playwright MCP integration?",
+    options: [
+      "Database testing",
+      "Browser automation and testing",
+      "API testing",
+      "Performance monitoring"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 94,
+    question: "In the settings hierarchy, where would team-wide settings typically be stored?",
+    options: [
+      "User level",
+      "Project level",
+      "Local level",
+      "Global level"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 95,
+    question: "What is the significance of December 9, 2025?",
+    options: [
+      "Claude Code release date",
+      "AAIF formation date",
+      "agentskills.io launch date",
+      "MCP protocol release date"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 96,
+    question: "Which skill source would include skills that ship with Claude Code?",
+    options: [
+      "Bundled",
+      "Foundational",
+      "Partner",
+      "External"
+    ],
+    correct: 0,
+    chapter: 14
+  },
+  {
+    id: 97,
+    question: "What is the purpose of the general-purpose built-in agent?",
+    options: [
+      "Code exploration",
+      "Task planning",
+      "Handling general tasks without specific specialization",
+      "Shell command execution"
+    ],
+    correct: 2,
+    chapter: 14
+  },
+  {
+    id: 98,
+    question: "How does MCP Tool Search achieve its 85% reduction?",
+    options: [
+      "By removing unused tools",
+      "By intelligently filtering and exposing only relevant tools",
+      "By compressing tool definitions",
+      "By caching tool results"
+    ],
+    correct: 1,
+    chapter: 14
+  },
+  {
+    id: 99,
+    question: "What is the relationship between SKILL.md and agentskills.io?",
+    options: [
+      "SKILL.md is the file format defined by the agentskills.io standard",
+      "They are unrelated",
+      "agentskills.io is a hosting platform for SKILL.md files",
+      "SKILL.md predates agentskills.io"
+    ],
+    correct: 0,
+    chapter: 14
+  },
+  {
+    id: 100,
+    question: "What happens when 'disable-model-invocation: true' is set in a skill?",
+    options: [
+      "The skill runs faster",
+      "Claude cannot make additional model calls during that skill's execution",
+      "The skill becomes read-only",
+      "The skill runs in offline mode"
+    ],
+    correct: 1,
+    chapter: 14
+  }
+];
+
+module.exports = ch14_q51_100;
+const ch14Questions = [
+  {
+    id: 101,
+    question: "What is the default permission mode in Claude Code?",
+    options: [
+      "auto",
+      "default",
+      "acceptEdits",
+      "bypassPermissions"
+    ],
+    correctAnswer: 1,
+    explanation: "The default permission mode requires explicit user approval for operations."
+  },
+  {
+    id: 102,
+    question: "Which permission mode automatically accepts all edit operations?",
+    options: [
+      "default",
+      "auto",
+      "acceptEdits",
+      "bypassPermissions"
+    ],
+    correctAnswer: 2,
+    explanation: "acceptEdits mode automatically accepts all edit operations without prompting."
+  },
+  {
+    id: 103,
+    question: "How many hook events are available in Claude Code?",
+    options: [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    correctAnswer: 2,
+    explanation: "There are 5 hook events: PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, and SessionEnd."
+  },
+  {
+    id: 104,
+    question: "Which hook event fires before a tool is executed?",
+    options: [
+      "SessionStart",
+      "PreToolUse",
+      "PostToolUse",
+      "UserPromptSubmit"
+    ],
+    correctAnswer: 1,
+    explanation: "PreToolUse fires before a tool is executed, allowing interception or modification."
+  },
+  {
+    id: 105,
+    question: "What is the file path for plugin configuration?",
+    options: [
+      ".claude/plugin.json",
+      ".claude-plugin/plugin.json",
+      "plugins/config.json",
+      ".config/claude-plugin.json"
+    ],
+    correctAnswer: 1,
+    explanation: "Plugin configuration is stored in .claude-plugin/plugin.json."
+  },
+  {
+    id: 106,
+    question: "How many hook types are available in Claude Code?",
+    options: [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    correctAnswer: 2,
+    explanation: "There are 4 hook types: command, http, prompt, and agent."
+  },
+  {
+    id: 107,
+    question: "Which hook type executes a shell command?",
+    options: [
+      "agent",
+      "prompt",
+      "command",
+      "http"
+    ],
+    correctAnswer: 2,
+    explanation: "The command hook type executes shell commands in response to events."
+  },
+  {
+    id: 108,
+    question: "What command is used to manage plugins in Claude Code?",
+    options: [
+      "/plugins",
+      "/plugin",
+      "/manage-plugin",
+      "/add-plugin"
+    ],
+    correctAnswer: 1,
+    explanation: "The /plugin command is used to manage plugins in Claude Code."
+  },
+  {
+    id: 109,
+    question: "Which environment variable enables Agent Teams?",
+    options: [
+      "CLAUDE_AGENT_TEAMS=1",
+      "CLAUDE_CODE_AGENT_TEAMS=1",
+      "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1",
+      "ENABLE_AGENT_TEAMS=1"
+    ],
+    correctAnswer: 2,
+    explanation: "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 enables the Agent Teams feature."
+  },
+  {
+    id: 110,
+    question: "What keyboard shortcut activates delegate mode?",
+    options: [
+      "Ctrl+Tab",
+      "Shift+Tab",
+      "Alt+Tab",
+      "Ctrl+Shift+D"
+    ],
+    correctAnswer: 1,
+    explanation: "Shift+Tab activates delegate mode for agent collaboration."
+  },
+  {
+    id: 111,
+    question: "Which tool is used to create scheduled tasks?",
+    options: [
+      "CronSchedule",
+      "CronCreate",
+      "TaskCreate",
+      "ScheduleCreate"
+    ],
+    correctAnswer: 1,
+    explanation: "CronCreate is the tool used to create scheduled tasks in Claude Code."
+  },
+  {
+    id: 112,
+    question: "What is the maximum number of tasks in a session-scoped schedule?",
+    options: [
+      "25",
+      "50",
+      "75",
+      "100"
+    ],
+    correctAnswer: 1,
+    explanation: "Session-scoped schedules have a 50-task limit."
+  },
+  {
+    id: 113,
+    question: "How long do session-scoped scheduled tasks persist?",
+    options: [
+      "1 day",
+      "2 days",
+      "3 days",
+      "7 days"
+    ],
+    correctAnswer: 2,
+    explanation: "Session-scoped scheduled tasks have a 3-day expiry period."
+  },
+  {
+    id: 114,
+    question: "Which command enables cloud persistence for schedules?",
+    options: [
+      "/persist",
+      "/schedule",
+      "/cloud-schedule",
+      "/save-schedule"
+    ],
+    correctAnswer: 1,
+    explanation: "The /schedule command enables cloud persistence for scheduled tasks."
+  },
+  {
+    id: 115,
+    question: "What tool lists all scheduled cron jobs?",
+    options: [
+      "CronShow",
+      "CronList",
+      "ListCron",
+      "ShowSchedule"
+    ],
+    correctAnswer: 1,
+    explanation: "CronList is used to list all scheduled cron jobs."
+  },
+  {
+    id: 116,
+    question: "Which tool deletes a scheduled cron job?",
+    options: [
+      "CronRemove",
+      "CronDelete",
+      "DeleteCron",
+      "RemoveSchedule"
+    ],
+    correctAnswer: 1,
+    explanation: "CronDelete is used to delete scheduled cron jobs."
+  },
+  {
+    id: 117,
+    question: "What command starts Remote Control mode?",
+    options: [
+      "claude remote",
+      "claude --remote",
+      "claude remote-control",
+      "claude rc"
+    ],
+    correctAnswer: 2,
+    explanation: "The command 'claude remote-control' starts Remote Control mode."
+  },
+  {
+    id: 118,
+    question: "What is the shorthand flag for Remote Control?",
+    options: [
+      "--remote",
+      "--rc",
+      "-r",
+      "-rc"
+    ],
+    correctAnswer: 1,
+    explanation: "The --rc flag is the shorthand for enabling Remote Control mode."
+  },
+  {
+    id: 119,
+    question: "What command can be used in-session for Remote Control?",
+    options: [
+      "/remote",
+      "/rc",
+      "/remote-control",
+      "/control"
+    ],
+    correctAnswer: 1,
+    explanation: "The /rc command enables Remote Control within a session."
+  },
+  {
+    id: 120,
+    question: "Where are worktrees stored by default?",
+    options: [
+      ".git/worktrees/",
+      ".claude/worktrees/",
+      "worktrees/",
+      ".worktrees/"
+    ],
+    correctAnswer: 1,
+    explanation: "Worktrees are stored in the .claude/worktrees/ directory."
+  },
+  {
+    id: 121,
+    question: "What flag enables worktree mode when starting Claude Code?",
+    options: [
+      "--wt",
+      "--worktree",
+      "--work-tree",
+      "-w"
+    ],
+    correctAnswer: 1,
+    explanation: "The --worktree flag enables worktree mode when starting Claude Code."
+  },
+  {
+    id: 122,
+    question: "What type of application is Claude Cowork?",
+    options: [
+      "Web application",
+      "CLI tool",
+      "Desktop app",
+      "Browser extension"
+    ],
+    correctAnswer: 2,
+    explanation: "Claude Cowork is a desktop application for collaborative coding."
+  },
+  {
+    id: 123,
+    question: "What is the minimum Apple Silicon requirement for Claude Cowork?",
+    options: [
+      "M1+",
+      "M2+",
+      "M3+",
+      "Any Apple Silicon"
+    ],
+    correctAnswer: 0,
+    explanation: "Claude Cowork requires Apple Silicon M1+ processors."
+  },
+  {
+    id: 124,
+    question: "What is the minimum Chrome extension version for Browser Integration?",
+    options: [
+      "v1.0.30+",
+      "v1.0.36+",
+      "v1.0.40+",
+      "v1.1.0+"
+    ],
+    correctAnswer: 1,
+    explanation: "Browser Integration requires Chrome extension version 1.0.36 or higher."
+  },
+  {
+    id: 125,
+    question: "On which platform is Computer Use available as a research preview?",
+    options: [
+      "Windows",
+      "Linux",
+      "macOS",
+      "All platforms"
+    ],
+    correctAnswer: 2,
+    explanation: "Computer Use is available as a research preview on macOS."
+  },
+  {
+    id: 126,
+    question: "How many members did AAIF have by February 2026?",
+    options: [
+      "120",
+      "135",
+      "146",
+      "160"
+    ],
+    correctAnswer: 2,
+    explanation: "AAIF had 146 members by February 2026."
+  },
+  {
+    id: 127,
+    question: "What is Claude Code's ARR (Annual Recurring Revenue)?",
+    options: [
+      "$1.5B+",
+      "$2.0B+",
+      "$2.5B+",
+      "$3.0B+"
+    ],
+    correctAnswer: 2,
+    explanation: "Claude Code achieved $2.5B+ in Annual Recurring Revenue."
+  },
+  {
+    id: 128,
+    question: "What is Claude Code's SWE-bench Verified score?",
+    options: [
+      "75.3%",
+      "80.9%",
+      "85.2%",
+      "90.1%"
+    ],
+    correctAnswer: 1,
+    explanation: "Claude Code achieved an 80.9% score on SWE-bench Verified."
+  },
+  {
+    id: 129,
+    question: "Which hook event fires after a tool completes execution?",
+    options: [
+      "PreToolUse",
+      "PostToolUse",
+      "ToolComplete",
+      "SessionEnd"
+    ],
+    correctAnswer: 1,
+    explanation: "PostToolUse fires after a tool completes execution."
+  },
+  {
+    id: 130,
+    question: "Which hook event fires when a user submits a prompt?",
+    options: [
+      "PromptSubmit",
+      "UserPrompt",
+      "UserPromptSubmit",
+      "SubmitPrompt"
+    ],
+    correctAnswer: 2,
+    explanation: "UserPromptSubmit fires when a user submits a prompt."
+  },
+  {
+    id: 131,
+    question: "Which hook event fires at the beginning of a session?",
+    options: [
+      "SessionStart",
+      "StartSession",
+      "SessionBegin",
+      "InitSession"
+    ],
+    correctAnswer: 0,
+    explanation: "SessionStart fires at the beginning of a Claude Code session."
+  },
+  {
+    id: 132,
+    question: "Which hook event fires at the end of a session?",
+    options: [
+      "SessionClose",
+      "SessionEnd",
+      "EndSession",
+      "CloseSession"
+    ],
+    correctAnswer: 1,
+    explanation: "SessionEnd fires at the end of a Claude Code session."
+  },
+  {
+    id: 133,
+    question: "Which hook type makes HTTP requests?",
+    options: [
+      "web",
+      "http",
+      "request",
+      "api"
+    ],
+    correctAnswer: 1,
+    explanation: "The http hook type makes HTTP requests in response to events."
+  },
+  {
+    id: 134,
+    question: "Which hook type injects prompts into the conversation?",
+    options: [
+      "inject",
+      "prompt",
+      "message",
+      "context"
+    ],
+    correctAnswer: 1,
+    explanation: "The prompt hook type injects prompts into the conversation."
+  },
+  {
+    id: 135,
+    question: "Which hook type delegates to another agent?",
+    options: [
+      "delegate",
+      "agent",
+      "subagent",
+      "worker"
+    ],
+    correctAnswer: 1,
+    explanation: "The agent hook type delegates tasks to another agent."
+  },
+  {
+    id: 136,
+    question: "Which permission mode bypasses all permission checks?",
+    options: [
+      "auto",
+      "bypass",
+      "bypassPermissions",
+      "noPermissions"
+    ],
+    correctAnswer: 2,
+    explanation: "bypassPermissions mode bypasses all permission checks."
+  },
+  {
+    id: 137,
+    question: "What does the /loop command enable?",
+    options: [
+      "Infinite loops in code",
+      "Recurring task execution",
+      "Loop detection",
+      "Circular dependency resolution"
+    ],
+    correctAnswer: 1,
+    explanation: "The /loop command enables recurring task execution with interval parsing."
+  },
+  {
+    id: 138,
+    question: "Which mode automatically approves most operations?",
+    options: [
+      "auto",
+      "acceptEdits",
+      "default",
+      "bypassPermissions"
+    ],
+    correctAnswer: 0,
+    explanation: "The auto permission mode automatically approves most operations."
+  },
+  {
+    id: 139,
+    question: "What is the primary purpose of Agent Teams?",
+    options: [
+      "Code review automation",
+      "Multi-agent collaboration",
+      "Team management",
+      "Version control"
+    ],
+    correctAnswer: 1,
+    explanation: "Agent Teams enable multi-agent collaboration on complex tasks."
+  },
+  {
+    id: 140,
+    question: "What does delegate mode allow agents to do?",
+    options: [
+      "Delete files",
+      "Assign tasks to other agents",
+      "Bypass permissions",
+      "Create new sessions"
+    ],
+    correctAnswer: 1,
+    explanation: "Delegate mode allows agents to assign tasks to other agents."
+  },
+  {
+    id: 141,
+    question: "What is the main advantage of cloud-persisted schedules?",
+    options: [
+      "Faster execution",
+      "Survive session restarts",
+      "Better performance",
+      "Lower cost"
+    ],
+    correctAnswer: 1,
+    explanation: "Cloud-persisted schedules survive session restarts and system reboots."
+  },
+  {
+    id: 142,
+    question: "What is the primary use case for Remote Control?",
+    options: [
+      "Remote debugging",
+      "Mobile device control",
+      "Cross-device Claude Code access",
+      "Remote server management"
+    ],
+    correctAnswer: 2,
+    explanation: "Remote Control enables cross-device access to Claude Code sessions."
+  },
+  {
+    id: 143,
+    question: "What is the main benefit of worktrees in Claude Code?",
+    options: [
+      "Faster compilation",
+      "Isolated development environments",
+      "Better version control",
+      "Reduced disk usage"
+    ],
+    correctAnswer: 1,
+    explanation: "Worktrees provide isolated development environments for parallel work."
+  },
+  {
+    id: 144,
+    question: "What distinguishes Claude Cowork from Claude Code CLI?",
+    options: [
+      "Better performance",
+      "Desktop GUI interface",
+      "More features",
+      "Lower cost"
+    ],
+    correctAnswer: 1,
+    explanation: "Claude Cowork provides a desktop GUI interface unlike the CLI version."
+  },
+  {
+    id: 145,
+    question: "What does Browser Integration enable?",
+    options: [
+      "Web scraping",
+      "Browser automation",
+      "Claude Code in browser context",
+      "Extension development"
+    ],
+    correctAnswer: 2,
+    explanation: "Browser Integration enables Claude Code to work within browser context."
+  },
+  {
+    id: 146,
+    question: "What does AAIF stand for in the context of Claude Code?",
+    options: [
+      "Advanced AI Framework",
+      "Anthropic AI Integration Forum",
+      "AI Adoption and Innovation Forum",
+      "Automated AI Functions"
+    ],
+    correctAnswer: 2,
+    explanation: "AAIF refers to the AI Adoption and Innovation Forum community."
+  },
+  {
+    id: 147,
+    question: "What does SWE-bench Verified measure?",
+    options: [
+      "Code quality",
+      "Software engineering task performance",
+      "Security vulnerabilities",
+      "Execution speed"
+    ],
+    correctAnswer: 1,
+    explanation: "SWE-bench Verified measures performance on software engineering tasks."
+  },
+  {
+    id: 148,
+    question: "Which cron tool would you use to check existing schedules?",
+    options: [
+      "CronCreate",
+      "CronList",
+      "CronDelete",
+      "CronShow"
+    ],
+    correctAnswer: 1,
+    explanation: "CronList displays all existing scheduled cron jobs."
+  },
+  {
+    id: 149,
+    question: "What is the purpose of the plugin.json file?",
+    options: [
+      "Store user preferences",
+      "Define plugin configuration and metadata",
+      "Log plugin activity",
+      "Cache plugin data"
+    ],
+    correctAnswer: 1,
+    explanation: "plugin.json defines the plugin's configuration, hooks, and metadata."
+  },
+  {
+    id: 150,
+    question: "What happens when session-scoped schedules reach the 50-task limit?",
+    options: [
+      "Oldest tasks are deleted",
+      "New tasks are rejected",
+      "Tasks are moved to cloud",
+      "Session is terminated"
+    ],
+    correctAnswer: 1,
+    explanation: "When the 50-task limit is reached, new task creation is rejected."
+  }
+];
+
+module.exports = ch14Questions;

@@ -95,10 +95,25 @@ function startQuestionTimer() {
 }
 
 function showTimeoutMessage() {
+    // Show timeout message
     const messageDiv = document.createElement('div');
     messageDiv.className = 'timeout-message';
     messageDiv.textContent = '⏰ Time Up! Moving to next question...';
     document.querySelector('.question-card').appendChild(messageDiv);
+
+    // Show sad emotional feedback for timeout
+    showFeedbackMessage('😢 Oh no! Time ran out! Don\'t worry, keep going! 💪', 'wrong');
+
+    // Show the correct answer
+    const question = questions[currentQuestionIndex];
+    const options = document.querySelectorAll('.option');
+    if (options[question.correct]) {
+        options[question.correct].classList.add('correct');
+        options[question.correct].innerHTML += ' ✅ (Correct Answer)';
+    }
+
+    // Show explanation
+    showExplanation(question.explanation);
 }
 
 function loadQuestion() {
