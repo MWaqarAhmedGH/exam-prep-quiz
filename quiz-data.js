@@ -1816,7 +1816,7 @@ const chapter13Questions = [
       "It eliminates the need for code comments",
       "It automatically generates test cases"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Progressive specification allows teams to start with high-level requirements and add detail incrementally as understanding deepens, making it easier to manage evolving requirements."
   },
   {
@@ -1828,7 +1828,7 @@ const chapter13Questions = [
       "Just the user interface design",
       "Only database schema definitions"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Complete specifications must address cross-cutting themes like security, performance, accessibility, and error handling that affect multiple components."
   },
   {
@@ -1840,7 +1840,7 @@ const chapter13Questions = [
       "Write unit tests",
       "Create user documentation"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The verification framework begins with parsing the document structure to understand sections and hierarchy before proceeding to other validation steps."
   },
   {
@@ -1852,7 +1852,7 @@ const chapter13Questions = [
       "4 steps",
       "5 steps"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "The verification framework consists of 4 steps for validating specification completeness and correctness."
   },
   {
@@ -1864,7 +1864,7 @@ const chapter13Questions = [
       "Elimination of human developers",
       "Instant deployment capabilities"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "AI can parse structured Markdown to understand document organization, locate specific information quickly, and validate that all required components are present."
   },
   {
@@ -1876,7 +1876,7 @@ const chapter13Questions = [
       "MultiMarkdown",
       "Markdown Extra"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "GitHub Flavored Markdown (GFM) is the standard flavor used on GitHub, adding features like task lists, tables, and strikethrough."
   },
   {
@@ -1888,7 +1888,7 @@ const chapter13Questions = [
       "Code block labels",
       "Table headers"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Level 1 headings serve as the document title or main topic, typically appearing once at the top of the document."
   },
   {
@@ -1900,7 +1900,7 @@ const chapter13Questions = [
       "For subsections within a level 2 section",
       "Never, only use levels 1 and 2"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Level 3 headings are used for subsections within level 2 sections, providing additional hierarchy and organization."
   },
   {
@@ -1912,7 +1912,7 @@ const chapter13Questions = [
       "Only alphabetical sorting",
       "Unimportant information"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Ordered lists indicate that items have a meaningful sequence, such as steps in a process, priority ranking, or temporal order."
   },
   {
@@ -1924,7 +1924,7 @@ const chapter13Questions = [
       "Use strikethrough",
       "Dependencies cannot be shown in Markdown"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Dependencies can be shown through nested list structures or explicit textual references indicating relationships between items."
   },
   {
@@ -1936,7 +1936,7 @@ const chapter13Questions = [
       "To add syntax highlighting",
       "To create inline code"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Quadruple backticks allow you to document code examples that contain triple backticks, preventing parsing conflicts."
   },
   {
@@ -1948,7 +1948,7 @@ const chapter13Questions = [
       "They load faster than local files",
       "They never break"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Online URLs make images accessible from any location without requiring local file access, though they depend on network connectivity."
   },
   {
@@ -1960,7 +1960,7 @@ const chapter13Questions = [
       "They cannot be displayed in browsers",
       "They use more disk space"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Local image paths require careful management of relative paths and ensuring files are available in the correct locations for all users."
   },
   {
@@ -1972,7 +1972,7 @@ const chapter13Questions = [
       "Always use the largest possible file size",
       "Never include images with AI"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Multimodal AI benefits from clear, relevant images with appropriate context that explains what the AI should focus on or extract from the image."
   },
   {
@@ -1984,7 +1984,7 @@ const chapter13Questions = [
       "Using asterisks instead of underscores",
       "Combining bold and italic"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Overusing emphasis (bold/italic) dilutes its impact and makes documents harder to read. Emphasis should be reserved for truly important content."
   },
   {
@@ -1996,7 +1996,7 @@ const chapter13Questions = [
       "|:---|",
       "|===|"
     ],
-    correctAnswer: 0,
+    correct: 0,
     explanation: "The syntax :---: centers column content, with colons on both sides of the dashes in the separator row."
   },
   {
@@ -2008,7 +2008,7 @@ const chapter13Questions = [
       "|:---:|",
       "|>---|"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The syntax ---: right-aligns column content, with a colon only on the right side of the dashes."
   },
   {
@@ -2020,7 +2020,7 @@ const chapter13Questions = [
       "Caret (^)",
       "Tilde (~)"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The backslash (\\) is used to escape special Markdown characters, allowing them to be displayed literally."
   },
   {
@@ -2032,7 +2032,7 @@ const chapter13Questions = [
       "/*",
       "^*"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Use \\* to escape the asterisk and display it literally without triggering emphasis formatting."
   },
   {
@@ -2044,7 +2044,7 @@ const chapter13Questions = [
       "Creates a horizontal rule",
       "Starts a code block"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Most Markdown parsers treat a single newline as a space within the same paragraph, not as a line break."
   },
   {
@@ -2056,7 +2056,7 @@ const chapter13Questions = [
       "Use a semicolon",
       "Indent the text"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "A blank line (two consecutive newlines) separates paragraphs in Markdown."
   },
   {
@@ -2068,7 +2068,7 @@ const chapter13Questions = [
       "Only code examples",
       "Social media links"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Complete specifications must include purpose, scope, functional requirements, acceptance criteria, and other key components."
   },
   {
@@ -2080,7 +2080,7 @@ const chapter13Questions = [
       "No specification needed",
       "Code-first with no documentation"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The Task Tracker example demonstrates progressive specification, where detail is added incrementally as requirements evolve."
   },
   {
@@ -2092,7 +2092,7 @@ const chapter13Questions = [
       "Delete old versions",
       "Create backup copies"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "After parsing structure (step 1), the second step is to find and extract specific information from identified sections."
   },
   {
@@ -2104,7 +2104,7 @@ const chapter13Questions = [
       "Archive the project",
       "Generate random test data"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The third step validates that all required specification components are present and complete."
   },
   {
@@ -2116,7 +2116,7 @@ const chapter13Questions = [
       "Delete the specification",
       "Create a new project"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The final step checks for internal consistency, conflicts between sections, and gaps in the specification."
   },
   {
@@ -2128,7 +2128,7 @@ const chapter13Questions = [
       "CommonMark",
       "Basic Markdown"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Markdown Extra extends standard Markdown with features like footnotes, definition lists, and tables."
   },
   {
@@ -2140,7 +2140,7 @@ const chapter13Questions = [
       "A deprecated Markdown version",
       "A Markdown editor"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "CommonMark is a standardized specification that aims to remove ambiguities in Markdown parsing."
   },
   {
@@ -2152,7 +2152,7 @@ const chapter13Questions = [
       "Compiling code",
       "Database backups"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "GitHub README files provide project overviews, installation instructions, usage examples, and other essential documentation."
   },
   {
@@ -2164,7 +2164,7 @@ const chapter13Questions = [
       "It automatically generates code",
       "It requires no learning"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Markdown's simple, structured syntax is both human-readable and easily parsed by AI systems for understanding and validation."
   },
   {
@@ -2176,7 +2176,7 @@ const chapter13Questions = [
       "Video editing",
       "Image processing"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Markdown is widely used with static site generators to create documentation websites from simple text files."
   },
   {
@@ -2188,7 +2188,7 @@ const chapter13Questions = [
       "For inline emphasis",
       "For code comments"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Level 2 headings mark major sections within a document, providing the primary organizational structure below the title."
   },
   {
@@ -2200,7 +2200,7 @@ const chapter13Questions = [
       "Level 4 or 5",
       "Level 10"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Most documents should limit headings to level 4 or 5 to maintain clarity and avoid excessive nesting."
   },
   {
@@ -2212,7 +2212,7 @@ const chapter13Questions = [
       "Alphabetical organization only",
       "Deprecated information"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Unordered lists indicate a collection of related items where the order is not significant."
   },
   {
@@ -2224,7 +2224,7 @@ const chapter13Questions = [
       "Use strikethrough",
       "Change the font size"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Dependencies can be shown through nesting (indentation) or explicit textual references like 'requires completion of task X'."
   },
   {
@@ -2236,7 +2236,7 @@ const chapter13Questions = [
       "```script",
       "```java"
     ],
-    correctAnswer: 0,
+    correct: 0,
     explanation: "Use ```js or ```javascript to enable syntax highlighting for JavaScript code blocks."
   },
   {
@@ -2248,7 +2248,7 @@ const chapter13Questions = [
       "To add extra security",
       "To compress the code"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Quadruple backticks allow you to show Markdown code block syntax (with triple backticks) as an example without the parser interpreting it."
   },
   {
@@ -2260,7 +2260,7 @@ const chapter13Questions = [
       "<img>alt text</img>",
       "{image: alt text}"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The syntax ![alt text](image.png) creates an image with alternative text for accessibility."
   },
   {
@@ -2272,7 +2272,7 @@ const chapter13Questions = [
       "Network paths only",
       "Random paths"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Relative paths are recommended for local images as they maintain portability when the project is moved or shared."
   },
   {
@@ -2284,7 +2284,7 @@ const chapter13Questions = [
       "Only the file size",
       "The creation date"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Providing context about the diagram's purpose and key elements helps AI understand and extract relevant information."
   },
   {
@@ -2296,7 +2296,7 @@ const chapter13Questions = [
       "It increases font size",
       "It changes the color"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Overusing bold text diminishes its emphasis value and creates visual clutter, making documents harder to read."
   },
   {
@@ -2308,7 +2308,7 @@ const chapter13Questions = [
       "Use tabs between columns",
       "Use commas like CSV"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Markdown tables use pipes (|) to separate columns and a row of dashes to separate headers from content."
   },
   {
@@ -2320,7 +2320,7 @@ const chapter13Questions = [
       "Right-aligned",
       "Justified"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Table columns are left-aligned by default unless alignment syntax (colons) is specified."
   },
   {
@@ -2332,7 +2332,7 @@ const chapter13Questions = [
       "Spaces and tabs",
       "Vowels only"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Special Markdown characters like *, _, #, brackets, parentheses, and backslash need escaping to display literally."
   },
   {
@@ -2344,7 +2344,7 @@ const chapter13Questions = [
       "Use a comma",
       "Use a semicolon"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Two spaces at the end of a line followed by a newline creates a hard line break within a paragraph."
   },
   {
@@ -2356,7 +2356,7 @@ const chapter13Questions = [
       "Only success cases",
       "Error handling is optional"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Complete specifications must document expected error scenarios and define appropriate handling strategies."
   },
   {
@@ -2368,7 +2368,7 @@ const chapter13Questions = [
       "To confuse developers",
       "They are optional and not important"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Acceptance criteria provide clear, measurable conditions that determine when a feature is complete and working correctly."
   },
   {
@@ -2380,7 +2380,7 @@ const chapter13Questions = [
       "Accessibility",
       "Maintainability"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Performance is the cross-cutting concern that addresses system responsiveness, speed, and resource efficiency."
   },
   {
@@ -2392,7 +2392,7 @@ const chapter13Questions = [
       "Never add technical details",
       "Only after the project is complete"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Progressive specification adds technical details incrementally as the team's understanding evolves and requirements become clearer."
   },
   {
@@ -2404,7 +2404,7 @@ const chapter13Questions = [
       "It requires special tools",
       "It cannot be versioned"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Markdown's plain text format integrates seamlessly with version control systems, making changes easy to track, diff, and merge."
   },
 ];
@@ -3620,7 +3620,7 @@ const chapter14Questions = [
       "acceptEdits",
       "bypassPermissions"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The default permission mode requires explicit user approval for operations."
   },
   {
@@ -3632,7 +3632,7 @@ const chapter14Questions = [
       "acceptEdits",
       "bypassPermissions"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "acceptEdits mode automatically accepts all edit operations without prompting."
   },
   {
@@ -3644,7 +3644,7 @@ const chapter14Questions = [
       "5",
       "6"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "There are 5 hook events: PreToolUse, PostToolUse, UserPromptSubmit, SessionStart, and SessionEnd."
   },
   {
@@ -3656,7 +3656,7 @@ const chapter14Questions = [
       "PostToolUse",
       "UserPromptSubmit"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "PreToolUse fires before a tool is executed, allowing interception or modification."
   },
   {
@@ -3668,7 +3668,7 @@ const chapter14Questions = [
       "plugins/config.json",
       ".config/claude-plugin.json"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Plugin configuration is stored in .claude-plugin/plugin.json."
   },
   {
@@ -3680,7 +3680,7 @@ const chapter14Questions = [
       "4",
       "5"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "There are 4 hook types: command, http, prompt, and agent."
   },
   {
@@ -3692,7 +3692,7 @@ const chapter14Questions = [
       "command",
       "http"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "The command hook type executes shell commands in response to events."
   },
   {
@@ -3704,7 +3704,7 @@ const chapter14Questions = [
       "/manage-plugin",
       "/add-plugin"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The /plugin command is used to manage plugins in Claude Code."
   },
   {
@@ -3716,7 +3716,7 @@ const chapter14Questions = [
       "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1",
       "ENABLE_AGENT_TEAMS=1"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 enables the Agent Teams feature."
   },
   {
@@ -3728,7 +3728,7 @@ const chapter14Questions = [
       "Alt+Tab",
       "Ctrl+Shift+D"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Shift+Tab activates delegate mode for agent collaboration."
   },
   {
@@ -3740,7 +3740,7 @@ const chapter14Questions = [
       "TaskCreate",
       "ScheduleCreate"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "CronCreate is the tool used to create scheduled tasks in Claude Code."
   },
   {
@@ -3752,7 +3752,7 @@ const chapter14Questions = [
       "75",
       "100"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Session-scoped schedules have a 50-task limit."
   },
   {
@@ -3764,7 +3764,7 @@ const chapter14Questions = [
       "3 days",
       "7 days"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Session-scoped scheduled tasks have a 3-day expiry period."
   },
   {
@@ -3776,7 +3776,7 @@ const chapter14Questions = [
       "/cloud-schedule",
       "/save-schedule"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The /schedule command enables cloud persistence for scheduled tasks."
   },
   {
@@ -3788,7 +3788,7 @@ const chapter14Questions = [
       "ListCron",
       "ShowSchedule"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "CronList is used to list all scheduled cron jobs."
   },
   {
@@ -3800,7 +3800,7 @@ const chapter14Questions = [
       "DeleteCron",
       "RemoveSchedule"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "CronDelete is used to delete scheduled cron jobs."
   },
   {
@@ -3812,7 +3812,7 @@ const chapter14Questions = [
       "claude remote-control",
       "claude rc"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "The command 'claude remote-control' starts Remote Control mode."
   },
   {
@@ -3824,7 +3824,7 @@ const chapter14Questions = [
       "-r",
       "-rc"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The --rc flag is the shorthand for enabling Remote Control mode."
   },
   {
@@ -3836,7 +3836,7 @@ const chapter14Questions = [
       "/remote-control",
       "/control"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The /rc command enables Remote Control within a session."
   },
   {
@@ -3848,7 +3848,7 @@ const chapter14Questions = [
       "worktrees/",
       ".worktrees/"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Worktrees are stored in the .claude/worktrees/ directory."
   },
   {
@@ -3860,7 +3860,7 @@ const chapter14Questions = [
       "--work-tree",
       "-w"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The --worktree flag enables worktree mode when starting Claude Code."
   },
   {
@@ -3872,7 +3872,7 @@ const chapter14Questions = [
       "Desktop app",
       "Browser extension"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Claude Cowork is a desktop application for collaborative coding."
   },
   {
@@ -3884,7 +3884,7 @@ const chapter14Questions = [
       "M3+",
       "Any Apple Silicon"
     ],
-    correctAnswer: 0,
+    correct: 0,
     explanation: "Claude Cowork requires Apple Silicon M1+ processors."
   },
   {
@@ -3896,7 +3896,7 @@ const chapter14Questions = [
       "v1.0.40+",
       "v1.1.0+"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Browser Integration requires Chrome extension version 1.0.36 or higher."
   },
   {
@@ -3908,7 +3908,7 @@ const chapter14Questions = [
       "macOS",
       "All platforms"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Computer Use is available as a research preview on macOS."
   },
   {
@@ -3920,7 +3920,7 @@ const chapter14Questions = [
       "146",
       "160"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "AAIF had 146 members by February 2026."
   },
   {
@@ -3932,7 +3932,7 @@ const chapter14Questions = [
       "$2.5B+",
       "$3.0B+"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Claude Code achieved $2.5B+ in Annual Recurring Revenue."
   },
   {
@@ -3944,7 +3944,7 @@ const chapter14Questions = [
       "85.2%",
       "90.1%"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Claude Code achieved an 80.9% score on SWE-bench Verified."
   },
   {
@@ -3956,7 +3956,7 @@ const chapter14Questions = [
       "ToolComplete",
       "SessionEnd"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "PostToolUse fires after a tool completes execution."
   },
   {
@@ -3968,7 +3968,7 @@ const chapter14Questions = [
       "UserPromptSubmit",
       "SubmitPrompt"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "UserPromptSubmit fires when a user submits a prompt."
   },
   {
@@ -3980,7 +3980,7 @@ const chapter14Questions = [
       "SessionBegin",
       "InitSession"
     ],
-    correctAnswer: 0,
+    correct: 0,
     explanation: "SessionStart fires at the beginning of a Claude Code session."
   },
   {
@@ -3992,7 +3992,7 @@ const chapter14Questions = [
       "EndSession",
       "CloseSession"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "SessionEnd fires at the end of a Claude Code session."
   },
   {
@@ -4004,7 +4004,7 @@ const chapter14Questions = [
       "request",
       "api"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The http hook type makes HTTP requests in response to events."
   },
   {
@@ -4016,7 +4016,7 @@ const chapter14Questions = [
       "message",
       "context"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The prompt hook type injects prompts into the conversation."
   },
   {
@@ -4028,7 +4028,7 @@ const chapter14Questions = [
       "subagent",
       "worker"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The agent hook type delegates tasks to another agent."
   },
   {
@@ -4040,7 +4040,7 @@ const chapter14Questions = [
       "bypassPermissions",
       "noPermissions"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "bypassPermissions mode bypasses all permission checks."
   },
   {
@@ -4052,7 +4052,7 @@ const chapter14Questions = [
       "Loop detection",
       "Circular dependency resolution"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "The /loop command enables recurring task execution with interval parsing."
   },
   {
@@ -4064,7 +4064,7 @@ const chapter14Questions = [
       "default",
       "bypassPermissions"
     ],
-    correctAnswer: 0,
+    correct: 0,
     explanation: "The auto permission mode automatically approves most operations."
   },
   {
@@ -4076,7 +4076,7 @@ const chapter14Questions = [
       "Team management",
       "Version control"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Agent Teams enable multi-agent collaboration on complex tasks."
   },
   {
@@ -4088,7 +4088,7 @@ const chapter14Questions = [
       "Bypass permissions",
       "Create new sessions"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Delegate mode allows agents to assign tasks to other agents."
   },
   {
@@ -4100,7 +4100,7 @@ const chapter14Questions = [
       "Better performance",
       "Lower cost"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Cloud-persisted schedules survive session restarts and system reboots."
   },
   {
@@ -4112,7 +4112,7 @@ const chapter14Questions = [
       "Cross-device Claude Code access",
       "Remote server management"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Remote Control enables cross-device access to Claude Code sessions."
   },
   {
@@ -4124,7 +4124,7 @@ const chapter14Questions = [
       "Better version control",
       "Reduced disk usage"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Worktrees provide isolated development environments for parallel work."
   },
   {
@@ -4136,7 +4136,7 @@ const chapter14Questions = [
       "More features",
       "Lower cost"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "Claude Cowork provides a desktop GUI interface unlike the CLI version."
   },
   {
@@ -4148,7 +4148,7 @@ const chapter14Questions = [
       "Claude Code in browser context",
       "Extension development"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "Browser Integration enables Claude Code to work within browser context."
   },
   {
@@ -4160,7 +4160,7 @@ const chapter14Questions = [
       "AI Adoption and Innovation Forum",
       "Automated AI Functions"
     ],
-    correctAnswer: 2,
+    correct: 2,
     explanation: "AAIF refers to the AI Adoption and Innovation Forum community."
   },
   {
@@ -4172,7 +4172,7 @@ const chapter14Questions = [
       "Security vulnerabilities",
       "Execution speed"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "SWE-bench Verified measures performance on software engineering tasks."
   },
   {
@@ -4184,7 +4184,7 @@ const chapter14Questions = [
       "CronDelete",
       "CronShow"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "CronList displays all existing scheduled cron jobs."
   },
   {
@@ -4196,7 +4196,7 @@ const chapter14Questions = [
       "Log plugin activity",
       "Cache plugin data"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "plugin.json defines the plugin's configuration, hooks, and metadata."
   },
   {
@@ -4208,7 +4208,7 @@ const chapter14Questions = [
       "Tasks are moved to cloud",
       "Session is terminated"
     ],
-    correctAnswer: 1,
+    correct: 1,
     explanation: "When the 50-task limit is reached, new task creation is rejected."
   },
 ];
