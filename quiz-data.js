@@ -713,7 +713,7 @@ const chapter12Questions = [
     },
     {
         question: "What does the Nine Pillars framework suggest about partial implementation?",
-        options: ['A) Partial is sufficient', 'B) Comprehensive approach needed for full benefits', 'C) Any pillar works alone', 'D) Order doesn't matter'],
+        options: ['A) Partial is sufficient', 'B) Comprehensive approach needed for full benefits', 'C) Any pillar works alone', 'D) Order does not matter'],
         correct: 1,
         explanation: "The Nine Pillars framework suggests a comprehensive approach is needed, as partial implementation may miss critical interdependencies between pillars."
     },
@@ -785,7 +785,7 @@ const chapter12Questions = [
     },
     {
         question: "How does the 'Hear' power extend beyond simple speech recognition?",
-        options: ['A) It doesn't', 'B) Includes understanding context, tone, and intent in audio', 'C) Only transcription', 'D) Visual processing'],
+        options: ['A) It does not', 'B) Includes understanding context, tone, and intent in audio', 'C) Only transcription', 'D) Visual processing'],
         correct: 1,
         explanation: "The Hear power extends beyond transcription to understand context, tone, and intent in audio communication, enabling richer interaction."
     },
@@ -1394,7 +1394,7 @@ const chapter13Questions = [
       "It's too informal",
       "It provides no context about the link destination and is not accessible",
       "It's too long",
-      "It doesn't work in Markdown"
+      "It does not work in Markdown"
     ],
     correct: 1,
     explanation: "'Click here' provides no semantic information about the link destination, making it less useful for AI processing and inaccessible for screen reader users."
@@ -1511,7 +1511,7 @@ const chapter13Questions = [
     id: 76,
     question: "How does text emphasis help AI prioritize instructions?",
     options: [
-      "It doesn't affect AI processing",
+      "It does not affect AI processing",
       "Bold and italic provide visual cues that signal importance and requirement levels",
       "It only helps human readers",
       "It makes processing slower"
