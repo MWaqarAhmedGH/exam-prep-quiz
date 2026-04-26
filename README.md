@@ -38,7 +38,11 @@ Interactive and Beautiful Quiz Application for Exam Preparation
 
 ## 📱 Access Online
 
-Visit: [Your GitHub Pages URL will be here]
+Visit: [Live Quiz Application](https://mwaqarahmedgh.github.io/exam-prep-quiz/)
+
+## 🔗 Repository
+
+GitHub: [exam-prep-quiz](https://github.com/MWaqarAhmedGH/exam-prep-quiz)
 
 ## 💪 Good Luck!
 
