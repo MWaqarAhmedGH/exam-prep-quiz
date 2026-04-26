@@ -113,7 +113,7 @@ function showTimeoutMessage() {
     }
 
     // Show explanation
-    showExplanation(question.explanation);
+    // showExplanation(question.explanation);
 }
 
 function loadQuestion() {
@@ -190,7 +190,7 @@ function loadQuestion() {
         } else {
             showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
         }
-        showExplanation(question.explanation);
+        // showExplanation(question.explanation);
     }
 
     // Update navigation buttons
@@ -264,7 +264,7 @@ function selectOption(index) {
     }
 
     // Show explanation for THIS question
-    showExplanation(question.explanation);
+    // showExplanation(question.explanation);
 
     // Update timer display
     document.getElementById('questionTimer').textContent = 'Answered';
