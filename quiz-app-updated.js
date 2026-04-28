@@ -118,6 +118,12 @@ function showTimeoutMessage() {
 
 function loadQuestion() {
     const question = questions[currentQuestionIndex];
+    const questionCard = document.querySelector('.question-card');
+    
+    // Trigger 3D Flip Animation
+    questionCard.classList.remove('flip-3d');
+    void questionCard.offsetWidth; // Force reflow
+    questionCard.classList.add('flip-3d');
 
     // IMPORTANT: Remove old explanations, timeout messages, and feedback messages
     const oldExplanation = document.querySelector('.explanation');
