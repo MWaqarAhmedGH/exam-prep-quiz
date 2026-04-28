@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💕 Romantic Exam Prep Quiz - 3D Experience 💕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🌹 Midnight Rose Quiz Experience 🌹</title>
     <style>
         :root {
-            --romantic-primary: #ff758c;
-            --romantic-secondary: #ff7eb3;
-            --romantic-gradient: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
-            --romantic-dark: #764ba2;
-            --romantic-light: #fff5f7;
-            --romantic-accent: #fce38a;
-            --shadow-3d: 0 20px 50px rgba(255, 117, 140, 0.3);
+            --midnight-bg: #1a0624;
+            --rose-primary: #e7a79a;
+            --rose-dark: #b87a6e;
+            --velvet-purple: #4a154b;
+            --cream-white: #fffafa;
+            --glass-bg: rgba(255, 250, 250, 0.95);
+            --romantic-gradient: linear-gradient(135deg, #4a154b 0%, #1a0624 100%);
         }
 
         * {
@@ -21,337 +21,332 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-            min-height: 100vh;
-            padding: 20px;
-            position: relative;
-            overflow-x: hidden;
-            perspective: 1500px;
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden !important;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
 
-        /* Floating Hearts Background */
-        .heart-particle {
+        body {
+            font-family: 'Optima', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--romantic-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 2000px;
+        }
+
+        /* Ambient Petals */
+        .petal {
             position: fixed;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 20px;
+            color: var(--rose-primary);
+            font-size: 15px;
             pointer-events: none;
             z-index: 0;
-            animation: floatHeart 15s linear infinite;
+            opacity: 0.4;
+            animation: drift 12s linear infinite;
         }
 
-        @keyframes floatHeart {
-            0% { transform: translateY(100vh) rotate(0deg) translateZ(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-20vh) rotate(360deg) translateZ(500px); opacity: 0; }
+        @keyframes drift {
+            0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { transform: translateY(110vh) rotate(720deg) translateX(100px); opacity: 0; }
         }
 
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 40px;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.5),
-                        0 0 0 1px rgba(255,255,255,0.4) inset;
-            overflow: hidden;
-            backdrop-filter: blur(15px);
+            width: 95%;
+            max-width: 1100px;
+            height: 90%;
+            max-height: 90%;
+            background: var(--glass-bg);
+            border-radius: 20px;
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8),
+                        0 0 0 1px rgba(231, 167, 154, 0.3) inset;
+            display: flex;
+            flex-direction: column;
             transform-style: preserve-3d;
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
             z-index: 1;
+            overflow: hidden;
         }
 
         .container:hover {
-            transform: rotateX(2deg) rotateY(-1deg);
+            transform: rotateX(1deg) rotateY(-0.5deg);
         }
 
         .header {
-            background: var(--romantic-gradient);
-            color: white;
-            padding: 50px;
+            padding: 10px 20px;
+            background: var(--midnight-bg);
+            color: var(--rose-primary);
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
+            border-bottom: 3px solid var(--rose-primary);
+            flex-shrink: 0;
         }
 
         .header h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            text-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            transform: translateZ(50px);
-            animation: titlePulse 2s ease-in-out infinite;
-        }
-
-        @keyframes titlePulse {
-            0%, 100% { transform: translateZ(50px) scale(1); }
-            50% { transform: translateZ(80px) scale(1.05); }
-        }
-
-        .header p {
-            font-size: 1.4em;
-            opacity: 0.95;
-            transform: translateZ(30px);
+            font-size: 1.6em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
         }
 
         .content {
-            padding: 50px;
-            transform-style: preserve-3d;
+            flex: 1;
+            padding: 15px 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 0;
         }
 
         .chapter-selection {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            margin-bottom: 30px;
-            transform-style: preserve-3d;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            height: 100%;
         }
 
         .chapter-card {
-            background: white;
-            color: var(--romantic-dark);
-            padding: 45px;
-            border-radius: 30px;
+            background: var(--midnight-bg);
+            color: var(--rose-primary);
+            padding: 20px;
+            border-radius: 15px;
             cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-align: center;
-            position: relative;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border: 2px solid transparent;
+            transition: all 0.4s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--velvet-purple);
             transform-style: preserve-3d;
         }
 
         .chapter-card:hover {
-            transform: translateY(-15px) rotateY(10deg) translateZ(20px);
-            border-color: var(--romantic-primary);
-            box-shadow: 0 30px 60px rgba(255, 117, 140, 0.3);
-            color: var(--romantic-primary);
+            background: var(--velvet-purple);
+            transform: translateZ(30px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
         }
 
-        .chapter-card h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            transform: translateZ(40px);
-        }
-
-        .chapter-card .mcq-count {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin: 15px 0;
-            background: var(--romantic-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transform: translateZ(60px);
-        }
+        .chapter-card h3 { font-size: 1.5em; margin-bottom: 10px; }
+        .chapter-card .mcq-count { font-size: 3em; font-weight: 700; margin: 10px 0; }
 
         .quiz-container {
             display: none;
-            animation: flipIn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-            transform-style: preserve-3d;
-        }
-
-        @keyframes flipIn {
-            from { transform: rotateX(-90deg); opacity: 0; }
-            to { transform: rotateX(0deg); opacity: 1; }
+            height: 100%;
+            flex-direction: column;
         }
 
         .quiz-header {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 8px 15px;
+            background: var(--midnight-bg);
+            color: var(--rose-primary);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            text-align: center;
             align-items: center;
-            margin-bottom: 40px;
-            padding: 35px;
-            background: white;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transform: translateZ(20px);
+            flex-shrink: 0;
         }
 
-        .question-timer {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: var(--romantic-primary);
-            text-shadow: 0 5px 15px rgba(255, 117, 140, 0.2);
-        }
+        .question-timer { font-size: 1.5em; font-weight: 700; color: #fff; }
 
         .question-card {
-            background: white;
-            padding: 50px;
-            border-radius: 35px;
-            margin-bottom: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
-            transform: translateZ(30px);
-            transition: transform 0.5s ease;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 0;
+            overflow: hidden;
         }
 
         .question-text {
-            font-size: 1.6em;
-            margin-bottom: 40px;
-            color: #333;
-            line-height: 1.6;
+            font-size: 1.15em;
+            color: var(--midnight-bg);
+            margin-bottom: 12px;
             font-weight: 600;
+            line-height: 1.3;
         }
 
         .options {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
         }
 
         .option {
-            background: var(--romantic-light);
-            padding: 25px;
-            border-radius: 20px;
-            border: 2px solid #ffeef1;
+            background: #fff;
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: 2px solid var(--rose-primary);
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-size: 1.3em;
-            color: #555;
-            transform-style: preserve-3d;
+            transition: all 0.3s;
+            font-size: 0.95em;
+            color: #444;
+            display: flex;
+            align-items: center;
         }
 
         .option:hover {
-            transform: translateX(15px) translateZ(20px);
-            background: white;
-            border-color: var(--romantic-primary);
-            box-shadow: 0 10px 25px rgba(255, 117, 140, 0.2);
+            background: var(--rose-primary);
+            color: #fff;
+            transform: scale(1.02);
         }
 
         .option.selected {
-            background: var(--romantic-gradient);
-            color: white;
-            border-color: transparent;
-            transform: scale(1.05) translateZ(30px);
-            box-shadow: 0 15px 35px rgba(255, 117, 140, 0.4);
+            background: var(--midnight-bg);
+            color: var(--rose-primary);
+            border-color: var(--midnight-bg);
         }
 
-        .option.correct {
-            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
-            color: white;
-            transform: scale(1.05) translateZ(30px);
-        }
+        .option.correct { background: #2d6a4f !important; color: white !important; }
+        .option.wrong { background: #7b1e1e !important; color: white !important; }
 
-        .option.wrong {
-            background: linear-gradient(135deg, #f44336 0%, #b71c1c 100%);
-            color: white;
-            transform: scale(0.95) translateZ(10px);
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            flex-shrink: 0;
         }
 
         .btn {
-            padding: 20px 50px;
+            padding: 10px 25px;
             border: none;
-            border-radius: 20px;
-            font-size: 1.3em;
+            border-radius: 10px;
+            font-size: 1em;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-weight: bold;
+            font-weight: 700;
+            transition: all 0.3s;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-            transform-style: preserve-3d;
         }
 
-        .btn-primary {
-            background: var(--romantic-gradient);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-8px) translateZ(30px);
-            box-shadow: 0 20px 40px rgba(255, 117, 140, 0.4);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--romantic-primary);
-            border: 2px solid var(--romantic-primary);
-        }
+        .btn-primary { background: var(--midnight-bg); color: var(--rose-primary); }
+        .btn-secondary { background: var(--rose-primary); color: var(--midnight-bg); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
         .result-container {
             display: none;
-            animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.5); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .result-score {
-            font-size: 7em;
+            font-size: 3.5em;
             font-weight: 900;
-            background: var(--romantic-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 20px 0;
-            filter: drop-shadow(0 10px 20px rgba(255, 117, 140, 0.3));
+            color: var(--midnight-bg);
+        }
+
+        .result-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            width: 100%;
+            max-width: 600px;
+            margin: 10px 0;
         }
 
         .result-item {
-            background: white;
-            border: 1px solid #ffeef1;
-            margin: 15px 0;
-            padding: 25px;
-            border-radius: 20px;
+            background: #fff;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid var(--rose-primary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .feedback-correct, .feedback-wrong {
+            padding: 6px 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            font-size: 0.9em;
             font-weight: 600;
-            transition: all 0.3s;
+            text-align: center;
+            flex-shrink: 0;
         }
 
-        .result-item:hover {
-            transform: scale(1.02) translateZ(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        .feedback-correct {
+            background: #d4edda;
+            color: #155724;
         }
 
-        @media (max-width: 768px) {
-            .header h1 { font-size: 2.5em; }
-            .content { padding: 25px; }
-            .btn { width: 100%; margin-bottom: 15px; }
-            .navigation { flex-direction: column-reverse; }
+        .feedback-wrong {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .timeout-message {
+            padding: 6px 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-align: center;
+            background: #fff3cd;
+            color: #856404;
+            flex-shrink: 0;
+        }
+
+        @media (max-height: 700px) {
+            .header h1 { font-size: 1.3em; }
+            .header { padding: 6px 15px; }
+            .question-text { font-size: 1em; margin-bottom: 8px; }
+            .option { padding: 8px 10px; font-size: 0.85em; }
+            .options { gap: 6px; }
+            .navigation { margin-top: 6px; }
+            .btn { padding: 8px 20px; font-size: 0.9em; }
+            .quiz-header { padding: 6px 10px; margin-bottom: 6px; }
+            .question-timer { font-size: 1.2em; }
+            .result-score { font-size: 2.5em; }
+            .content { padding: 10px 15px; }
         }
     </style>
 </head>
 <body>
-    <!-- Background Hearts -->
     <script>
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart-particle';
-            heart.innerHTML = '💕';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            heart.style.opacity = Math.random() * 0.5 + 0.2;
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 20000);
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.innerHTML = '🌸';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDuration = (Math.random() * 5 + 7) + 's';
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 12000);
         }
-        setInterval(createHeart, 800);
+        setInterval(createPetal, 1500);
     </script>
 
     <div class="container">
         <div class="header">
-            <h1>💕 Exam Prep Quiz 💕</h1>
-            <p>Romantic 3D Experience - Chapters 12, 13, 14</p>
+            <h1>🌹 Midnight Rose Quiz Experience 🌹</h1>
         </div>
 
         <div class="content">
-            <!-- Chapter Selection Screen -->
+            <!-- Chapter Selection -->
             <div id="chapterSelection" class="chapter-selection">
                 <div class="chapter-card" onclick="startQuiz(12)">
-                    <h3>📚 Chapter 12</h3>
-                    <p>AI Agent Factory Paradigm</p>
+                    <h3>Chapter 12</h3>
                     <div class="mcq-count">150</div>
                     <p>MCQs</p>
                 </div>
                 <div class="chapter-card" onclick="startQuiz(13)">
-                    <h3>📝 Chapter 13</h3>
-                    <p>Markdown - Writing Instructions</p>
+                    <h3>Chapter 13</h3>
                     <div class="mcq-count">150</div>
                     <p>MCQs</p>
                 </div>
                 <div class="chapter-card" onclick="startQuiz(14)">
-                    <h3>🖥️ Chapter 14</h3>
-                    <p>Claude Code and Cowork</p>
+                    <h3>Chapter 14</h3>
                     <div class="mcq-count">150</div>
                     <p>MCQs</p>
                 </div>
@@ -361,13 +356,13 @@
             <div id="quizContainer" class="quiz-container">
                 <div class="quiz-header">
                     <div>
-                        <div style="color: #888; font-weight: 600; margin-bottom: 5px;">Total Time</div>
-                        <div id="totalTimer" style="font-size: 1.4em; color: var(--romantic-dark); font-weight: 700;">00:00</div>
+                        <div style="font-size: 0.8em; opacity: 0.8;">TIME</div>
+                        <div id="totalTimer">00:00</div>
                     </div>
                     <div class="question-timer" id="questionTimer">60s</div>
-                    <div style="text-align: right;">
-                        <div id="currentQInfo" style="color: #888; font-weight: 600; margin-bottom: 5px;">Question <span id="currentQ">1</span>/<span id="totalQ">150</span></div>
-                        <div id="scoreInfo" style="font-size: 1.4em; color: var(--romantic-primary); font-weight: 700;">Score: <span id="score">0</span></div>
+                    <div>
+                        <div id="currentQInfo" style="font-size: 0.8em; opacity: 0.8;">Q <span id="currentQ">1</span>/<span id="totalQ">150</span></div>
+                        <div id="scoreInfo">Score: <span id="score">0</span></div>
                     </div>
                 </div>
 
@@ -377,54 +372,35 @@
                 </div>
 
                 <div class="navigation">
-                    <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn">⬅️ Previous</button>
-                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Next ➡️</button>
-                    <button class="btn btn-primary" onclick="submitQuiz()" id="submitBtn" style="display:none;">Finish Quiz 🎯</button>
+                    <button class="btn btn-secondary" onclick="previousQuestion()" id="prevBtn">Previous</button>
+                    <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn">Next</button>
+                    <button class="btn btn-primary" onclick="submitQuiz()" id="submitBtn" style="display:none;">Finish</button>
                 </div>
             </div>
 
             <!-- Result Container -->
             <div id="resultContainer" class="result-container">
-                <h2 style="font-size: 2.5em; color: var(--romantic-dark);">💕 Quiz Results 💕</h2>
+                <h2 style="color: var(--midnight-bg);">Quiz Results</h2>
                 <div class="result-score" id="finalScore">0%</div>
-                <div class="result-message" id="resultMessage"></div>
-
-                <div id="resultEmoji" style="font-size: 4em; margin-bottom: 20px;">🎉</div>
+                <div id="resultEmoji" style="font-size: 2em;">🌹</div>
+                <div class="result-message" id="resultMessage" style="margin: 5px 0; font-weight: 700;"></div>
 
                 <div class="result-details">
-                    <div class="result-item">
-                        <span>Total Questions:</span>
-                        <span id="totalQuestions">0</span>
-                    </div>
-                    <div class="result-item">
-                        <span>✅ Correct:</span>
-                        <span id="correctAnswers">0</span>
-                    </div>
-                    <div class="result-item">
-                        <span>❌ Wrong:</span>
-                        <span id="wrongAnswers">0</span>
-                    </div>
-                    <div class="result-item">
-                        <span>📊 Grade:</span>
-                        <span id="gradeDisplay" style="color: var(--romantic-primary);">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span>🏆 Status:</span>
-                        <span id="passFailStatus">-</span>
-                    </div>
-                    <div class="result-item">
-                        <span>⏰ Total Time:</span>
-                        <span id="timeTaken">0</span>
-                    </div>
-                    <div class="result-item" style="display:none;">
-                        <span id="obtainedMarks">0</span>
-                        <span id="totalMarksDisplay">0</span>
-                        <span id="passingMarks">0</span>
-                        <span id="percentage">0%</span>
-                    </div>
+                    <div class="result-item"><span>Total:</span> <span id="totalQuestions">0</span></div>
+                    <div class="result-item"><span>Correct:</span> <span id="correctAnswers">0</span></div>
+                    <div class="result-item"><span>Wrong:</span> <span id="wrongAnswers">0</span></div>
+                    <div class="result-item"><span>Grade:</span> <span id="gradeDisplay"></span></div>
+                    <div class="result-item"><span>Status:</span> <span id="passFailStatus"></span></div>
+                    <div class="result-item"><span>Time:</span> <span id="timeTaken">0</span></div>
+
+                    <!-- Hidden elements for script compatibility -->
+                    <span id="obtainedMarks" style="display:none;">0</span>
+                    <span id="totalMarksDisplay" style="display:none;">0</span>
+                    <span id="passingMarks" style="display:none;">0</span>
+                    <span id="percentage" style="display:none;">0%</span>
                 </div>
 
-                <button class="btn btn-primary" onclick="restartQuiz()" style="width: 100%;">🔄 Try Another Chapter</button>
+                <button class="btn btn-primary" onclick="restartQuiz()" style="width: 100%;">Try Again</button>
             </div>
         </div>
     </div>
