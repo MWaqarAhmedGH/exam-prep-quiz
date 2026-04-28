@@ -3,110 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>🌹 Midnight Rose Quiz Experience 🌹</title>
+    <title>✨ Midnight Rose & Starlight Quiz ✨</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:wght@300;400;600;700&display=swap');
+
         :root {
-            --midnight-bg: #1a0624;
-            --rose-primary: #e7a79a;
-            --rose-dark: #b87a6e;
-            --velvet-purple: #4a154b;
-            --cream-white: #fffafa;
-            --glass-bg: rgba(255, 250, 250, 0.95);
-            --romantic-gradient: linear-gradient(135deg, #4a154b 0%, #1a0624 100%);
+            --primary-rose: #ff4d6d;
+            --deep-velvet: #590d22;
+            --midnight-indigo: #0b090a;
+            --starlight-white: #fff0f3;
+            --soft-lavender: #c9184a;
+            --gold-accent: #ffb703;
+            --glass-bg: rgba(30, 0, 15, 0.7);
+            --glass-border: rgba(255, 77, 109, 0.3);
+            --rose-glow: 0 0 20px rgba(255, 77, 109, 0.4);
+            --luxury-bg: radial-gradient(circle at center, #2d0015 0%, #0b090a 100%);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
             overflow: hidden !important;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
         }
 
         body {
-            font-family: 'Optima', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--romantic-gradient);
+            font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+            background: var(--luxury-bg);
             display: flex;
             align-items: center;
             justify-content: center;
-            perspective: 2000px;
+            perspective: 1200px;
+            color: var(--starlight-white);
         }
 
-        /* Ambient Petals */
+        /* Twinkling Stars Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: 
+                radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+                radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50% 50%, #fff, rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 80% 90%, #fff, rgba(0,0,0,0));
+            background-size: 200px 200px;
+            animation: starsTwinkle 4s ease-in-out infinite alternate;
+            pointer-events: none; z-index: 0;
+            opacity: 0.3;
+        }
+
+        @keyframes starsTwinkle {
+            0% { opacity: 0.2; transform: scale(1); }
+            100% { opacity: 0.5; transform: scale(1.05); }
+        }
+
         .petal {
             position: fixed;
-            color: var(--rose-primary);
-            font-size: 15px;
+            font-size: 18px;
             pointer-events: none;
             z-index: 0;
-            opacity: 0.4;
-            animation: drift 12s linear infinite;
+            opacity: 0;
+            filter: blur(0.5px);
+            animation: floatHeart3D 10s linear infinite;
+            transform-style: preserve-3d;
         }
-
-        @keyframes drift {
-            0% { transform: translateY(-10vh) rotate(0deg) translateX(0); opacity: 0; }
-            10% { opacity: 0.4; }
-            90% { opacity: 0.4; }
-            100% { transform: translateY(110vh) rotate(720deg) translateX(100px); opacity: 0; }
+        @keyframes floatHeart3D {
+            0% { transform: translateY(-5vh) translateZ(0) rotateX(0) rotateY(0) scale(0.5); opacity: 0; }
+            10% { opacity: 0.5; }
+            50% { transform: translateY(50vh) translateZ(80px) rotateX(180deg) rotateY(180deg) scale(1); opacity: 0.6; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(110vh) translateZ(-40px) rotateX(360deg) rotateY(360deg) scale(0.3); opacity: 0; }
         }
 
         .container {
-            width: 95%;
-            max-width: 1100px;
-            height: 90%;
-            max-height: 90%;
+            width: 95%; max-width: 1100px;
+            height: 90%; max-height: 90%;
             background: var(--glass-bg);
-            border-radius: 20px;
-            box-shadow: 0 50px 100px rgba(0,0,0,0.8),
-                        0 0 0 1px rgba(231, 167, 154, 0.3) inset;
-            display: flex;
-            flex-direction: column;
+            backdrop-filter: blur(25px) saturate(1.8);
+            -webkit-backdrop-filter: blur(25px) saturate(1.8);
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.8), 0 0 40px rgba(255, 77, 109, 0.2);
+            display: flex; flex-direction: column;
             transform-style: preserve-3d;
-            transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            z-index: 1;
-            overflow: hidden;
+            transition: transform 1s cubic-bezier(0.2,0.8,0.2,1), box-shadow 1s ease;
+            position: relative; z-index: 1; overflow: hidden;
         }
 
         .container:hover {
-            transform: rotateX(1deg) rotateY(-0.5deg);
+            transform: rotateX(2deg) rotateY(-1deg) translateZ(10px);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.9), 0 0 60px rgba(255, 77, 109, 0.3);
         }
 
         .header {
-            padding: 10px 20px;
-            background: var(--midnight-bg);
-            color: var(--rose-primary);
+            padding: 15px 25px;
+            background: rgba(11, 9, 10, 0.8);
+            color: var(--primary-rose);
             text-align: center;
-            border-bottom: 3px solid var(--rose-primary);
+            border-bottom: 2px solid var(--glass-border);
             flex-shrink: 0;
+            position: relative;
         }
-
         .header h1 {
-            font-size: 1.6em;
-            letter-spacing: 2px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            font-weight: 300;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-rose), #ff85a1, var(--primary-rose));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 100%;
+            animation: roseTextShimmer 4s ease-in-out infinite;
+        }
+        @keyframes roseTextShimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .content {
-            flex: 1;
-            padding: 15px 20px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 0;
+            flex: 1; padding: 20px;
+            overflow-y: auto; display: flex;
+            flex-direction: column; justify-content: flex-start;
+            min-height: 0; color: var(--starlight-white);
         }
 
         .chapter-selection {
@@ -114,31 +140,34 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             height: 100%;
+            align-items: center;
         }
 
         .chapter-card {
-            background: var(--midnight-bg);
-            color: var(--rose-primary);
-            padding: 20px;
-            border-radius: 15px;
+            background: rgba(89, 13, 34, 0.4);
+            color: var(--starlight-white);
+            padding: 30px;
+            border-radius: 20px;
             cursor: pointer;
             transition: all 0.4s;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 1px solid var(--velvet-purple);
+            border: 1px solid var(--glass-border);
             transform-style: preserve-3d;
+            backdrop-filter: blur(10px);
         }
 
         .chapter-card:hover {
-            background: var(--velvet-purple);
-            transform: translateZ(30px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            background: rgba(255, 77, 109, 0.2);
+            transform: translateZ(30px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(255, 77, 109, 0.3);
+            border-color: var(--primary-rose);
         }
 
-        .chapter-card h3 { font-size: 1.5em; margin-bottom: 10px; }
-        .chapter-card .mcq-count { font-size: 3em; font-weight: 700; margin: 10px 0; }
+        .chapter-card h3 { font-size: 1.5em; margin-bottom: 10px; font-family: 'Playfair Display'; }
+        .chapter-card .mcq-count { font-size: 3em; font-weight: 700; margin: 10px 0; color: var(--primary-rose); }
 
         .quiz-container {
             display: none;
@@ -149,17 +178,18 @@
         .quiz-header {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            padding: 8px 15px;
-            background: var(--midnight-bg);
-            color: var(--rose-primary);
-            border-radius: 10px;
-            margin-bottom: 10px;
+            padding: 12px 20px;
+            background: rgba(11, 9, 10, 0.6);
+            color: var(--starlight-white);
+            border-radius: 15px;
+            margin-bottom: 15px;
             text-align: center;
             align-items: center;
             flex-shrink: 0;
+            border: 1px solid var(--glass-border);
         }
 
-        .question-timer { font-size: 1.5em; font-weight: 700; color: #fff; }
+        .question-timer { font-size: 1.8em; font-weight: 700; color: var(--primary-rose); text-shadow: 0 0 10px rgba(255, 77, 109, 0.5); }
 
         .question-card {
             flex: 1;
@@ -167,72 +197,79 @@
             flex-direction: column;
             justify-content: center;
             min-height: 0;
-            overflow: hidden;
+            overflow-y: auto;
+            padding: 10px;
         }
 
         .question-text {
-            font-size: 1.15em;
-            color: var(--midnight-bg);
-            margin-bottom: 12px;
+            font-size: 1.4em;
+            color: var(--starlight-white);
+            margin-bottom: 20px;
             font-weight: 600;
-            line-height: 1.3;
+            line-height: 1.4;
+            font-family: 'Playfair Display';
         }
 
         .options {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 15px;
         }
 
         .option {
-            background: #fff;
-            padding: 10px 14px;
-            border-radius: 10px;
-            border: 2px solid var(--rose-primary);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 0.95em;
-            color: #444;
+            font-size: 1.1em;
+            color: var(--starlight-white);
             display: flex;
             align-items: center;
+            backdrop-filter: blur(5px);
         }
 
         .option:hover {
-            background: var(--rose-primary);
-            color: #fff;
-            transform: scale(1.02);
+            background: rgba(255, 77, 109, 0.2);
+            border-color: var(--primary-rose);
+            transform: translateX(5px);
         }
 
         .option.selected {
-            background: var(--midnight-bg);
-            color: var(--rose-primary);
-            border-color: var(--midnight-bg);
+            background: var(--primary-rose);
+            color: white;
+            border-color: var(--primary-rose);
+            box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
         }
 
-        .option.correct { background: #2d6a4f !important; color: white !important; }
-        .option.wrong { background: #7b1e1e !important; color: white !important; }
+        .option.correct { background: #2d6a4f !important; color: white !important; border-color: #40916c !important; }
+        .option.wrong { background: #800e13 !important; color: white !important; border-color: #a4161a !important; }
 
         .navigation {
             display: flex;
             justify-content: space-between;
-            margin-top: 10px;
+            margin-top: 20px;
             flex-shrink: 0;
         }
 
         .btn {
-            padding: 10px 25px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1em;
+            padding: 12px 30px;
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            font-size: 1.1em;
             cursor: pointer;
             font-weight: 700;
             transition: all 0.3s;
             text-transform: uppercase;
+            font-family: 'Playfair Display';
+            letter-spacing: 1px;
         }
 
-        .btn-primary { background: var(--midnight-bg); color: var(--rose-primary); }
-        .btn-secondary { background: var(--rose-primary); color: var(--midnight-bg); }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-primary { background: var(--primary-rose); color: white; }
+        .btn-secondary { background: transparent; color: var(--starlight-white); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .btn-primary:hover { background: #ff758f; }
 
         .result-container {
             display: none;
@@ -240,76 +277,57 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
 
         .result-score {
-            font-size: 3.5em;
+            font-size: 4em;
             font-weight: 900;
-            color: var(--midnight-bg);
+            color: var(--primary-rose);
+            text-shadow: 0 0 20px rgba(255, 77, 109, 0.3);
+            font-family: 'Playfair Display';
         }
 
         .result-details {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 8px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
             width: 100%;
-            max-width: 600px;
-            margin: 10px 0;
+            max-width: 800px;
+            margin: 20px 0;
         }
 
         .result-item {
-            background: #fff;
-            padding: 8px 12px;
-            border-radius: 8px;
-            border: 1px solid var(--rose-primary);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 5px;
         }
+
+        .result-item span:first-child { font-size: 0.8em; opacity: 0.7; text-transform: uppercase; }
+        .result-item span:last-child { font-size: 1.4em; font-weight: 700; color: var(--primary-rose); }
 
         .feedback-correct, .feedback-wrong {
-            padding: 6px 10px;
-            border-radius: 8px;
-            margin-top: 8px;
-            font-size: 0.9em;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+            font-size: 1.1em;
             font-weight: 600;
-            text-align: center;
-            flex-shrink: 0;
+            line-height: 1.5;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .feedback-correct {
-            background: #d4edda;
-            color: #155724;
-        }
+        .feedback-correct { background: rgba(45, 106, 79, 0.3); color: #95d5b2; }
+        .feedback-wrong { background: rgba(128, 14, 19, 0.3); color: #ff85a1; }
 
-        .feedback-wrong {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .timeout-message {
-            padding: 6px 10px;
-            border-radius: 8px;
-            margin-top: 8px;
-            font-size: 0.9em;
-            font-weight: 600;
-            text-align: center;
-            background: #fff3cd;
-            color: #856404;
-            flex-shrink: 0;
-        }
-
-        @media (max-height: 700px) {
-            .header h1 { font-size: 1.3em; }
-            .header { padding: 6px 15px; }
-            .question-text { font-size: 1em; margin-bottom: 8px; }
-            .option { padding: 8px 10px; font-size: 0.85em; }
-            .options { gap: 6px; }
-            .navigation { margin-top: 6px; }
-            .btn { padding: 8px 20px; font-size: 0.9em; }
-            .quiz-header { padding: 6px 10px; margin-bottom: 6px; }
-            .question-timer { font-size: 1.2em; }
-            .result-score { font-size: 2.5em; }
-            .content { padding: 10px 15px; }
+        @media (max-width: 768px) {
+            .options { grid-template-columns: 1fr; }
+            .result-details { grid-template-columns: 1fr 1fr; }
+            .chapter-selection { grid-template-columns: 1fr; gap: 10px; overflow-y: auto; }
+            .header h1 { font-size: 1.2em; letter-spacing: 2px; }
         }
     </style>
 </head>
@@ -318,18 +336,19 @@
         function createPetal() {
             const petal = document.createElement('div');
             petal.className = 'petal';
-            petal.innerHTML = '🌸';
+            const icons = ['🌸', '✨', '💖', '🌹'];
+            petal.innerHTML = icons[Math.floor(Math.random() * icons.length)];
             petal.style.left = Math.random() * 100 + 'vw';
             petal.style.animationDuration = (Math.random() * 5 + 7) + 's';
             document.body.appendChild(petal);
             setTimeout(() => petal.remove(), 12000);
         }
-        setInterval(createPetal, 1500);
+        setInterval(createPetal, 1000);
     </script>
 
     <div class="container">
         <div class="header">
-            <h1>🌹 Midnight Rose Quiz Experience 🌹</h1>
+            <h1>✨ Midnight Rose & Starlight Quiz ✨</h1>
         </div>
 
         <div class="content">
@@ -338,17 +357,17 @@
                 <div class="chapter-card" onclick="startQuiz(12)">
                     <h3>Chapter 12</h3>
                     <div class="mcq-count">150</div>
-                    <p>MCQs</p>
+                    <p>AI Agent Factory Paradigm</p>
                 </div>
                 <div class="chapter-card" onclick="startQuiz(13)">
                     <h3>Chapter 13</h3>
                     <div class="mcq-count">150</div>
-                    <p>MCQs</p>
+                    <p>Markdown & Instructions</p>
                 </div>
                 <div class="chapter-card" onclick="startQuiz(14)">
                     <h3>Chapter 14</h3>
                     <div class="mcq-count">150</div>
-                    <p>MCQs</p>
+                    <p>Claude Code & Cowork</p>
                 </div>
             </div>
 
@@ -380,18 +399,18 @@
 
             <!-- Result Container -->
             <div id="resultContainer" class="result-container">
-                <h2 style="color: var(--midnight-bg);">Quiz Results</h2>
+                <h2 style="font-family: 'Playfair Display'; color: var(--primary-rose);">Quiz Results</h2>
                 <div class="result-score" id="finalScore">0%</div>
-                <div id="resultEmoji" style="font-size: 2em;">🌹</div>
-                <div class="result-message" id="resultMessage" style="margin: 5px 0; font-weight: 700;"></div>
+                <div id="resultEmoji" style="font-size: 3em;">🌹</div>
+                <div class="result-message" id="resultMessage" style="margin: 10px 0; font-weight: 700; font-size: 1.2em;"></div>
 
                 <div class="result-details">
-                    <div class="result-item"><span>Total:</span> <span id="totalQuestions">0</span></div>
-                    <div class="result-item"><span>Correct:</span> <span id="correctAnswers">0</span></div>
-                    <div class="result-item"><span>Wrong:</span> <span id="wrongAnswers">0</span></div>
-                    <div class="result-item"><span>Grade:</span> <span id="gradeDisplay"></span></div>
-                    <div class="result-item"><span>Status:</span> <span id="passFailStatus"></span></div>
-                    <div class="result-item"><span>Time:</span> <span id="timeTaken">0</span></div>
+                    <div class="result-item"><span>Total MCQs</span> <span id="totalQuestions">0</span></div>
+                    <div class="result-item"><span>Correct</span> <span id="correctAnswers">0</span></div>
+                    <div class="result-item"><span>Wrong</span> <span id="wrongAnswers">0</span></div>
+                    <div class="result-item"><span>Grade</span> <span id="gradeDisplay">-</span></div>
+                    <div class="result-item"><span>Status</span> <span id="passFailStatus">-</span></div>
+                    <div class="result-item"><span>Time Taken</span> <span id="timeTaken">0</span></div>
 
                     <!-- Hidden elements for script compatibility -->
                     <span id="obtainedMarks" style="display:none;">0</span>
@@ -400,7 +419,7 @@
                     <span id="percentage" style="display:none;">0%</span>
                 </div>
 
-                <button class="btn btn-primary" onclick="restartQuiz()" style="width: 100%;">Try Again</button>
+                <button class="btn btn-primary" onclick="restartQuiz()" style="width: 100%; margin-top: 20px;">Try Again</button>
             </div>
         </div>
     </div>
