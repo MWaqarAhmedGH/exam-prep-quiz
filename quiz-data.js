@@ -1571,7 +1571,7 @@ const chapter13Questions = [
   {
     id: 74,
     question: "How should you write alt text for a decorative image?",
-    options: ["Describe it in detail", "Use empty alt text: ![]() or describe it as decorative", "Use the filename as alt text", "Omit the alt text attribute entirely"],
+    options: ["Describe it in detail", "Use empty alt text: ![]()", "Use the filename as alt text", "Omit the alt text attribute entirely"],
     correct: 1,
     explanation: "Decorative images that don't add meaning should have empty alt text to be ignored by screen readers."
   },
