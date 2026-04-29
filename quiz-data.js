@@ -1508,7 +1508,7 @@ const chapter13Questions = [
   {
     id: 65,
     question: "What makes a link description effective for AI processing?",
-    options: ["Using ", " or ", "", "Descriptive text that explains what the link points to", "Using only URLs", "Making it as short as possible"],
+    options: ["Using keywords only", "Descriptive text that explains what the link points to", "Using only URLs", "Making it as short as possible"],
     correct: 1,
     explanation: "Descriptive link text that explains the destination or purpose helps both humans and AI understand the context and relevance of the link."
   },
