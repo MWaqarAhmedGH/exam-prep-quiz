@@ -2807,9 +2807,9 @@ const chapter14Questions = [
   {
     id: 100,
     question: "What happens when 'disable-model-invocation: true' is set in a skill?",
-    options: ["The skill runs faster", "Claude cannot make additional model calls during that skill", ",\n      ", ",\n      "],
+    options: ["The skill runs faster", "Claude cannot make additional model calls during skill execution", "The skill is disabled entirely", "Skill execution is paused"],
     correct: 1,
-    explanation: "No explanation available."
+    explanation: "This flag specifically restricts the agent from invoking the model again while the skill is running, helping to manage costs and complexity."
   },
   {
     id: 101,
