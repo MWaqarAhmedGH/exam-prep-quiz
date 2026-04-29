@@ -1823,7 +1823,7 @@ const chapter13Questions = [
   {
     id: 110,
     question: "How do you indicate dependencies between list items in Markdown?",
-    options: ["Use bold text", "Use nested lists or explicit text like ", " or ", "", "Use strikethrough", "Dependencies cannot be shown in Markdown"],
+    options: ["Use bold text", "Use nested lists or explicit references", "Use strikethrough", "Dependencies cannot be shown"],
     correct: 1,
     explanation: "Dependencies can be shown through nested list structures or explicit textual references indicating relationships between items."
   },
