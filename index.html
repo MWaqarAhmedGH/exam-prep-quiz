@@ -260,19 +260,20 @@
         }
 
         @keyframes pulse3D {
-            0% { transform: translateZ(20px) scale(1); text-shadow: 0 0 5px rgba(0,242,255,0.5); }
-            50% { transform: translateZ(40px) scale(1.05); text-shadow: 0 0 20px rgba(0,242,255,0.8); }
-            100% { transform: translateZ(20px) scale(1); text-shadow: 0 0 5px rgba(0,242,255,0.5); }
+            0% { transform: translateZ(50px) scale(1) rotateX(0deg); text-shadow: 0 0 10px var(--primary-3d); }
+            50% { transform: translateZ(100px) scale(1.1) rotateX(10deg); text-shadow: 0 0 30px #fff, 0 0 50px var(--primary-3d); }
+            100% { transform: translateZ(50px) scale(1) rotateX(0deg); text-shadow: 0 0 10px var(--primary-3d); }
         }
 
         .creator-credit {
             margin-top: 50px;
             text-align: center;
-            font-size: 1.2em;
+            font-size: 1.3em;
             font-weight: 900;
             color: var(--primary-3d);
-            animation: pulse3D 3s infinite ease-in-out;
+            animation: pulse3D 2s infinite ease-in-out;
             cursor: default;
+            transform-style: preserve-3d;
         }
 
         @media (max-width: 768px) {
