@@ -1389,9 +1389,9 @@ const chapter13Questions = [
   {
     id: 48,
     question: "Is the language tag required for code blocks?",
-    options: ["Yes, always", "No, it", ", ", ", "],
+    options: ["Yes, it is always required", "No, it is optional", "Only for JavaScript", "Only for Bash"],
     correct: 1,
-    explanation: "No explanation available."
+    explanation: "The language tag is optional; if omitted, the code block is rendered as plain text."
   },
   {
     id: 49,
