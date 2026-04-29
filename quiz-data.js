@@ -1522,7 +1522,7 @@ const chapter13Questions = [
   {
     id: 67,
     question: "What is the correct syntax for an inline Markdown link?",
-    options: ["[text](url)", "(text)[url]", "[url](text)", "[[text]]"],
+    options: ["[text](url)", "(text)[url]", "[url](text)", "{text}[url]"],
     correct: 0,
     explanation: "Inline Markdown links use the syntax [link text](URL), with the descriptive text in square brackets and the URL in parentheses."
   },
