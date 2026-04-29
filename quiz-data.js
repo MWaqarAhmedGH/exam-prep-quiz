@@ -1963,9 +1963,9 @@ const chapter13Questions = [
   {
     id: 130,
     question: "Why is Markdown ideal for AI specifications?",
-    options: ["It", ",\n      ", ",\n      ", ",\n      "],
+    options: ["It is a binary format", "It is plain text, making diffs and merges easy", "It requires special compilers", "It cannot be versioned"],
     correct: 1,
-    explanation: "Markdown"
+    explanation: "Markdown's plain text format makes it ideal for version control, allowing easy tracking of changes and collaboration."
   },
   {
     id: 131,
