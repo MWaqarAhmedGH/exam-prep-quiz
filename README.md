@@ -1,4 +1,4 @@
-# 💕 Exam Prep Quiz App 💕
+# 💕 GIAIC Quarter 4 Quiz (MCQs Based) 💕
 
 Interactive and Beautiful Quiz Application for Exam Preparation
 
