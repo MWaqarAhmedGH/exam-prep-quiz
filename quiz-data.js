@@ -2450,9 +2450,9 @@ const chapter14Questions = [
   {
     id: 49,
     question: "What was the significance of Boris Cherny's September 2024 experiment?",
-    options: ["It proved AI couldn", ",\n      ", "s potential impact", "It showed limitations of AI", "It compared different AI models"],
+    options: ["It proved AI couldn't code", "It demonstrated Claude Code's potential impact", "It showed severe limitations of AI", "It compared different AI models"],
     correct: 1,
-    explanation: "No explanation available."
+    explanation: "Boris Cherny's experiment demonstrated the significant potential impact of AI-driven coding agents like Claude Code."
   },
   {
     id: 50,
