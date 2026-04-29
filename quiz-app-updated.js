@@ -28,6 +28,7 @@ function startQuiz(chapter) {
     const chapterIndicator = document.getElementById('chapterIndicator');
     const chapterValue = document.getElementById('chapterValue');
     if(chapterIndicator && chapterValue) {
+        console.log("Setting Chapter Display to:", chapter);
         chapterValue.textContent = chapter;
         chapterIndicator.style.display = 'block';
     }
@@ -58,15 +59,11 @@ function startTotalTimer() {
 }
 
 function startQuestionTimer() {
-    // Clear any existing timer
-    if (questionTimerInterval) {
-        clearInterval(questionTimerInterval);
-    }
+    if (questionTimerInterval) clearInterval(questionTimerInterval);
 
     questionTimeLeft = 60;
     questionStartTime = Date.now();
 
-    // Update timer display immediately
     document.getElementById('questionTimer').textContent = '60s';
     document.getElementById('questionTimer').style.color = '#4caf50';
 
@@ -74,14 +71,9 @@ function startQuestionTimer() {
         questionTimeLeft = 60 - Math.floor((Date.now() - questionStartTime) / 1000);
 
         if (questionTimeLeft <= 0) {
-            // Time up! Mark as wrong and move to next
             clearInterval(questionTimerInterval);
-            userAnswers[currentQuestionIndex] = -1; // -1 means no answer (wrong)
-
-            // Show timeout message
+            userAnswers[currentQuestionIndex] = -1;
             showTimeoutMessage();
-
-            // Auto move to next question after 1 second
             setTimeout(() => {
                 if (currentQuestionIndex < questions.length - 1) {
                     currentQuestionIndex++;
@@ -92,8 +84,6 @@ function startQuestionTimer() {
             }, 1000);
         } else {
             document.getElementById('questionTimer').textContent = questionTimeLeft + 's';
-
-            // Change color based on time left
             if (questionTimeLeft <= 10) {
                 document.getElementById('questionTimer').style.color = '#f44336';
             } else if (questionTimeLeft <= 30) {
@@ -106,16 +96,13 @@ function startQuestionTimer() {
 }
 
 function showTimeoutMessage() {
-    // Show timeout message
     const messageDiv = document.createElement('div');
     messageDiv.className = 'timeout-message';
     messageDiv.textContent = '⏰ Time Up! Moving to next question...';
     document.querySelector('.question-card').appendChild(messageDiv);
 
-    // Show sad emotional feedback for timeout
     showFeedbackMessage('😢 Oh no! Time ran out! Don\'t worry, keep going! 💪', 'wrong');
 
-    // Show the correct answer
     const question = questions[currentQuestionIndex];
     const options = document.querySelectorAll('.option');
     if (options[question.correct]) {
@@ -128,56 +115,34 @@ function loadQuestion() {
     const question = questions[currentQuestionIndex];
     const questionCard = document.querySelector('.question-card');
     
-    // Trigger 3D Flip Animation
     questionCard.classList.remove('flip-3d');
-    void questionCard.offsetWidth; // Force reflow
+    void questionCard.offsetWidth; 
     questionCard.classList.add('flip-3d');
 
-    // IMPORTANT: Remove old explanations, timeout messages, and feedback messages
-    const oldExplanation = document.querySelector('.explanation');
-    if (oldExplanation) {
-        oldExplanation.remove();
-    }
-    const oldTimeout = document.querySelector('.timeout-message');
-    if (oldTimeout) {
-        oldTimeout.remove();
-    }
-    const oldFeedbackCorrect = document.querySelector('.feedback-correct');
-    if (oldFeedbackCorrect) {
-        oldFeedbackCorrect.remove();
-    }
-    const oldFeedbackWrong = document.querySelector('.feedback-wrong');
-    if (oldFeedbackWrong) {
-        oldFeedbackWrong.remove();
-    }
+    const elementsToRemove = ['.explanation', '.timeout-message', '.feedback-correct', '.feedback-wrong'];
+    elementsToRemove.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el) el.remove();
+    });
 
-    // Update progress
     document.getElementById('currentQ').textContent = currentQuestionIndex + 1;
     document.getElementById('score').textContent = score;
 
-    // Update question text (WITHOUT showing correct answer)
     document.getElementById('questionText').innerHTML =
         `<strong>Q${currentQuestionIndex + 1}:</strong> ${question.question}`;
 
-    // Update options (REMOVE correct answer markers)
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
 
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
-
-        // Remove any checkmarks or correct indicators from option text
-        let cleanOption = option.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim();
-        optionDiv.innerHTML = cleanOption;
-
+        optionDiv.innerHTML = option.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim();
         optionDiv.onclick = () => selectOption(index);
 
-        // If user already answered this question, show their selection
         if (userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] !== -1) {
             if (userAnswers[currentQuestionIndex] === index) {
                 optionDiv.classList.add('selected');
-                // Show if it was correct or wrong
                 if (index === question.correct) {
                     optionDiv.classList.add('correct');
                     optionDiv.innerHTML += ' ✅';
@@ -186,27 +151,19 @@ function loadQuestion() {
                     optionDiv.innerHTML += ' ❌';
                 }
             }
-            // Also show the correct answer
             if (index === question.correct && userAnswers[currentQuestionIndex] !== index) {
                 optionDiv.classList.add('correct');
                 optionDiv.innerHTML += ' ✅ (Correct)';
             }
         }
-
         optionsContainer.appendChild(optionDiv);
     });
 
-    // If user already answered, show the explanation and feedback again
     if (userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] !== -1) {
         const wasCorrect = userAnswers[currentQuestionIndex] === question.correct;
-        if (wasCorrect) {
-            showFeedbackMessage('🎉 Congratulations! Absolutely correct! Well done! 💕', 'correct');
-        } else {
-            showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
-        }
+        showFeedbackMessage(wasCorrect ? '🎉 Congratulations! Absolutely correct! Well done! 💕' : '😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', wasCorrect ? 'correct' : 'wrong');
     }
 
-    // Update navigation buttons
     document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
 
     if (currentQuestionIndex === questions.length - 1) {
@@ -217,66 +174,40 @@ function loadQuestion() {
         document.getElementById('submitBtn').style.display = 'none';
     }
 
-    // Start 60 second timer for this question (only if not already answered)
     if (userAnswers[currentQuestionIndex] === undefined) {
         startQuestionTimer();
     } else {
-        // Question already answered, stop timer
-        if (questionTimerInterval) {
-            clearInterval(questionTimerInterval);
-        }
+        if (questionTimerInterval) clearInterval(questionTimerInterval);
         document.getElementById('questionTimer').textContent = 'Answered';
         document.getElementById('questionTimer').style.color = '#2196f3';
     }
 }
 
 function selectOption(index) {
-    // Don't allow selection if already answered
-    if (userAnswers[currentQuestionIndex] !== undefined) {
-        return;
-    }
-
-    // Stop the question timer
-    if (questionTimerInterval) {
-        clearInterval(questionTimerInterval);
-    }
+    if (userAnswers[currentQuestionIndex] !== undefined) return;
+    if (questionTimerInterval) clearInterval(questionTimerInterval);
 
     const question = questions[currentQuestionIndex];
+    document.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
 
-    // Remove previous selection
-    document.querySelectorAll('.option').forEach(opt => {
-        opt.classList.remove('selected');
-    });
-
-    // Add selection to clicked option
     const selectedOption = document.querySelectorAll('.option')[index];
     selectedOption.classList.add('selected');
-
-    // Save user answer
     userAnswers[currentQuestionIndex] = index;
 
-    // Show if correct or wrong immediately with emotional feedback
     if (index === question.correct) {
         selectedOption.classList.add('correct');
         selectedOption.innerHTML += ' ✅ Correct!';
         score++;
         document.getElementById('score').textContent = score;
-
-        // Show happy/congratulations message
         showFeedbackMessage('🎉 Congratulations! Absolutely correct! Well done! 💕', 'correct');
     } else {
         selectedOption.classList.add('wrong');
         selectedOption.innerHTML += ' ❌ Wrong!';
-
-        // Show correct answer
         document.querySelectorAll('.option')[question.correct].classList.add('correct');
         document.querySelectorAll('.option')[question.correct].innerHTML += ' ✅ (Correct Answer)';
-
-        // Show sad/encouraging message
         showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
     }
 
-    // Update timer display
     document.getElementById('questionTimer').textContent = 'Answered';
     document.getElementById('questionTimer').style.color = '#2196f3';
 }
@@ -310,111 +241,62 @@ function previousQuestion() {
 }
 
 function submitQuiz() {
-    // Stop all timers
     clearInterval(totalTimerInterval);
     clearInterval(questionTimerInterval);
 
     const timeTaken = Math.floor((Date.now() - startTime) / 1000);
 
-    // Calculate score (already calculated during quiz)
-    // Count unanswered questions as wrong
     questions.forEach((question, index) => {
-        if (userAnswers[index] === undefined || userAnswers[index] === -1) {
-            userAnswers[index] = -1; // Mark as unanswered
-        }
+        if (userAnswers[index] === undefined) userAnswers[index] = -1;
     });
 
-    // Hide quiz, show results
     document.getElementById('quizContainer').style.display = 'none';
     document.getElementById('resultContainer').style.display = 'block';
 
-    // Calculate marks and percentage
     const totalMarks = questions.length * MARKS_PER_QUESTION;
     const obtainedMarks = score * MARKS_PER_QUESTION;
     const percentage = Math.round((score / questions.length) * 100);
-    const passingMarks = Math.round(totalMarks * 0.6); // 60% passing
-    const isPassed = obtainedMarks >= passingMarks;
+    const isPassed = percentage >= 60;
 
-    // Determine grade
-    let grade = '';
-    if (percentage >= 90) {
-        grade = 'A+';
-    } else if (percentage >= 80) {
-        grade = 'A';
-    } else if (percentage >= 70) {
-        grade = 'B';
-    } else if (percentage >= 60) {
-        grade = 'C';
-    } else if (percentage >= 50) {
-        grade = 'D';
-    } else {
-        grade = 'F';
-    }
+    let grade = 'F';
+    if (percentage >= 90) grade = 'A+';
+    else if (percentage >= 80) grade = 'A';
+    else if (percentage >= 70) grade = 'B';
+    else if (percentage >= 60) grade = 'C';
+    else if (percentage >= 50) grade = 'D';
 
-    // Display results
     document.getElementById('finalScore').textContent = percentage + '%';
-    document.getElementById('totalQuestions').textContent = questions.length;
     document.getElementById('correctAnswers').textContent = score;
-    document.getElementById('wrongAnswers').textContent = questions.length - score;
-    document.getElementById('percentage').textContent = percentage + '%';
-    document.getElementById('obtainedMarks').textContent = obtainedMarks;
-    document.getElementById('totalMarksDisplay').textContent = totalMarks;
-    document.getElementById('passingMarks').textContent = passingMarks;
     document.getElementById('gradeDisplay').textContent = grade;
     document.getElementById('passFailStatus').textContent = isPassed ? 'PASSED ✅' : 'FAILED ❌';
     document.getElementById('passFailStatus').style.color = isPassed ? '#28a745' : '#dc3545';
 
     const minutes = Math.floor(timeTaken / 60);
     const seconds = timeTaken % 60;
-    document.getElementById('timeTaken').textContent =
-        `${minutes}m ${seconds}s`;
+    document.getElementById('timeTaken').textContent = `${minutes}m ${seconds}s`;
 
-    // Result message with emotional feedback
     let message = '';
     let emoji = '';
-    if (percentage >= 90) {
-        message = '🏆 OUTSTANDING! You are a genius! Perfect preparation for the exam! 💕';
-        emoji = '🎉🎊🏆';
-    } else if (percentage >= 80) {
-        message = '🌟 EXCELLENT! Great job! You are well prepared! Keep it up! ❤️';
-        emoji = '🌟✨💫';
-    } else if (percentage >= 70) {
-        message = '👏 VERY GOOD! Good performance! A bit more practice and you will be perfect! 😊';
-        emoji = '👏💪📚';
-    } else if (percentage >= 60) {
-        message = '💪 GOOD! You passed! But you need more revision to score better! 📖';
-        emoji = '💪📝✍️';
-    } else if (percentage >= 50) {
-        message = '😔 BELOW AVERAGE! You failed! Please study harder and practice more! 📚';
-        emoji = '😔📖💔';
-    } else {
-        message = '😢 POOR PERFORMANCE! You need serious revision! Don\'t give up, study more! 💪';
-        emoji = '😢📚🔄';
-    }
+    if (percentage >= 90) { message = '🏆 OUTSTANDING! You are a genius! Perfect preparation for the exam! 💕'; emoji = '🎉🎊🏆'; }
+    else if (percentage >= 80) { message = '🌟 EXCELLENT! Great job! You are well prepared! Keep it up! ❤️'; emoji = '🌟✨💫'; }
+    else if (percentage >= 70) { message = '👏 VERY GOOD! Good performance! A bit more practice and you will be perfect! 😊'; emoji = '👏💪📚'; }
+    else if (percentage >= 60) { message = '💪 GOOD! You passed! But you need more revision to score better! 📖'; emoji = '💪📝✍️'; }
+    else if (percentage >= 50) { message = '😔 BELOW AVERAGE! You failed! Please study harder and practice more! 📚'; emoji = '😔📖💔'; }
+    else { message = '😢 POOR PERFORMANCE! You need serious revision! Don\'t give up, study more! 💪'; emoji = '😢📚🔄'; }
 
     document.getElementById('resultMessage').textContent = message;
     document.getElementById('resultEmoji').textContent = emoji;
 }
 
 function restartQuiz() {
-    // Reset everything
     document.getElementById('resultContainer').style.display = 'none';
     document.getElementById('chapterSelection').style.display = 'grid';
-    
-    // Show Title again
-    const title = document.getElementById('appTitle');
-    if(title) title.style.display = 'block';
-
-    // Hide Chapter Indicator
-    const chapterIndicator = document.getElementById('chapterIndicator');
-    if(chapterIndicator) chapterIndicator.style.display = 'none';
-
+    document.getElementById('appTitle').style.display = 'block';
+    document.getElementById('chapterIndicator').style.display = 'none';
     currentChapter = 0;
     currentQuestionIndex = 0;
     score = 0;
     userAnswers = [];
-
-    // Clear timers
     if (totalTimerInterval) clearInterval(totalTimerInterval);
     if (questionTimerInterval) clearInterval(questionTimerInterval);
 }

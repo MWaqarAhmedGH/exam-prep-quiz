@@ -56,21 +56,22 @@
         /* Chapter Indicator - Modern & Subtle */
         .chapter-indicator {
             position: absolute;
-            top: 10px;
+            top: 20px;
             left: 50%;
-            transform: translateX(-50%) translateZ(80px);
-            background: rgba(0, 242, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 8px 25px;
+            transform: translateX(-50%) translateZ(120px);
+            background: rgba(0, 242, 255, 0.15);
+            backdrop-filter: blur(15px);
+            padding: 10px 30px;
             border-radius: 50px;
-            border: 1px solid rgba(0, 242, 255, 0.3);
+            border: 2px solid rgba(0, 242, 255, 0.4);
             color: var(--primary-3d);
             font-weight: 800;
-            font-size: 0.9em;
-            letter-spacing: 1px;
+            font-size: 1.1em;
+            letter-spacing: 2px;
             display: none;
-            z-index: 100;
-            box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
+            z-index: 9999;
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
         }
 
         /* Title floating in 3D space */
@@ -329,7 +330,6 @@
         <h1 class="main-title" id="appTitle">💎 3D Crystal Quiz Universe 💎</h1>
 
         <div class="content">
-            <!-- Landing Page: ONLY these items -->
             <div id="chapterSelection" class="chapter-selection">
                 <div class="chapter-card" onclick="startQuiz(12)">
                     <h3>Chapter 12</h3>
@@ -348,7 +348,6 @@
                 </div>
             </div>
 
-            <!-- Quiz Container: Hidden on landing -->
             <div id="quizContainer" class="quiz-container">
                 <div class="quiz-header">
                     <div>TIME: <span id="totalTimer">00:00</span></div>
@@ -368,7 +367,6 @@
                 </div>
             </div>
 
-            <!-- Result Container: Hidden on landing -->
             <div id="resultContainer" class="result-container">
                 <h2 id="resultEmoji" style="font-size: 4em;">🏆</h2>
                 <div class="result-score" id="finalScore">0%</div>
@@ -380,7 +378,6 @@
                     <div class="result-item"><span>Status</span><span id="passFailStatus">-</span></div>
                     <div class="result-item"><span>Time</span><span id="timeTaken">0</span></div>
                     
-                    <!-- Hidden helpers -->
                     <span id="totalQuestions" style="display:none;"></span>
                     <span id="obtainedMarks" style="display:none;"></span>
                     <span id="totalMarksDisplay" style="display:none;"></span>
