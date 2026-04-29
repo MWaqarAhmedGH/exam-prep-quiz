@@ -2578,7 +2578,7 @@ const chapter14Questions = [
     question: "What percentage of tool reduction does MCP Tool Search achieve?",
     options: ["75%", "80%", "85%", "90%"],
     correct: 2,
-    explanation: "No explanation available."
+    explanation: "MCP Tool Search achieves a 90% reduction in tools exposed to the model."
   },
   {
     id: 68,
