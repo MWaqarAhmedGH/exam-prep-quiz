@@ -2103,10 +2103,10 @@ const chapter13Questions = [
   {
     id: 150,
     question: "What makes Markdown particularly suitable for version control systems?",
-    options: ["It", ",\n      ", "s plain text, making diffs and merges straightforward", "It requires special tools", "It cannot be versioned"],
+    options: ["It is a binary format", "It is plain text, making diffs and merges straightforward", "It requires special tools", "It cannot be versioned"],
     correct: 1,
-    explanation: "Markdown"
-  }
+    explanation: "Markdown's plain text format makes it ideal for version control, allowing easy tracking of changes and collaboration."
+  },
 ];
 
 // CHAPTER 14
