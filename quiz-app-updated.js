@@ -137,7 +137,8 @@ function loadQuestion() {
     question.options.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
-        optionDiv.innerHTML = option.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim();
+        const label = String.fromCharCode(65 + index); // A, B, C, D
+        optionDiv.innerHTML = `${label}) ${option.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim()}`;
         optionDiv.onclick = () => selectOption(index);
 
         if (userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] !== -1) {
