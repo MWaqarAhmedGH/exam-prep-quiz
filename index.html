@@ -13,18 +13,18 @@
             --secondary-3d: #7000ff;
             --text-main: #e0e0e0;
             --bg-dark: #050505;
-            --glass-bg: rgba(10, 10, 20, 0.8);
+            --glass-bg: rgba(10, 10, 20, 0.85);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         html, body {
             margin: 0; padding: 0;
-            width: 100%; min-height: 100vh;
+            width: 100%; height: 100%;
             background: var(--bg-dark);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            overflow: hidden; /* No scroll on main body */
         }
 
         #bg-canvas {
@@ -43,55 +43,50 @@
 
         .container {
             width: 100%;
-            max-width: 1300px;
-            min-height: 100vh;
+            max-width: 1400px;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             transform-style: preserve-3d;
             position: relative;
             z-index: 10;
-            padding: 20px;
+            padding: 10px;
             transition: transform 0.1s ease-out;
+            overflow: hidden; /* Container itself shouldn't scroll unless needed on mobile */
         }
 
-        .container::-webkit-scrollbar { width: 5px; }
-        .container::-webkit-scrollbar-thumb { background: var(--primary-3d); border-radius: 10px; }
-
         .chapter-indicator {
-            position: sticky;
-            top: 20px;
-            margin: 0 auto 20px;
-            background: rgba(0, 242, 255, 0.15);
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%) translateZ(120px);
+            background: rgba(0, 242, 255, 0.2);
             backdrop-filter: blur(15px);
-            padding: 8px 25px;
+            padding: 6px 20px;
             border-radius: 50px;
-            border: 2px solid rgba(0, 242, 255, 0.4);
+            border: 1px solid var(--primary-3d);
             color: var(--primary-3d);
             font-weight: 800;
-            font-size: 0.9em;
+            font-size: 0.85em;
             letter-spacing: 2px;
             display: none;
             z-index: 999;
-            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
-            text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
-            width: fit-content;
+            box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
         }
 
         .main-title {
             text-align: center;
-            padding: 30px 0;
+            padding: 1.5vh 0;
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8em, 6vw, 3.5em);
+            font-size: clamp(1.4em, 4vh, 2.5em);
             font-weight: 900;
             background: linear-gradient(90deg, #00f2ff, #7000ff, #00f2ff);
             background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textFlow 4s linear infinite;
-            letter-spacing: 3px;
-            filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.3));
+            filter: drop-shadow(0 0 15px rgba(0, 242, 255, 0.3));
             transform: translateZ(100px);
-            width: 100%;
         }
 
         @keyframes textFlow {
@@ -106,98 +101,93 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            padding-bottom: 2vh;
         }
 
         .chapter-selection {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             width: 100%;
             max-width: 1100px;
             transform-style: preserve-3d;
         }
 
         .chapter-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            border-radius: 30px;
-            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+            border-radius: 20px;
+            padding: 4vh 20px;
             cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.3s ease;
             text-align: center;
             transform-style: preserve-3d;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
         .chapter-card:hover {
-            background: rgba(0, 242, 255, 0.15);
+            background: rgba(0, 242, 255, 0.1);
             border-color: var(--primary-3d);
-            transform: translateZ(50px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 242, 255, 0.4);
+            transform: translateZ(30px) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
-        .chapter-card h3 { font-size: 1.6em; color: var(--primary-3d); margin-bottom: 15px; font-family: 'Playfair Display'; }
-        .chapter-card .mcq-count { font-size: 3.5em; font-weight: 800; color: #fff; margin-bottom: 10px; }
-        .chapter-card p { font-size: 1.1em; opacity: 0.8; color: #e0e0e0; }
+        .chapter-card h3 { font-size: 1.4em; color: var(--primary-3d); margin-bottom: 10px; }
+        .chapter-card .mcq-count { font-size: 3em; font-weight: 800; color: #fff; margin-bottom: 5px; }
+        .chapter-card p { font-size: 0.95em; opacity: 0.7; }
 
         .quiz-container {
             display: none;
             width: 100%;
-            max-width: 850px;
+            max-width: 800px;
             background: var(--glass-bg);
-            backdrop-filter: blur(25px);
-            border-radius: 25px;
-            border: 1px solid rgba(0, 242, 255, 0.3);
-            padding: 30px;
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            padding: 2.5vh 30px;
             transform: translateZ(50px);
-            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
-            margin: 20px auto;
+            margin: auto;
         }
 
         .quiz-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
-            background: rgba(0, 242, 255, 0.05);
-            border-radius: 15px;
-            margin-bottom: 25px;
-            border: 1px solid rgba(0, 242, 255, 0.1);
-            font-size: 0.9em;
-            flex-wrap: wrap;
-            gap: 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 2vh;
+            font-size: 0.85em;
         }
 
-        .question-timer { font-size: 1.8em; font-weight: 800; color: #ff0055; text-shadow: 0 0 15px rgba(255, 0, 85, 0.4); }
+        .question-timer { font-size: 1.6em; font-weight: 800; color: #ff0055; }
 
         .question-text {
-            font-size: clamp(1.2em, 4vw, 1.6em);
+            font-size: clamp(1.1em, 2.5vh, 1.4em);
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 2vh;
             color: #fff;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
         .options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-            gap: 15px;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
 
         .option {
             background: rgba(255, 255, 255, 0.05);
-            padding: 18px 20px;
-            border-radius: 15px;
+            padding: 1.8vh 15px;
+            border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.1);
             cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1.05em;
-            display: flex;
-            align-items: center;
+            transition: all 0.2s;
+            font-size: 0.95em;
         }
 
-        .option:hover { background: rgba(0, 242, 255, 0.1); border-color: var(--primary-3d); transform: translateX(8px); }
+        .option:hover { background: rgba(0, 242, 255, 0.08); border-color: var(--primary-3d); }
         .option.selected { background: var(--primary-3d); color: #000; font-weight: 800; }
         .option.correct { background: #00ff88 !important; color: #000 !important; }
         .option.wrong { background: #ff0055 !important; color: #fff !important; }
@@ -206,111 +196,80 @@
             display: flex;
             justify-content: space-between;
             gap: 15px;
-            margin-top: 30px;
+            margin-top: 2vh;
         }
 
         .btn {
-            flex: 1;
-            padding: 15px 25px;
-            border-radius: 12px;
+            padding: 1.2vh 25px;
+            border-radius: 8px;
             font-weight: 800;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
             text-transform: uppercase;
             border: none;
-            font-size: 0.9em;
-            letter-spacing: 1px;
+            font-size: 0.85em;
         }
 
-        .btn-primary { background: var(--primary-3d); color: #000; box-shadow: 0 0 20px rgba(0, 242, 255, 0.3); }
+        .btn-primary { background: var(--primary-3d); color: #000; }
         .btn-secondary { background: rgba(255, 255, 255, 0.1); color: #fff; }
-        .btn:active { transform: scale(0.95); }
 
         .result-container {
             display: none;
             text-align: center;
             background: var(--glass-bg);
-            backdrop-filter: blur(30px);
-            padding: 40px 30px;
-            border-radius: 30px;
+            backdrop-filter: blur(25px);
+            padding: 3vh 20px;
+            border-radius: 25px;
             border: 1px solid var(--primary-3d);
             width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 850px;
+            margin: auto;
         }
 
-        .result-score { font-size: clamp(3em, 10vw, 5em); font-weight: 900; color: var(--primary-3d); text-shadow: 0 0 40px var(--primary-3d); margin: 20px 0; }
+        .result-score { font-size: clamp(2.5em, 7vh, 4em); font-weight: 900; color: var(--primary-3d); margin: 1vh 0; }
 
         .result-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin: 30px 0;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 2vh 0;
         }
 
         .result-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 20px 15px;
-            border-radius: 18px;
-            border: 1px solid rgba(0, 242, 255, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .result-item:hover { transform: translateY(-5px); border-color: var(--primary-3d); }
-        .result-item span:first-child { font-size: 0.85em; opacity: 0.7; display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-        .result-item span:last-child { color: var(--primary-3d); font-weight: 800; font-size: 1.3em; display: block; }
-
-        .feedback-correct, .feedback-wrong, .explanation, .timeout-message {
-            margin-top: 20px;
-            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5vh 10px;
             border-radius: 12px;
-            font-size: 1em;
-            animation: fadeIn 0.4s ease-out;
+            border: 1px solid rgba(0, 242, 255, 0.1);
         }
 
-        .feedback-correct { background: rgba(0, 255, 136, 0.1); border: 1px solid #00ff88; color: #00ff88; }
-        .feedback-wrong { background: rgba(255, 0, 85, 0.1); border: 1px solid #ff0055; color: #ff0055; }
-        .explanation { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); color: #e0e0e0; text-align: left; line-height: 1.5; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .result-item span:first-child { font-size: 0.75em; opacity: 0.6; display: block; margin-bottom: 3px; }
+        .result-item span:last-child { color: var(--primary-3d); font-weight: 800; font-size: 1.1em; }
 
         .creator-credit {
-            margin-top: 40px;
+            margin-top: 3vh;
             text-align: center;
-            font-size: clamp(1.1em, 3vw, 1.4em);
+            font-size: 1.1em;
             font-weight: 900;
             background: linear-gradient(90deg, #ff00ff, #00f2ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            padding: 20px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
-        /* Responsive Fixes */
-        @media (max-width: 768px) {
-            .container { padding: 15px; }
-            .chapter-selection { grid-template-columns: 1fr; }
-            .quiz-container { padding: 20px; border-radius: 20px; }
-            .quiz-header { flex-direction: column; text-align: center; }
-            .btn-group { flex-direction: column-reverse; }
-            .btn { width: 100%; }
+        /* Mobile Adjustments */
+        @media (max-width: 850px) {
+            html, body, .container { overflow-y: auto; height: auto; min-height: 100vh; }
+            .chapter-selection { grid-template-columns: 1fr; max-width: 400px; padding-bottom: 30px; }
+            .options { grid-template-columns: 1fr; }
             .result-details { grid-template-columns: 1fr 1fr; }
-            .main-title { padding: 20px 0; }
+            .quiz-container, .result-container { width: 95%; padding: 20px; }
+            .quiz-header { flex-direction: column; gap: 10px; text-align: center; }
         }
 
-        @media (max-width: 480px) {
-            .result-details { grid-template-columns: 1fr; }
-            .chapter-card { padding: 30px 15px; }
-            .chapter-card .mcq-count { font-size: 3em; }
-        }
-        
-        /* Disable 3D tilt on mobile for better usability */
-        @media (hover: none) {
-            .container { transform: none !important; }
-            .chapter-card:hover { transform: scale(1.02); }
+        @media (max-height: 700px) and (min-width: 851px) {
+            .chapter-card { padding: 2vh 10px; }
+            .chapter-card .mcq-count { font-size: 2em; }
+            .main-title { padding: 1vh 0; }
         }
     </style>
 </head>
@@ -348,12 +307,12 @@
         }
 
         window.addEventListener('mousemove', (e) => {
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 850) {
                 mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
                 mouse.y = (e.clientY / window.innerHeight) * 2 - 1;
                 const container = document.querySelector('.container');
                 if(container) {
-                    container.style.transform = `rotateX(${-mouse.y * 3}deg) rotateY(${mouse.x * 3}deg)`;
+                    container.style.transform = `rotateX(${-mouse.y * 2}deg) rotateY(${mouse.x * 2}deg)`;
                 }
             }
         });
@@ -415,17 +374,17 @@
             </div>
 
             <div id="resultContainer" class="result-container">
-                <h2 id="resultEmoji" style="font-size: 4em;">🏆</h2>
+                <h2 id="resultEmoji" style="font-size: 3em;">🏆</h2>
                 <div class="result-score" id="finalScore">0%</div>
-                <p id="resultMessage" style="margin: 20px 0; font-size: 1.2em;"></p>
+                <p id="resultMessage" style="margin: 1vh 0; font-size: 1.1em;"></p>
 
                 <div class="result-details">
                     <div class="result-item"><span>Total Questions</span><span id="totalQuestionsDisplay">0</span></div>
-                    <div class="result-item"><span>Correct Answers</span><span id="correctAnswers">0</span></div>
-                    <div class="result-item"><span>Wrong Answers</span><span id="wrongAnswersDisplay">0</span></div>
-                    <div class="result-item"><span>Marks Obtained</span><span id="obtainedMarksDisplay">0</span></div>
+                    <div class="result-item"><span>Correct</span><span id="correctAnswers">0</span></div>
+                    <div class="result-item"><span>Wrong</span><span id="wrongAnswersDisplay">0</span></div>
+                    <div class="result-item"><span>Obtained</span><span id="obtainedMarksDisplay">0</span></div>
                     <div class="result-item"><span>Total Marks</span><span id="totalMarksDisplay">0</span></div>
-                    <div class="result-item"><span>Passing Marks</span><span id="passingMarksDisplay">0</span></div>
+                    <div class="result-item"><span>Passing</span><span id="passingMarksDisplay">0</span></div>
                     <div class="result-item"><span>Grade</span><span id="gradeDisplay">-</span></div>
                     <div class="result-item"><span>Status</span><span id="passFailStatus">-</span></div>
                     <div class="result-item"><span>Time Taken</span><span id="timeTaken">0</span></div>
