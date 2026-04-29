@@ -1557,9 +1557,9 @@ const chapter13Questions = [
   {
     id: 72,
     question: "What makes good alt text for an image?",
-    options: ["Just the filename", "Descriptive text that conveys the content or purpose", "The image dimensions", "The file creation date"],
+    options: ["The file name", "Descriptive text of the visual content", "The date created", "Image file size"],
     correct: 1,
-    explanation: "Good alt text is descriptive and conveys the meaning or purpose of the image to users who cannot see it."
+    explanation: "Good alt text provides a concise, accurate description of the image content or its function on the page."
   },
   {
     id: 73,
