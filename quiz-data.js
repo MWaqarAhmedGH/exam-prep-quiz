@@ -1522,7 +1522,7 @@ const chapter13Questions = [
   {
     id: 67,
     question: "What is the correct syntax for an inline Markdown link?",
-    options: ["[text](url)", "(text)[url]", "[url](text)", "<text|url>"],
+    options: ["[text](url)", "(text)[url]", "[url](text)", "[text]{url}"],
     correct: 0,
     explanation: "Inline Markdown links use the syntax [link text](URL), with the descriptive text in square brackets and the URL in parentheses."
   },
@@ -1536,7 +1536,7 @@ const chapter13Questions = [
   {
     id: 69,
     question: "When are reference-style links most useful?",
-    options: ["For short documents only", "When the same URL is used multiple times or to improve readability", "Only for external links", "When you don"],
+    options: ["For short documents only", "When the same URL is used multiple times or to improve readability", "Only for external links", "When you want to track clicks"],
     correct: 1,
     explanation: "Reference-style links are useful when reusing URLs multiple times or when you want to keep the main text readable by moving URLs to a separate section."
   },
@@ -1557,23 +1557,23 @@ const chapter13Questions = [
   {
     id: 72,
     question: "What makes good alt text for an image?",
-    options: ["Just the filename", "Descriptive text that conveys the image", ",\n      ", ",\n      "],
+    options: ["Just the filename", "Descriptive text that conveys the content or purpose", "The image dimensions", "The file creation date"],
     correct: 1,
-    explanation: "Good alt text is descriptive, conveys the image"
+    explanation: "Good alt text is descriptive and conveys the meaning or purpose of the image to users who cannot see it."
   },
   {
     id: 73,
     question: "What is the Markdown syntax for an image with alt text?",
-    options: ["![alt text](image-url)", "[alt text]!(image-url)", "(alt text)[image-url]", "<img alt=", " src=", ">"],
+    options: ["![alt text](url)", "[alt text]!(url)", "(alt text)[url]", "image(alt text)[url]"],
     correct: 0,
     explanation: "Markdown image syntax is ![alt text](image-url), similar to links but with an exclamation mark prefix."
   },
   {
     id: 74,
     question: "How should you write alt text for a decorative image?",
-    options: ["Describe it in detail", "Use empty alt text: ![]() or describe it as decorative", "Use ", " as the alt text", "Omit the alt text attribute"],
+    options: ["Describe it in detail", "Use empty alt text: ![]() or describe it as decorative", "Use the filename as alt text", "Omit the alt text attribute entirely"],
     correct: 1,
-    explanation: "Decorative images that don"
+    explanation: "Decorative images that don't add meaning should have empty alt text to be ignored by screen readers."
   },
   {
     id: 75,
@@ -1606,7 +1606,7 @@ const chapter13Questions = [
   {
     id: 79,
     question: "What is wrong with this list structure?\\n\\n- Item 1\\n  - Subitem\\n- Item 2\\n    - Subitem",
-    options: ["Nothing, it", ",\n      ", ",\n      ", ",\n      "],
+    options: ["Nothing, it is correct", "Inconsistent indentation for subitems", "Missing bullet points", "Too many main items"],
     correct: 1,
     explanation: "The first subitem uses 2 spaces (correct) but the second uses 4 spaces, creating inconsistent indentation that may break rendering."
   },
@@ -1627,9 +1627,9 @@ const chapter13Questions = [
   {
     id: 82,
     question: "What is a common mistake with links?",
-    options: ["Using too many links", "Non-descriptive link text like ", " or broken syntax", "Making links too long", "Using HTTPS instead of HTTP"],
+    options: ["Using too many links", "Non-descriptive link text or reversed syntax", "Making links too long", "Using HTTPS instead of HTTP"],
     correct: 1,
-    explanation: "Common link mistakes include non-descriptive text ("
+    explanation: "Common link mistakes include non-descriptive text like 'click here' or using reversed syntax like (text)[url]."
   },
   {
     id: 83,
@@ -1641,14 +1641,14 @@ const chapter13Questions = [
   {
     id: 84,
     question: "What is a common mistake with image alt text?",
-    options: ["Making it too descriptive", "Using generic text like ", " or omitting it entirely", "Using complete sentences", "Including the file format"],
+    options: ["Making it too descriptive", "Using generic text like 'image' or 'photo'", "Using complete sentences", "Including the file creation date"],
     correct: 1,
-    explanation: "Common alt text mistakes include generic text ("
+    explanation: "Common alt text mistakes include using generic text like 'image' or omitting it entirely for non-decorative images."
   },
   {
     id: 85,
     question: "What professional standard applies to section headers?",
-    options: ["Always use title case", "Use consistent capitalization and hierarchy (H1 for title, H2 for sections, etc.)", "Never use more than H2", "Always use sentence case"],
+    options: ["Always use title case", "Use consistent capitalization and hierarchy", "Never use more than H2", "Always use sentence case"],
     correct: 1,
     explanation: "Professional documentation uses consistent header hierarchy (H1 for document title, H2 for main sections, H3 for subsections) and consistent capitalization style."
   },
@@ -1662,7 +1662,7 @@ const chapter13Questions = [
   {
     id: 87,
     question: "Why is parallel structure important in lists?",
-    options: ["It makes lists longer", "It improves readability and helps AI understand relationships between items", "It", ",\n      "],
+    options: ["It makes lists longer", "It improves readability and helps AI understand item relationships", "It is required by Markdown", "It reduces file size"],
     correct: 1,
     explanation: "Parallel structure (starting each item with the same grammatical form) improves readability and helps AI understand that items are equivalent or related."
   },
@@ -1671,26 +1671,26 @@ const chapter13Questions = [
     question: "What is an accessibility consideration for links?",
     options: ["Links should be blue", "Link text should be descriptive and make sense out of context", "Links should always open in new tabs", "Links should be underlined"],
     correct: 1,
-    explanation: "For accessibility, link text should be descriptive and make sense when read out of context by screen readers, avoiding "
+    explanation: "For accessibility, link text should be descriptive and make sense when read out of context by screen readers."
   },
   {
     id: 89,
     question: "What accessibility consideration applies to images?",
-    options: ["Images should be small", "All images must have meaningful alt text or be marked as decorative", "Images should be in PNG format", "Images should have borders"],
+    options: ["Images should be small", "All images must have meaningful alt text or be marked decorative", "Images should be in PNG format", "Images should have borders"],
     correct: 1,
-    explanation: "For accessibility, all images must have meaningful alt text describing their content/purpose, or be marked as decorative if they don"
+    explanation: "For accessibility, all images must have meaningful alt text describing their content/purpose, or be marked as decorative."
   },
   {
     id: 90,
     question: "Why is proper heading hierarchy important for accessibility?",
-    options: ["It makes documents look better", "Screen readers use heading structure for navigation", "It", ",\n      "],
+    options: ["It makes documents look better", "Screen readers use heading structure for navigation", "It is required for SEO", "It speeds up loading"],
     correct: 1,
     explanation: "Screen reader users navigate documents using heading structure, so proper hierarchy (no skipped levels) is essential for accessibility."
   },
   {
     id: 91,
     question: "What is wrong with this heading structure?\\n\\n# Title\\n### Subsection",
-    options: ["Nothing, it", ",\n      ", ",\n      ", ",\n      "],
+    options: ["Nothing, it is correct", "Skipping heading levels (H1 to H3 without H2)", "Using too many hashtags", "Missing space after hashtags"],
     correct: 1,
     explanation: "Skipping heading levels (H1 to H3 without H2) breaks the document hierarchy and makes navigation difficult for screen reader users."
   },
@@ -1704,7 +1704,7 @@ const chapter13Questions = [
   {
     id: 93,
     question: "What is the specification by example pattern best used for?",
-    options: ["Theoretical discussions", "Showing concrete input/output examples that demonstrate expected behavior", "Listing all possible features", "Writing abstract requirements"],
+    options: ["Theoretical discussions", "Showing concrete input/output examples of expected behavior", "Listing all possible features", "Writing abstract requirements"],
     correct: 1,
     explanation: "Specification by example is best for showing concrete examples of input, output, or behavior rather than abstract descriptions."
   },
@@ -1713,7 +1713,7 @@ const chapter13Questions = [
     question: "In a 'Problem' section, what should you avoid?",
     options: ["Describing the actual problem", "Jumping to solutions or implementation details", "Using complete sentences", "Providing context"],
     correct: 1,
-    explanation: "The "
+    explanation: "The Problem section should focus on the 'what' and 'why', not the 'how' or implementation details."
   },
   {
     id: 95,
@@ -1725,7 +1725,7 @@ const chapter13Questions = [
   {
     id: 96,
     question: "When should you use code blocks within lists?",
-    options: ["Never mix code blocks and lists", "When a list item needs to show code, indent the code block 4 spaces", "Only at the end of lists", "Only for single-line code"],
+    options: ["Never mix code blocks and lists", "When a list item needs to show code, indenting appropriately", "Only at the end of lists", "Only for single-line code"],
     correct: 1,
     explanation: "Code blocks can be included in lists by indenting them 4 spaces (2 for list + 2 for code block) to maintain list structure."
   },
@@ -1739,14 +1739,14 @@ const chapter13Questions = [
   {
     id: 98,
     question: "How should you document multiple related examples?",
-    options: ["Put them all in one code block", "Use separate labeled code blocks with explanatory text between them", "Use a single list", "Avoid multiple examples"],
+    options: ["Put them all in one code block", "Use separate labeled code blocks with explanatory text", "Use a single list", "Avoid multiple examples"],
     correct: 1,
     explanation: "Multiple related examples should be in separate, labeled code blocks with explanatory text between them to provide context and clarity."
   },
   {
     id: 99,
     question: "What is the best practice for documenting error cases?",
-    options: ["Don", ",\n      ", ",\n      ", ",\n      "],
+    options: ["Do not document them", "Provide concrete examples of error input and expected output", "Only mention them in comments", "List them without examples"],
     correct: 1,
     explanation: "Error cases should be documented with concrete examples showing the error-triggering input and the expected error output or message."
   },
@@ -2061,7 +2061,7 @@ const chapter13Questions = [
   {
     id: 144,
     question: "Which characters commonly need escaping in Markdown?",
-    options: ["Letters and numbers"],
+    options: ["Letters and numbers", "Special characters like *, _, #, etc.", "Only the backslash", "Markdown doesn't need escaping"],
     correct: 1,
     explanation: "Special Markdown characters like *, _, #, brackets, parentheses, and backslash need escaping to display literally."
   },
