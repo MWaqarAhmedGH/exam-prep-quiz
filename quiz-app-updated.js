@@ -220,13 +220,6 @@ function showFeedbackMessage(message, type) {
     document.querySelector('.question-card').appendChild(feedbackDiv);
 }
 
-function showExplanation(explanation) {
-    const explanationDiv = document.createElement('div');
-    explanationDiv.className = 'explanation';
-    explanationDiv.innerHTML = `<strong>💡 Explanation:</strong> ${explanation}`;
-    document.querySelector('.question-card').appendChild(explanationDiv);
-}
-
 function nextQuestion() {
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
@@ -258,6 +251,8 @@ function submitQuiz() {
     const obtainedMarks = score * MARKS_PER_QUESTION;
     const percentage = Math.round((score / questions.length) * 100);
     const isPassed = percentage >= 60;
+    const passingMarks = totalMarks * 0.6;
+    const wrongAnswers = questions.length - score;
 
     let grade = 'F';
     if (percentage >= 90) grade = 'A+';
@@ -267,7 +262,12 @@ function submitQuiz() {
     else if (percentage >= 50) grade = 'D';
 
     document.getElementById('finalScore').textContent = percentage + '%';
+    document.getElementById('totalQuestionsDisplay').textContent = questions.length;
     document.getElementById('correctAnswers').textContent = score;
+    document.getElementById('wrongAnswersDisplay').textContent = wrongAnswers;
+    document.getElementById('obtainedMarksDisplay').textContent = obtainedMarks;
+    document.getElementById('totalMarksDisplay').textContent = totalMarks;
+    document.getElementById('passingMarksDisplay').textContent = passingMarks;
     document.getElementById('gradeDisplay').textContent = grade;
     document.getElementById('passFailStatus').textContent = isPassed ? 'PASSED ✅' : 'FAILED ❌';
     document.getElementById('passFailStatus').style.color = isPassed ? '#28a745' : '#dc3545';
