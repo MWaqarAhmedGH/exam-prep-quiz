@@ -2802,7 +2802,7 @@ const chapter14Questions = [
     question: "What is the relationship between SKILL.md and agentskills.io?",
     options: ["SKILL.md is the file format defined by the agentskills.io standard", "They are unrelated", "agentskills.io is a hosting platform for SKILL.md files", "SKILL.md predates agentskills.io"],
     correct: 0,
-    explanation: "No explanation available."
+    explanation: "SKILL.md is the standardized file format defined by the agentskills.io open standard for sharing AI skills."
   },
   {
     id: 100,
