@@ -42,11 +42,18 @@
         /* The Main Wrapper - Transparent */
         .container {
             width: 95%; max-width: 1200px;
-            height: 90vh;
+            height: 95vh;
             display: flex; flex-direction: column;
             transform-style: preserve-3d;
             position: relative; z-index: 10;
+            overflow-y: auto;
+            padding: 20px;
         }
+
+        /* Custom Scrollbar for 3D look */
+        .container::-webkit-scrollbar { width: 8px; }
+        .container::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+        .container::-webkit-scrollbar-thumb { background: var(--primary-3d); border-radius: 10px; }
 
         /* Title floating in 3D space */
         .main-title {
@@ -275,7 +282,7 @@
     </script>
 
     <div class="container">
-        <h1 class="main-title">💎 3D Crystal Quiz Universe 💎</h1>
+        <h1 class="main-title" id="appTitle">💎 3D Crystal Quiz Universe 💎</h1>
 
         <div class="content">
             <!-- Landing Page: ONLY these items -->

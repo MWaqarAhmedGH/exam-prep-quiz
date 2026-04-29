@@ -23,6 +23,10 @@ function startQuiz(chapter) {
     // Hide chapter selection, show quiz
     document.getElementById('chapterSelection').style.display = 'none';
     document.getElementById('quizContainer').style.display = 'block';
+    
+    // Hide Title to prevent overlap
+    const title = document.getElementById('appTitle');
+    if(title) title.style.display = 'none';
 
     // Initialize quiz
     document.getElementById('totalQ').textContent = questions.length;
@@ -396,6 +400,11 @@ function restartQuiz() {
     // Reset everything
     document.getElementById('resultContainer').style.display = 'none';
     document.getElementById('chapterSelection').style.display = 'grid';
+    
+    // Show Title again
+    const title = document.getElementById('appTitle');
+    if(title) title.style.display = 'block';
+
     currentChapter = 0;
     currentQuestionIndex = 0;
     score = 0;
