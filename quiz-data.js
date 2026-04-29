@@ -1837,7 +1837,7 @@ const chapter13Questions = [
   {
     id: 112,
     question: "What is the advantage of using online URLs for images in specifications?",
-    options: ["They work offline", "They", ",\n      ", ",\n      "],
+    options: ["They work offline", "They are accessible from any network location", "They are faster to load", "They never break"],
     correct: 1,
     explanation: "Online URLs make images accessible from any location without requiring local file access, though they depend on network connectivity."
   },
