@@ -24,13 +24,20 @@ function startQuiz(chapter) {
     document.getElementById('chapterSelection').style.display = 'none';
     document.getElementById('quizContainer').style.display = 'block';
     
+    // Show Chapter Indicator
+    const chapterIndicator = document.getElementById('chapterIndicator');
+    const chapterValue = document.getElementById('chapterValue');
+    if(chapterIndicator && chapterValue) {
+        chapterValue.textContent = chapter;
+        chapterIndicator.style.display = 'block';
+    }
+
     // Hide Title to prevent overlap
     const title = document.getElementById('appTitle');
     if(title) title.style.display = 'none';
 
     // Initialize quiz
     document.getElementById('totalQ').textContent = questions.length;
-    document.getElementById('totalScore').textContent = questions.length;
 
     // Start total timer
     startTime = Date.now();
@@ -115,9 +122,6 @@ function showTimeoutMessage() {
         options[question.correct].classList.add('correct');
         options[question.correct].innerHTML += ' ✅ (Correct Answer)';
     }
-
-    // Show explanation
-    // showExplanation(question.explanation);
 }
 
 function loadQuestion() {
@@ -200,7 +204,6 @@ function loadQuestion() {
         } else {
             showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
         }
-        // showExplanation(question.explanation);
     }
 
     // Update navigation buttons
@@ -272,9 +275,6 @@ function selectOption(index) {
         // Show sad/encouraging message
         showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
     }
-
-    // Show explanation for THIS question
-    // showExplanation(question.explanation);
 
     // Update timer display
     document.getElementById('questionTimer').textContent = 'Answered';
@@ -404,6 +404,10 @@ function restartQuiz() {
     // Show Title again
     const title = document.getElementById('appTitle');
     if(title) title.style.display = 'block';
+
+    // Hide Chapter Indicator
+    const chapterIndicator = document.getElementById('chapterIndicator');
+    if(chapterIndicator) chapterIndicator.style.display = 'none';
 
     currentChapter = 0;
     currentQuestionIndex = 0;
