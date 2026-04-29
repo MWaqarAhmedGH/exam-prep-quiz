@@ -2660,9 +2660,9 @@ const chapter14Questions = [
   {
     id: 79,
     question: "Which built-in agent is used for planning tasks?",
-    options: ["Explore", "Plan", "Bash", "general-purpose"],
+    options: ["Explore", "Plan", "Bash", "Debug"],
     correct: 1,
-    explanation: "No explanation available."
+    explanation: "The Plan agent is specifically designed to handle task planning and management in Claude Code."
   },
   {
     id: 80,
