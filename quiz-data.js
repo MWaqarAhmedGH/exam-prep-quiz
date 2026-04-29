@@ -2618,9 +2618,9 @@ const chapter14Questions = [
   {
     id: 73,
     question: "What is the primary purpose of CLAUDE.md?",
-    options: ["To store API keys", "To provide project context and structure for Claude", "To configure Claude", ",\n      "],
+    options: ["To store API keys", "To provide project context and structure for Claude", "To configure Claude", "To manage tasks"],
     correct: 1,
-    explanation: "No explanation available."
+    explanation: "CLAUDE.md provides essential project context, constraints, and instructions for Claude to operate effectively within a project."
   },
   {
     id: 74,
