@@ -1515,9 +1515,9 @@ const chapter13Questions = [
   {
     id: 66,
     question: "Why should you avoid 'click here' in link text?",
-    options: ["It", ",\n      ", ",\n      ", "s too long", "It does not work in Markdown"],
+    options: ["It is too long", "It is not descriptive for users or AI", "It does not work in Markdown", "It is against accessibility standards"],
     correct: 1,
-    explanation: ""
+    explanation: "Link text should be descriptive to help both humans and AI understand the context and relevance of the link destination."
   },
   {
     id: 67,
