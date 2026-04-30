@@ -333,6 +333,11 @@
 
         <div class="content">
             <div id="chapterSelection" class="chapter-selection">
+                <div id="resumeCard" class="chapter-card" style="display: none; border-color: #ff9800; background: rgba(255, 152, 0, 0.1);" onclick="startQuiz(0, true)">
+                    <h3 style="color: #ff9800;">Resume Quiz</h3>
+                    <p id="resumeDetails">Continue where you left off</p>
+                    <div class="mcq-count" id="resumeStatus">Chapter: -, Q: -</div>
+                </div>
                 <div class="chapter-card" onclick="startQuiz(12)">
                     <h3>Chapter 12</h3>
                     <p>AI Agent Factory Paradigm</p>

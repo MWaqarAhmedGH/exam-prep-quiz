@@ -19,14 +19,39 @@ function shuffleArray(array) {
     return array;
 }
 
-function startQuiz(chapter) {
-    currentChapter = chapter;
-    currentQuestionIndex = 0;
-    score = 0;
-    userAnswers = [];
+function saveProgress() {
+    const progress = {
+        currentChapter,
+        currentQuestionIndex,
+        score,
+        userAnswers,
+        startTime,
+        questions // Save shuffled questions to maintain order
+    };
+    localStorage.setItem('quizProgress', JSON.stringify(progress));
+}
 
-    // Get questions for selected chapter and shuffle them
-    questions = shuffleArray([...getQuestionsForChapter(chapter)]);
+function clearProgress() {
+    localStorage.removeItem('quizProgress');
+}
+
+function startQuiz(chapter, isResuming = false) {
+    if (isResuming) {
+        const saved = JSON.parse(localStorage.getItem('quizProgress'));
+        currentChapter = saved.currentChapter;
+        currentQuestionIndex = saved.currentQuestionIndex;
+        score = saved.score;
+        userAnswers = saved.userAnswers;
+        startTime = saved.startTime;
+        questions = saved.questions;
+    } else {
+        currentChapter = chapter;
+        currentQuestionIndex = 0;
+        score = 0;
+        userAnswers = [];
+        questions = shuffleArray([...getQuestionsForChapter(chapter)]);
+        startTime = Date.now();
+    }
 
     // Hide chapter selection, show quiz
     document.getElementById('chapterSelection').style.display = 'none';
@@ -36,8 +61,7 @@ function startQuiz(chapter) {
     const chapterIndicator = document.getElementById('chapterIndicator');
     const chapterValue = document.getElementById('chapterValue');
     if(chapterIndicator && chapterValue) {
-        console.log("Setting Chapter Display to:", chapter);
-        chapterValue.textContent = chapter;
+        chapterValue.textContent = currentChapter;
         chapterIndicator.style.display = 'block';
     }
 
@@ -49,10 +73,9 @@ function startQuiz(chapter) {
     document.getElementById('totalQ').textContent = questions.length;
 
     // Start total timer
-    startTime = Date.now();
     startTotalTimer();
 
-    // Load first question
+    // Load current question
     loadQuestion();
 }
 
@@ -81,6 +104,7 @@ function startQuestionTimer() {
         if (questionTimeLeft <= 0) {
             clearInterval(questionTimerInterval);
             userAnswers[currentQuestionIndex] = -1;
+            saveProgress(); // Save timeout state
             showTimeoutMessage();
             setTimeout(() => {
                 if (currentQuestionIndex < questions.length - 1) {
@@ -217,6 +241,7 @@ function selectOption(index) {
         showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
     }
 
+    saveProgress(); // Save answer state
     document.getElementById('questionTimer').textContent = 'Answered';
     document.getElementById('questionTimer').style.color = '#2196f3';
 }
@@ -231,6 +256,7 @@ function showFeedbackMessage(message, type) {
 function nextQuestion() {
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
+        saveProgress();
         loadQuestion();
     }
 }
@@ -238,6 +264,7 @@ function nextQuestion() {
 function previousQuestion() {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
+        saveProgress();
         loadQuestion();
     }
 }
@@ -245,6 +272,7 @@ function previousQuestion() {
 function submitQuiz() {
     clearInterval(totalTimerInterval);
     clearInterval(questionTimerInterval);
+    clearProgress();
 
     const timeTaken = Math.floor((Date.now() - startTime) / 1000);
 
@@ -306,6 +334,7 @@ function restartQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     userAnswers = [];
+    clearProgress();
     if (totalTimerInterval) clearInterval(totalTimerInterval);
     if (questionTimerInterval) clearInterval(questionTimerInterval);
 }
@@ -316,3 +345,17 @@ function getQuestionsForChapter(chapter) {
     if (chapter === 14) return chapter14Questions;
     return [];
 }
+
+// Check for saved progress on load
+window.onload = () => {
+    const saved = localStorage.getItem('quizProgress');
+    if (saved) {
+        const progress = JSON.parse(saved);
+        const resumeCard = document.getElementById('resumeCard');
+        const resumeStatus = document.getElementById('resumeStatus');
+        if (resumeCard && resumeStatus) {
+            resumeStatus.textContent = `Chapter: ${progress.currentChapter}, Q: ${progress.currentQuestionIndex + 1}/${progress.questions.length}`;
+            resumeCard.style.display = 'block';
+        }
+    }
+};
