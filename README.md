@@ -7,7 +7,7 @@ Interactive and Beautiful Quiz Application for Exam Preparation
 - **450 MCQs** across 3 chapters (12, 13, 14)
 - **5 marks per question** (Total: 750 marks)
 - **60-second timer** per question
-- **Instant feedback** with explanations
+- **Instant feedback** on each question
 - **Comprehensive grading system** (A+ to F)
 - **Pass/Fail status** (60% passing)
 - **Beautiful UI** with animations
@@ -33,7 +33,7 @@ Interactive and Beautiful Quiz Application for Exam Preparation
 1. Open `index.html` in your browser
 2. Select a chapter to start
 3. Answer questions within 60 seconds each
-4. Get instant feedback and explanations
+4. Get instant feedback on your answers
 5. View detailed results at the end
 
 ## 📱 Access Online

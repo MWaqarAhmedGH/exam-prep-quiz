@@ -11,14 +11,22 @@ let questions = [];
 let questionTimeLeft = 60;
 const MARKS_PER_QUESTION = 5;
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
 function startQuiz(chapter) {
     currentChapter = chapter;
     currentQuestionIndex = 0;
     score = 0;
     userAnswers = [];
 
-    // Get questions for selected chapter
-    questions = getQuestionsForChapter(chapter);
+    // Get questions for selected chapter and shuffle them
+    questions = shuffleArray([...getQuestionsForChapter(chapter)]);
 
     // Hide chapter selection, show quiz
     document.getElementById('chapterSelection').style.display = 'none';
@@ -119,7 +127,7 @@ function loadQuestion() {
     void questionCard.offsetWidth; 
     questionCard.classList.add('flip-3d');
 
-    const elementsToRemove = ['.explanation', '.timeout-message', '.feedback-correct', '.feedback-wrong'];
+    const elementsToRemove = ['.timeout-message', '.feedback-correct', '.feedback-wrong'];
     elementsToRemove.forEach(selector => {
         const el = document.querySelector(selector);
         if (el) el.remove();
