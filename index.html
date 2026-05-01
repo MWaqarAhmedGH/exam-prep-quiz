@@ -333,7 +333,8 @@
 
         <div class="content">
             <div id="chapterSelection" class="chapter-selection">
-                <div id="resumeCard" class="chapter-card" style="display: none; border-color: #ff9800; background: rgba(255, 152, 0, 0.1);" onclick="startQuiz(0, true)">
+                <div id="resumeCard" class="chapter-card" style="display: none; border-color: #ff9800; background: rgba(255, 152, 0, 0.1); position: relative;" onclick="startQuiz(0, true)">
+                    <button onclick="event.stopPropagation(); deleteSavedProgress()" title="Clear Progress" style="position: absolute; top: 10px; right: 10px; background: rgba(255,0,0,0.2); border: 1px solid #ff4444; color: #ff4444; cursor: pointer; border-radius: 50%; width: 30px; height: 30px; font-weight: bold; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">&times;</button>
                     <h3 style="color: #ff9800;">Resume Quiz</h3>
                     <p id="resumeDetails">Continue where you left off</p>
                     <div class="mcq-count" id="resumeStatus">Chapter: -, Q: -</div>

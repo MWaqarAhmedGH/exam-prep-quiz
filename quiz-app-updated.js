@@ -35,7 +35,21 @@ function clearProgress() {
     localStorage.removeItem('quizProgress');
 }
 
+function deleteSavedProgress() {
+    if (confirm("Are you sure you want to delete your saved progress? This cannot be undone.")) {
+        clearProgress();
+        document.getElementById('resumeCard').style.display = 'none';
+    }
+}
+
 function startQuiz(chapter, isResuming = false) {
+    if (!isResuming && localStorage.getItem('quizProgress')) {
+        if (!confirm("You have saved progress. Starting a new quiz will delete it. Continue?")) {
+            return;
+        }
+        clearProgress();
+    }
+
     if (isResuming) {
         const saved = JSON.parse(localStorage.getItem('quizProgress'));
         currentChapter = saved.currentChapter;
