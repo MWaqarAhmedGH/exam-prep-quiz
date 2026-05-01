@@ -162,6 +162,10 @@ function loadQuestion() {
     const question = questions[currentQuestionIndex];
     const questionCard = document.querySelector('.question-card');
     
+    // Update Progress Bar
+    const progressPercent = ((currentQuestionIndex + 1) / questions.length) * 100;
+    document.getElementById('progressBar').style.width = progressPercent + '%';
+
     questionCard.classList.remove('flip-3d');
     void questionCard.offsetWidth; 
     questionCard.classList.add('flip-3d');
@@ -373,6 +377,44 @@ function restartQuiz() {
     clearProgress();
     if (totalTimerInterval) clearInterval(totalTimerInterval);
     if (questionTimerInterval) clearInterval(questionTimerInterval);
+}
+
+function showReview() {
+    document.getElementById('resultContainer').style.display = 'none';
+    document.getElementById('reviewContainer').style.display = 'block';
+    const reviewList = document.getElementById('reviewList');
+    reviewList.innerHTML = '';
+
+    questions.forEach((q, i) => {
+        const item = document.createElement('div');
+        item.style.marginBottom = '20px';
+        item.style.padding = '15px';
+        item.style.background = 'rgba(255,255,255,0.05)';
+        item.style.borderRadius = '12px';
+        item.style.borderLeft = '4px solid';
+        
+        const userAnsIdx = userAnswers[i];
+        const correctIdx = q.shuffledOptions.findIndex(o => o.isCorrect);
+        const isCorrect = userAnsIdx === correctIdx;
+        
+        item.style.borderLeftColor = isCorrect ? '#00ff88' : '#ff0055';
+
+        item.innerHTML = `
+            <div style="font-weight: 800; margin-bottom: 10px;">Q${i+1}: ${q.question}</div>
+            <div style="font-size: 0.9em; display: flex; flex-direction: column; gap: 5px;">
+                <div style="color: ${isCorrect ? '#00ff88' : '#ff9999'}">
+                    <strong>Your Answer:</strong> ${userAnsIdx === -1 ? 'Timed Out' : String.fromCharCode(65 + userAnsIdx) + ') ' + q.shuffledOptions[userAnsIdx].text.replace(/^[A-D]\)\s*/i, '')}
+                </div>
+                ${!isCorrect ? `<div style="color: #00ff88;"><strong>Correct Answer:</strong> ${String.fromCharCode(65 + correctIdx) + ') ' + q.shuffledOptions[correctIdx].text.replace(/^[A-D]\)\s*/i, '')}</div>` : ''}
+            </div>
+        `;
+        reviewList.appendChild(item);
+    });
+}
+
+function closeReview() {
+    document.getElementById('reviewContainer').style.display = 'none';
+    document.getElementById('resultContainer').style.display = 'block';
 }
 
 function getQuestionsForChapter(chapter) {

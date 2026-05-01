@@ -361,6 +361,9 @@
             </div>
 
             <div id="quizContainer" class="quiz-container">
+                <div class="progress-container" style="width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 15px; overflow: hidden;">
+                    <div id="progressBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--primary-3d), var(--secondary-3d)); transition: width 0.3s ease;"></div>
+                </div>
                 <div class="quiz-header">
                     <div>TIME: <span id="totalTimer">00:00</span></div>
                     <div class="question-timer" id="questionTimer">60s</div>
@@ -396,7 +399,16 @@
                     <div class="result-item"><span>Time Taken</span><span id="timeTaken">0</span></div>
                 </div>
 
-                <button class="btn btn-primary" onclick="restartQuiz()" style="width: 100%;">Try Again</button>
+                <div style="display: flex; gap: 10px; margin-top: 2vh;">
+                    <button class="btn btn-secondary" onclick="showReview()" style="flex: 1;">Review Answers</button>
+                    <button class="btn btn-primary" onclick="restartQuiz()" style="flex: 1;">Try Again</button>
+                </div>
+            </div>
+
+            <div id="reviewContainer" class="result-container" style="max-height: 80vh; overflow-y: auto; text-align: left;">
+                <h2 style="text-align: center; color: var(--primary-3d); margin-bottom: 20px;">Review Answers</h2>
+                <div id="reviewList"></div>
+                <button class="btn btn-primary" onclick="closeReview()" style="width: 100%; margin-top: 20px; position: sticky; bottom: 0;">Back to Results</button>
             </div>
         </div>
     </div>
