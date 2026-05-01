@@ -194,7 +194,15 @@ function loadQuestion() {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
         const label = String.fromCharCode(65 + index); // A, B, C, D
-        optionDiv.innerHTML = `${label}) ${optionObj.text.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim()}`;
+        
+        // Strip existing A), B), C), D) from the start of the text
+        const cleanText = optionObj.text
+            .replace(/^[A-D]\)\s*/i, '') // Remove existing label
+            .replace(/✅/g, '')
+            .replace(/\(Correct.*?\)/gi, '')
+            .trim();
+
+        optionDiv.innerHTML = `${label}) ${cleanText}`;
         optionDiv.onclick = () => selectOption(index);
 
         if (userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] !== -1) {
