@@ -361,7 +361,7 @@ function submitQuiz() {
     else if (percentage >= 70) { message = '👏 VERY GOOD! Good performance! A bit more practice and you will be perfect! 😊'; emoji = '👏💪✨'; }
     else if (percentage >= 60) { message = '💪 GOOD! You passed! But you need more revision to score better! 📖'; emoji = '💪📝✍️'; }
     else if (percentage >= 50) { message = '😔 BELOW AVERAGE! You failed! Please study harder and practice more! 📖'; emoji = '😔📖💔'; }
-    else { message = 'POOR PERFORMANCE! You need serious revision! Don\'t give up, study more! 💪'; emoji = '⚠️📝⚠️'; }
+    else { message = 'POOR PERFORMANCE! You need serious revision! Don\'t give up, study more! 💪'; emoji = '❌❌❌'; }
 
     document.getElementById('resultMessage').textContent = message;
     document.getElementById('resultEmoji').textContent = emoji;
