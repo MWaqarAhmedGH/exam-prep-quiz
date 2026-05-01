@@ -49,7 +49,7 @@ function startQuiz(chapter, isResuming = false) {
         }
         clearProgress();
     }
-
+function startQuiz(chapter, isResuming = false) {
     if (isResuming) {
         const saved = JSON.parse(localStorage.getItem('quizProgress'));
         currentChapter = saved.currentChapter;
@@ -63,9 +63,20 @@ function startQuiz(chapter, isResuming = false) {
         currentQuestionIndex = 0;
         score = 0;
         userAnswers = [];
-        questions = shuffleArray([...getQuestionsForChapter(chapter)]);
+        const rawQuestions = getQuestionsForChapter(chapter);
+
+        // Professional approach: Pre-shuffle questions AND their options immediately
+        questions = shuffleArray([...rawQuestions]).map(q => {
+            const shuffledOptions = shuffleArray(q.options.map((opt, idx) => ({
+                text: opt,
+                isCorrect: idx === q.correct
+            })));
+            return { ...q, shuffledOptions };
+        });
+
         startTime = Date.now();
     }
+
 
     // Hide chapter selection, show quiz
     document.getElementById('chapterSelection').style.display = 'none';
@@ -184,15 +195,6 @@ function loadQuestion() {
 
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
-
-    // Create a copy of options with their original status
-    if (!question.shuffledOptions) {
-        const originalOptions = question.options.map((opt, idx) => ({
-            text: opt,
-            isCorrect: idx === question.correct
-        }));
-        question.shuffledOptions = shuffleArray([...originalOptions]);
-    }
 
     question.shuffledOptions.forEach((optionObj, index) => {
         const optionDiv = document.createElement('div');
