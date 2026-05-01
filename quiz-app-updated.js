@@ -347,7 +347,7 @@ function submitQuiz() {
     document.getElementById('totalMarksDisplay').textContent = totalMarks;
     document.getElementById('passingMarksDisplay').textContent = passingMarks;
     document.getElementById('gradeDisplay').textContent = grade;
-    document.getElementById('passFailStatus').textContent = isPassed ? 'PASSED ✅' : 'FAILED ❌';
+    document.getElementById('passFailStatus').textContent = isPassed ? 'PASSED' : 'FAILED';
     document.getElementById('passFailStatus').style.color = isPassed ? '#28a745' : '#dc3545';
 
     const minutes = Math.floor(timeTaken / 60);
