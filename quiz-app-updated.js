@@ -387,6 +387,12 @@ function showReview() {
     const reviewList = document.getElementById('reviewList');
     reviewList.innerHTML = '';
 
+    // Update review title to include chapter
+    const reviewTitle = document.querySelector('#reviewContainer h2');
+    if (reviewTitle) {
+        reviewTitle.textContent = `Review Answers - Chapter ${currentChapter}`;
+    }
+
     questions.forEach((q, i) => {
         const item = document.createElement('div');
         item.style.marginBottom = '20px';
