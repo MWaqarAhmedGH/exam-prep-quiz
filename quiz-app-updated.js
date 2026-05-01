@@ -49,7 +49,7 @@ function startQuiz(chapter, isResuming = false) {
         }
         clearProgress();
     }
-function startQuiz(chapter, isResuming = false) {
+
     if (isResuming) {
         const saved = JSON.parse(localStorage.getItem('quizProgress'));
         currentChapter = saved.currentChapter;
