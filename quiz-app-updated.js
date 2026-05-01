@@ -151,9 +151,10 @@ function showTimeoutMessage() {
 
     const question = questions[currentQuestionIndex];
     const options = document.querySelectorAll('.option');
-    if (options[question.correct]) {
-        options[question.correct].classList.add('correct');
-        options[question.correct].innerHTML += ' ✅ (Correct Answer)';
+    const correctIdx = question.shuffledOptions.findIndex(o => o.isCorrect);
+    if (options[correctIdx]) {
+        options[correctIdx].classList.add('correct');
+        options[correctIdx].innerHTML += ' ✅ (Correct Answer)';
     }
 }
 
@@ -180,17 +181,26 @@ function loadQuestion() {
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
 
-    question.options.forEach((option, index) => {
+    // Create a copy of options with their original status
+    if (!question.shuffledOptions) {
+        const originalOptions = question.options.map((opt, idx) => ({
+            text: opt,
+            isCorrect: idx === question.correct
+        }));
+        question.shuffledOptions = shuffleArray([...originalOptions]);
+    }
+
+    question.shuffledOptions.forEach((optionObj, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
         const label = String.fromCharCode(65 + index); // A, B, C, D
-        optionDiv.innerHTML = `${label}) ${option.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim()}`;
+        optionDiv.innerHTML = `${label}) ${optionObj.text.replace(/✅/g, '').replace(/\(Correct.*?\)/gi, '').trim()}`;
         optionDiv.onclick = () => selectOption(index);
 
         if (userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] !== -1) {
             if (userAnswers[currentQuestionIndex] === index) {
                 optionDiv.classList.add('selected');
-                if (index === question.correct) {
+                if (optionObj.isCorrect) {
                     optionDiv.classList.add('correct');
                     optionDiv.innerHTML += ' ✅';
                 } else {
@@ -198,7 +208,7 @@ function loadQuestion() {
                     optionDiv.innerHTML += ' ❌';
                 }
             }
-            if (index === question.correct && userAnswers[currentQuestionIndex] !== index) {
+            if (optionObj.isCorrect && userAnswers[currentQuestionIndex] !== index) {
                 optionDiv.classList.add('correct');
                 optionDiv.innerHTML += ' ✅ (Correct)';
             }
@@ -207,7 +217,8 @@ function loadQuestion() {
     });
 
     if (userAnswers[currentQuestionIndex] !== undefined && userAnswers[currentQuestionIndex] !== -1) {
-        const wasCorrect = userAnswers[currentQuestionIndex] === question.correct;
+        // Find if the user's answer was correct based on the shuffled object
+        const wasCorrect = question.shuffledOptions[userAnswers[currentQuestionIndex]].isCorrect;
         showFeedbackMessage(wasCorrect ? '🎉 Congratulations! Absolutely correct! Well done! 💕' : '😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', wasCorrect ? 'correct' : 'wrong');
     }
 
@@ -241,7 +252,9 @@ function selectOption(index) {
     selectedOption.classList.add('selected');
     userAnswers[currentQuestionIndex] = index;
 
-    if (index === question.correct) {
+    const isCorrect = question.shuffledOptions[index].isCorrect;
+
+    if (isCorrect) {
         selectedOption.classList.add('correct');
         selectedOption.innerHTML += ' ✅ Correct!';
         score++;
@@ -250,8 +263,9 @@ function selectOption(index) {
     } else {
         selectedOption.classList.add('wrong');
         selectedOption.innerHTML += ' ❌ Wrong!';
-        document.querySelectorAll('.option')[question.correct].classList.add('correct');
-        document.querySelectorAll('.option')[question.correct].innerHTML += ' ✅ (Correct Answer)';
+        const correctIdx = question.shuffledOptions.findIndex(o => o.isCorrect);
+        document.querySelectorAll('.option')[correctIdx].classList.add('correct');
+        document.querySelectorAll('.option')[correctIdx].innerHTML += ' ✅ (Correct Answer)';
         showFeedbackMessage('😔 Oops! Wrong answer. Don\'t worry, you\'ll get it next time! 💪', 'wrong');
     }
 
