@@ -91,7 +91,7 @@ function startQuiz(chapter, isResuming = false, part = null) {
     const chapterIndicator = document.getElementById('chapterIndicator');
     const chapterValue = document.getElementById('chapterValue');
     if(chapterIndicator && chapterValue) {
-        let indicatorText = `CHAPTER ${currentChapter}`;
+        let indicatorText = `${currentChapter}`;
         if (currentPart) indicatorText += ` - PART ${currentPart}`;
         chapterValue.textContent = indicatorText;
         chapterIndicator.style.display = 'block';
