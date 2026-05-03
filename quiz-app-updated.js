@@ -1,5 +1,6 @@
 // Quiz App Logic - Updated Version
 let currentChapter = 0;
+let currentPart = null;
 let currentQuestionIndex = 0;
 let score = 0;
 let userAnswers = [];
@@ -22,6 +23,7 @@ function shuffleArray(array) {
 function saveProgress() {
     const progress = {
         currentChapter,
+        currentPart,
         currentQuestionIndex,
         score,
         userAnswers,
@@ -42,7 +44,7 @@ function deleteSavedProgress() {
     }
 }
 
-function startQuiz(chapter, isResuming = false) {
+function startQuiz(chapter, isResuming = false, part = null) {
     if (!isResuming && localStorage.getItem('quizProgress')) {
         if (!confirm("You have saved progress. Starting a new quiz will delete it. Continue?")) {
             return;
@@ -53,6 +55,7 @@ function startQuiz(chapter, isResuming = false) {
     if (isResuming) {
         const saved = JSON.parse(localStorage.getItem('quizProgress'));
         currentChapter = saved.currentChapter;
+        currentPart = saved.currentPart || null;
         currentQuestionIndex = saved.currentQuestionIndex;
         score = saved.score;
         userAnswers = saved.userAnswers;
@@ -60,10 +63,11 @@ function startQuiz(chapter, isResuming = false) {
         questions = saved.questions;
     } else {
         currentChapter = chapter;
+        currentPart = part;
         currentQuestionIndex = 0;
         score = 0;
         userAnswers = [];
-        const rawQuestions = getQuestionsForChapter(chapter);
+        const rawQuestions = getQuestionsForChapter(chapter, part);
 
         // Professional approach: Pre-shuffle questions AND their options immediately
         questions = shuffleArray([...rawQuestions]).map(q => {
@@ -80,13 +84,16 @@ function startQuiz(chapter, isResuming = false) {
 
     // Hide chapter selection, show quiz
     document.getElementById('chapterSelection').style.display = 'none';
+    document.getElementById('partSelection').style.display = 'none';
     document.getElementById('quizContainer').style.display = 'block';
     
     // Show Chapter Indicator
     const chapterIndicator = document.getElementById('chapterIndicator');
     const chapterValue = document.getElementById('chapterValue');
     if(chapterIndicator && chapterValue) {
-        chapterValue.textContent = currentChapter;
+        let indicatorText = `CHAPTER ${currentChapter}`;
+        if (currentPart) indicatorText += ` - PART ${currentPart}`;
+        chapterValue.textContent = indicatorText;
         chapterIndicator.style.display = 'block';
     }
 
@@ -370,9 +377,11 @@ function submitQuiz() {
 function restartQuiz() {
     document.getElementById('resultContainer').style.display = 'none';
     document.getElementById('chapterSelection').style.display = 'grid';
+    document.getElementById('partSelection').style.display = 'none';
     document.getElementById('appTitle').style.display = 'block';
     document.getElementById('chapterIndicator').style.display = 'none';
     currentChapter = 0;
+    currentPart = null;
     currentQuestionIndex = 0;
     score = 0;
     userAnswers = [];
@@ -425,11 +434,29 @@ function closeReview() {
     document.getElementById('resultContainer').style.display = 'block';
 }
 
-function getQuestionsForChapter(chapter) {
-    if (chapter === 12) return chapter12Questions;
-    if (chapter === 13) return chapter13Questions;
-    if (chapter === 14) return chapter14Questions;
-    return [];
+function selectChapter(chapter) {
+    currentChapter = chapter;
+    document.getElementById('chapterSelection').style.display = 'none';
+    document.getElementById('partSelection').style.display = 'grid';
+    document.getElementById('selectedChapterTitle').textContent = `Chapter ${chapter} - Select Part`;
+}
+
+function backToChapters() {
+    document.getElementById('partSelection').style.display = 'none';
+    document.getElementById('chapterSelection').style.display = 'grid';
+}
+
+function getQuestionsForChapter(chapter, part) {
+    let allQuestions = [];
+    if (chapter === 12) allQuestions = chapter12Questions;
+    if (chapter === 13) allQuestions = chapter13Questions;
+    if (chapter === 14) allQuestions = chapter14Questions;
+    
+    if (!part) return allQuestions;
+    
+    const start = (part - 1) * 50;
+    const end = start + 50;
+    return allQuestions.slice(start, end);
 }
 
 // Check for saved progress on load
@@ -440,7 +467,10 @@ window.onload = () => {
         const resumeCard = document.getElementById('resumeCard');
         const resumeStatus = document.getElementById('resumeStatus');
         if (resumeCard && resumeStatus) {
-            resumeStatus.textContent = `Chapter: ${progress.currentChapter}, Q: ${progress.currentQuestionIndex + 1}/${progress.questions.length}`;
+            let statusText = `Chapter: ${progress.currentChapter}`;
+            if (progress.currentPart) statusText += `, Part: ${progress.currentPart}`;
+            statusText += `, Q: ${progress.currentQuestionIndex + 1}/${progress.questions.length}`;
+            resumeStatus.textContent = statusText;
             resumeCard.style.display = 'block';
         }
     }

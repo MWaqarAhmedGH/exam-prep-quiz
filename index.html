@@ -339,17 +339,17 @@
                     <p id="resumeDetails">Continue where you left off</p>
                     <div class="mcq-count" id="resumeStatus">Chapter: -, Q: -</div>
                 </div>
-                <div class="chapter-card" onclick="startQuiz(12)">
+                <div class="chapter-card" onclick="selectChapter(12)">
                     <h3>Chapter 12</h3>
                     <p>AI Agent Factory Paradigm</p>
                     <div class="mcq-count">150 Questions</div>
                 </div>
-                <div class="chapter-card" onclick="startQuiz(13)">
+                <div class="chapter-card" onclick="selectChapter(13)">
                     <h3>Chapter 13</h3>
                     <p>Markdown & Instructions</p>
                     <div class="mcq-count">150 Questions</div>
                 </div>
-                <div class="chapter-card" onclick="startQuiz(14)">
+                <div class="chapter-card" onclick="selectChapter(14)">
                     <h3>Chapter 14</h3>
                     <p>Claude Code & Cowork</p>
                     <div class="mcq-count">150 Questions</div>
@@ -357,6 +357,31 @@
                 <div class="creator-credit" style="grid-column: 1 / -1;">
                     Created by M Waqar Ahmed<br>
                     <span style="font-size: 0.7em; letter-spacing: 2px;">FULL STACK DEVELOPER</span>
+                </div>
+            </div>
+
+            <!-- Part Selection Container -->
+            <div id="partSelection" class="chapter-selection" style="display: none;">
+                <div style="grid-column: 1 / -1; text-align: center; margin-bottom: 20px;">
+                    <h2 id="selectedChapterTitle" style="color: var(--primary-3d); font-family: 'Playfair Display', serif;">Select Part</h2>
+                </div>
+                <div class="chapter-card" onclick="startQuiz(currentChapter, false, 1)">
+                    <h3>Part 1</h3>
+                    <p>Questions 1 - 50</p>
+                    <div class="mcq-count">50 MCQs</div>
+                </div>
+                <div class="chapter-card" onclick="startQuiz(currentChapter, false, 2)">
+                    <h3>Part 2</h3>
+                    <p>Questions 51 - 100</p>
+                    <div class="mcq-count">50 MCQs</div>
+                </div>
+                <div class="chapter-card" onclick="startQuiz(currentChapter, false, 3)">
+                    <h3>Part 3</h3>
+                    <p>Questions 101 - 150</p>
+                    <div class="mcq-count">50 MCQs</div>
+                </div>
+                <div style="grid-column: 1 / -1; text-align: center; margin-top: 20px;">
+                    <button class="btn btn-secondary" onclick="backToChapters()">Back to Chapters</button>
                 </div>
             </div>
 
