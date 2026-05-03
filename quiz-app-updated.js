@@ -102,7 +102,7 @@ function startQuiz(chapter, isResuming = false, part = null) {
     if(title) title.style.display = 'none';
 
     // Initialize quiz
-    document.getElementById('totalQ').textContent = questions.length;
+    document.getElementById('totalQ').textContent = currentPart ? 150 : questions.length;
 
     // Start total timer
     startTotalTimer();
@@ -194,11 +194,14 @@ function loadQuestion() {
         if (el) el.remove();
     });
 
-    document.getElementById('currentQ').textContent = currentQuestionIndex + 1;
+    const offset = currentPart ? (currentPart - 1) * 50 : 0;
+    const displayNum = offset + currentQuestionIndex + 1;
+
+    document.getElementById('currentQ').textContent = displayNum;
     document.getElementById('score').textContent = score;
 
     document.getElementById('questionText').innerHTML =
-        `<strong>Q${currentQuestionIndex + 1}:</strong> ${question.question}`;
+        `<strong>Q${displayNum}:</strong> ${question.question}`;
 
     const optionsContainer = document.getElementById('optionsContainer');
     optionsContainer.innerHTML = '';
@@ -402,6 +405,7 @@ function showReview() {
         reviewTitle.textContent = `Review Answers - Chapter ${currentChapter}`;
     }
 
+    const offset = currentPart ? (currentPart - 1) * 50 : 0;
     questions.forEach((q, i) => {
         const item = document.createElement('div');
         item.style.marginBottom = '20px';
@@ -417,7 +421,7 @@ function showReview() {
         item.style.borderLeftColor = isCorrect ? '#00ff88' : '#ff0055';
 
         item.innerHTML = `
-            <div style="font-weight: 800; margin-bottom: 10px;">Q${i+1}: ${q.question}</div>
+            <div style="font-weight: 800; margin-bottom: 10px;">Q${offset + i + 1}: ${q.question}</div>
             <div style="font-size: 0.9em; display: flex; flex-direction: column; gap: 5px;">
                 <div style="color: ${isCorrect ? '#00ff88' : '#ff9999'}">
                     <strong>Your Answer:</strong> ${userAnsIdx === -1 ? 'Timed Out' : String.fromCharCode(65 + userAnsIdx) + ') ' + q.shuffledOptions[userAnsIdx].text.replace(/^[A-D]\)\s*/i, '')}
@@ -469,7 +473,10 @@ window.onload = () => {
         if (resumeCard && resumeStatus) {
             let statusText = `Chapter: ${progress.currentChapter}`;
             if (progress.currentPart) statusText += `, Part: ${progress.currentPart}`;
-            statusText += `, Q: ${progress.currentQuestionIndex + 1}/${progress.questions.length}`;
+            const offset = progress.currentPart ? (progress.currentPart - 1) * 50 : 0;
+            const displayNum = offset + progress.currentQuestionIndex + 1;
+            const displayTotal = progress.currentPart ? 150 : progress.questions.length;
+            statusText += `, Q: ${displayNum}/${displayTotal}`;
             resumeStatus.textContent = statusText;
             resumeCard.style.display = 'block';
         }
